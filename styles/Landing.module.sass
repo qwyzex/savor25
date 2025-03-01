@@ -35,13 +35,21 @@
     // background: linear-gradient(135deg, #102b5a, #06183c)
     // background: linear-gradient(135deg, #0a1e40, #020a1a)
     background: linear-gradient(135deg, #ffb412, #f9336b)
+    // background: linear-gradient(135deg, #be8106, #b03a16)
 
     position: relative
 
     .gradientBlobContainer
-        filter: url(#goo) blur(40px) 
+        filter: url(#goo) blur(90px)
+        // filter: url(#goo)
+        // filter: url(#goo) blur(40px) contrast(145%) brightness(650%)
+        // mix-blend-mode: screen
         width: 100%
         height: 100%
+
+        // background: url(https://grainy-gradients.vercel.app/noise.svg)
+
+        opacity: 0.8
 
         position: absolute
         top: 0
@@ -60,7 +68,9 @@
             left: 0
 
         .g1 
+            
             position: absolute
+            // background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
             background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat
             mix-blend-mode: var(--blending)
 
@@ -75,7 +85,9 @@
             opacity: 1
 
         .g2 
+            
             position: absolute
+            // background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
             background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat
             mix-blend-mode: var(--blending)
 
@@ -90,7 +102,9 @@
             opacity: 1
 
         .g3 
+            
             position: absolute
+            // background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
             background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat
             mix-blend-mode: var(--blending)
 
@@ -105,7 +119,9 @@
             opacity: 1
 
         .g4 
+            
             position: absolute
+            // background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
             background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat
             mix-blend-mode: var(--blending)
 
@@ -120,7 +136,9 @@
             opacity: 0.7
 
         .g5 
+            
             position: absolute
+            // background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
             background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat
             mix-blend-mode: var(--blending)
 
@@ -136,13 +154,15 @@
 
 
     .wrapper
+        // display: none
         height: 100%
         width: 100%
         padding: 3rem
 
         background-color: transparent
-        // background-image: radial-gradient(circle, rgba(51, 46, 146, 0.5) 5%, transparent 5%), radial-gradient(circle, rgba(45, 65, 153, 0.5) 6%, transparent 6%)
-        background-image: radial-gradient(circle, rgba(255, 198, 118, 0.377) 6%, transparent 6%), radial-gradient(circle, rgba(250, 208, 131, 0.365) 6%, transparent 6%)
+        // background-image: radial-gradient(circle, rgba(51, 46, 146, 0.5) 6%, transparent 6%), radial-gradient(circle, rgba(45, 65, 153, 0.5) 6%, transparent 6%)
+        // background-image: radial-gradient(circle, rgba(255, 198, 118, 0.377) 6%, transparent 6%), radial-gradient(circle, rgba(250, 208, 131, 0.365) 6%, transparent 6%)
+        background-image: radial-gradient(circle, rgba(255, 198, 118, 0.177) 6%, transparent 6%), radial-gradient(circle, rgba(250, 208, 131, 0.165) 6%, transparent 6%)
         background-size: 3vh 3vh
         background-position: 0 0, 1.5vh 1.5vh
         // backdrop-filter: blur(4px)
@@ -172,31 +192,239 @@
 
         .orb
             z-index: 3
+            position: relative
+            overflow: hidden
 
             width: 50vw
-            height: 30vw
-            background: url('/imgs/zenprof.png') no-repeat center / cover
+            height: 40vw
+            background-color: #5251c3
+            // background: url('/imgs/zenprof.png') no-repeat center / cover
             border-radius: 50%
             transform: scaleX(1.8)
-            animation: slide-orb 8s linear infinite
+            // animation: slide-orb 8s linear infinite
 
-            filter: drop-shadow(0 -1rem 50px #521eff)
-            animation: radiatingShadow 8s infinite ease-in-out;
+            filter: drop-shadow(0 -1rem 50px #d6bafe)
+            animation: radiatingShadow 8s infinite ease-in-out
+
+            box-shadow: inset 0 0 3vh #9d56ff, inset 0 0 5vh #c296ff, inset 0 -75px 6vh #d8cbf3
+
+            // .reflection
+            //     position: absolute
+            //     top: 15px
+            //     left: 50%
+
+            //     transform: translateX(-50%)
+            //     width: 50%
+            //     height: 30%
+            //     border-radius: 50%
+            //     box-shadow: inset 0 10px 30px #ffffff, inset -10px 20px rgba(46, 196, 182, 1)
+            //     mix-blend-mode: soft-light
+            
+            // .innerGlow 
+            //     position: absolute
+            //     top: -2.5%
+            //     left: 50%
+            //     transform: translateX(-50%)
+            //     width: 15%
+            //     height: 5%
+            //     border-radius: 50%
+            //     background: #531effc6
+            //     box-shadow: 0 0 10px #531effc6, 0 0 20px #531effc6, 0 0 30px #531effc6, 0 0 40px #531effc6, 0 0 50px #531effc6
+            //     filter: blur(60px)
+
+            .orbGradientBlob
+                filter: url(#igoo) blur(40px)
+                // filter: url(#goo)
+                // filter: url(#goo) blur(40px) contrast(145%) brightness(650%)
+                // mix-blend-mode: screen
+                width: 100%
+                height: 100%
+
+                background: url(https://grainy-gradients.vercel.app/noise.svg)
+
+                opacity: 0.8
+
+                position: absolute
+                top: 0
+                left: 0
+
+                height: 100%
+                width: 100%
+
+                // Grain texture overlay
+                // &::before
+                //     content: ""
+                //     position: absolute
+                //     width: 100%
+                //     height: 100%
+                //     top: 0
+                //     left: 0
+                //     background: url("/imgs/grain_bw.jpg")
+                //     opacity: 0.3
+                //     mix-blend-mode: hard-light
+                //     pointer-events: none
+
+                // &::before
+                //     content: ""
+                //     position: absolute
+                //     width: 100%
+                //     height: 100%
+                //     top: 0
+                //     left: 0
+                //     background: rgba(0, 0, 0, 0.1)
+                //     filter: url(#grain)
+                //     mix-blend-mode: overlay
+                //     pointer-events: none
+
+                // &::before
+                //     content: ""
+                //     position: absolute
+                //     width: 100%
+                //     height: 100%
+                //     top: 0
+                //     left: 0
+                //     background: url("data:image/svg+xml,\
+                //         <svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>\
+                //             <filter id='noise'>\
+                //                 <feTurbulence type='fractalNoise' baseFrequency='5' numOctaves='3' stitchTiles='stitch'/>\
+                //                 <feColorMatrix type='saturate' values='0'/>\
+                //             </filter>\
+                //             <rect width='100%' height='100%' filter='url(#noise)' opacity='0.3'/>\
+                //         </svg>")
+                //     mix-blend-mode: hard-light
+                //     pointer-events: none
+
+                // &::before 
+                //     z-index: 3
+                //     content: ""
+                //     position: absolute
+                //     width: 100%
+                //     height: 100%
+                //     top: 0
+                //     left: 0
+                //     background: url("/svgs/noise.svg")
+                //     mix-blend-mode: soft-light
+                //     pointer-events: none
+
+                    // content: ""
+                    // position: absolute
+                    // width: 100%
+                    // height: 100%
+                    // top: 0
+                    // left: 0
+                    // background: rgba(0, 0, 0, 0.2)
+                    // // filter: contrast(10000%) brightness(10000%)
+                    // mix-blend-mode: overlay
+                    // pointer-events: none
+
+                svg
+                    // display: none
+                    height: 100%
+                    width: 100%
+
+                    position: absolute
+                    top: 0
+                    left: 0
+
+                .g1 
+                    
+                    position: absolute
+                    // background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
+                    background: radial-gradient(circle at center, rgba(var(--orb-color1), 0.8) 0, rgba(var(--orb-color1), 0) 50%) no-repeat
+                    mix-blend-mode: var(--blending)
+
+                    width: calc( var(--circle-size) * 2 )
+                    height: var(--circle-size)
+                    top: calc(50% - var(--circle-size) / 2)
+                    left: calc(50% - var(--circle-size) / 2)
+
+                    transform-origin: center center
+                    animation: moveVertical 9s ease infinite
+
+                    opacity: 1
+
+                .g2 
+                    
+                    position: absolute
+                    // background: radial-gradient(circle at center, rgba(var(--orb-color2), 0.8) 0, rgba(var(--orb-color2), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
+                    background: radial-gradient(circle at center, rgba(var(--orb-color2), 0.8) 0, rgba(var(--orb-color2), 0) 50%) no-repeat
+                    mix-blend-mode: var(--blending)
+
+                    width: calc( var(--circle-size) * 2 )
+                    height: var(--circle-size)
+                    top: calc(50% - var(--circle-size) / 2)
+                    left: calc(50% - var(--circle-size) / 2)
+
+                    transform-origin: calc(50% - 400px)
+                    animation: moveInCircle 8s reverse infinite
+
+                    opacity: 1
+
+                .g3 
+                    
+                    position: absolute
+                    // background: radial-gradient(circle at center, rgba(var(--orb-color3), 0.8) 0, rgba(var(--orb-color3), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
+                    background: radial-gradient(circle at center, rgba(var(--orb-color3), 0.8) 0, rgba(var(--orb-color3), 0) 50%) no-repeat
+                    mix-blend-mode: var(--blending)
+
+                    width: calc( var(--circle-size) * 2 )
+                    height: var(--circle-size)
+                    top: calc(50% - var(--circle-size) / 2 + 200px)
+                    left: calc(50% - var(--circle-size) / 2 - 500px)
+
+                    transform-origin: calc(50% + 400px)
+                    animation: moveInCircle 10s linear infinite
+
+                    opacity: 1
+
+                .g4 
+                    
+                    position: absolute
+                    // background: radial-gradient(circle at center, rgba(var(--orb-color4), 0.8) 0, rgba(var(--orb-color4), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
+                    background: radial-gradient(circle at center, rgba(var(--orb-color4), 0.8) 0, rgba(var(--orb-color4), 0) 50%) no-repeat
+                    mix-blend-mode: var(--blending)
+
+                    width: calc( var(--circle-size) * 3 )
+                    height: var(--circle-size)
+                    top: calc(50% - var(--circle-size) / 2)
+                    left: calc(50% - var(--circle-size) / 2)
+
+                    transform-origin: calc(50% - 200px)
+                    animation: moveHorizontal 13s ease infinite
+
+                    opacity: 0.7
+
+                .g5 
+                    
+                    position: absolute
+                    // background: radial-gradient(circle at center, rgba(var(--orb-color5), 0.8) 0, rgba(var(--orb-color5), 0.5) 10%, rgba(#00000000, 0) 50%) no-repeat
+                    background: radial-gradient(circle at center, rgba(var(--orb-color5), 0.8) 0, rgba(var(--orb-color5), 0) 50%) no-repeat
+                    mix-blend-mode: var(--blending)
+
+                    width: calc(var(--circle-size) * 2)
+                    height: calc(var(--circle-size) * 2)
+                    top: calc(50% - var(--circle-size))
+                    left: calc(50% - var(--circle-size))
+
+                    transform-origin: calc(50% - 800px) calc(50% + 200px)
+                    animation: moveInCircle 7s ease infinite
+
+                    opacity: 1
 
 @keyframes radiatingShadow 
     0% 
-        filter: drop-shadow(0 -1rem 70px #521eff)
+        filter: drop-shadow(0 -1rem 7vh rgba(0, 30, 255, 1))
     25%
-        filter: drop-shadow(0 -1rem 90px #521eff)
+        filter: drop-shadow(0 -1rem 9vh rgba(0, 30, 255, 0.8))
     50% 
-        filter: drop-shadow(0 -1rem 60px #521eff)
+        filter: drop-shadow(0 -1rem 6vh rgba(0, 30, 255, 0.5))
     75% 
-        filter: drop-shadow(0 -1rem 50px #521eff)
+        filter: drop-shadow(0 -1rem 5vh rgba(0, 30, 255, 0.7))
     100% 
-        filter: drop-shadow(0 -1rem 70px #521eff)
+        filter: drop-shadow(0 -1rem 7vh rgba(0, 30, 255, 1))
 
 @keyframes slideShroud
   from
     background-position: 0 0
   to
-    background-position: -250px 0 // Moves left, adjust if needed
+    background-position: -250vh 0 // Moves left, adjust if needed
