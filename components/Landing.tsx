@@ -1,21 +1,43 @@
 // import { DataContext } from "@/context/DataContext";
 import styles from "@/styles/Landing.module.sass";
-import { useState } from "react";
+import { useState, useRef, useEffect, Dispatch, SetStateAction } from "react";
 // import { useContext } from "react";
 // import Image from "next/image";
 
-const Landing = () => {
+interface LandingProps {
+    bbSetter: Dispatch<SetStateAction<boolean>>;
+}
+
+const Landing = ({ bbSetter }: LandingProps) => {
     // const { data } = useContext(DataContext);
 
     const [isNova, setIsNova] = useState(false);
     const [superNova, setSuperNova] = useState(false);
+    const [hideOrb, setHideOrb] = useState(false);
+    const orbRef = useRef<HTMLDivElement>(null);
 
+    // Handle the nova animation
     const handleNova = () => {
         setIsNova(true);
         setTimeout(() => {
             setSuperNova(true);
+        }, 3000);
+        setTimeout(() => {
+            setHideOrb(true);
+            bbSetter(true);
         }, 6000);
     };
+
+    // Apply transform instead of width/height for performance
+    useEffect(() => {
+        if (!orbRef.current) return;
+
+        // Using transform for animations is more performant than changing width/height
+        if (superNova) {
+            // Add the will-change property before animation starts
+            // orbRef.current.style.willChange = "transform";
+        }
+    }, [superNova]);
 
     const StarSVG = () => {
         return (
@@ -38,12 +60,16 @@ const Landing = () => {
 
     return (
         <>
-            <main className={`${styles.container} ${isNova && styles.novaContainer}`}>
+            <main
+                className={`${styles.container} ${isNova ? styles.novaContainer : ""} ${
+                    superNova ? styles.superContainer : ""
+                }`}
+            >
                 <div className={styles.darkBg}></div>
                 {!superNova && (
                     <div
                         className={`${styles.gradientBlobContainer} ${
-                            isNova && styles.novaGradientBlobContainer
+                            isNova ? styles.novaGradientBlobContainer : ""
                         }`}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg">
@@ -71,23 +97,32 @@ const Landing = () => {
                         <div className={styles.g5}></div>
                     </div>
                 )}
-                {!superNova && (
-                    <div className={`${styles.wrapper} ${isNova && styles.novaWrapper}`}>
-                        <div className={styles.title}>
-                            <h1>SAVOR</h1>
-                            <p>2025</p>
-                        </div>
-                        <div className={styles.wrapperMain}>
-                            <button onClick={handleNova}>
-                                <StarSVG />
-                            </button>
-                        </div>
-                        <footer className={`${isNova && styles.novaFooter}`}>
-                            <div className={styles.orb}>
-                                {/* <div className={styles.shroud}></div> */}
-                                {/* <div className={styles.reflection}></div>
-                                <div className={styles.innerGlow}></div>
-                                <div className={styles.outerShadow}></div>
+                <div
+                    className={`${styles.wrapper} ${isNova ? styles.novaWrapper : ""} ${
+                        superNova ? styles.superWrapper : ""
+                    }`}
+                >
+                    {!superNova && (
+                        <>
+                            <div className={styles.title}>
+                                <h1>SAVOR</h1>
+                                <p>2025</p>
+                            </div>
+                            <div className={styles.wrapperMain}>
+                                <button onClick={handleNova}>
+                                    <StarSVG />
+                                </button>
+                            </div>
+                        </>
+                    )}
+                    {!hideOrb && (
+                        <footer className={`${isNova ? styles.novaFooter : ""}`}>
+                            <div
+                                ref={orbRef}
+                                className={`${styles.orb} ${
+                                    superNova ? styles.performantOrb : ""
+                                }`}
+                            >
                                 <div className={styles.orbGradientBlob}>
                                     <svg xmlns="http://www.w3.org/2000/svg">
                                         <defs>
@@ -104,13 +139,14 @@ const Landing = () => {
                                     <div className={styles.g1}></div>
                                     <div className={styles.g2}></div>
                                     <div className={styles.g3}></div>
-                                    <div className={styles.g4}></div>
-                                    <div className={styles.g5}></div>
-                                </div> */}
+                                    {/* <div className={styles.g4}></div>
+                                    <div className={styles.g5}></div> */}
+                                </div>
+                                <div className={styles.highlight}></div>
                             </div>
                         </footer>
-                    </div>
-                )}
+                    )}
+                </div>
             </main>
         </>
     );

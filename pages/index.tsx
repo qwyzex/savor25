@@ -1,9 +1,12 @@
+import HomePage from "@/components/HomePage";
 import Landing from "@/components/Landing";
 import Head from "next/head";
+import { useState } from "react";
 // import Image from "next/image";
-import styles from "@/styles/Home.module.sass";
 
 export default function Home() {
+    const [bigBang, setBigBang] = useState(false);
+
     return (
         <>
             <Head>
@@ -13,10 +16,8 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div>
-                <Landing />
-                <div className={styles.home}>
-                    <p>ANOTHER BODY</p>
-                </div>
+                <Landing bbSetter={setBigBang} />
+                {bigBang && <HomePage />}
             </div>
         </>
     );

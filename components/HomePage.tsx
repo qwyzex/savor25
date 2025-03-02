@@ -1,0 +1,114 @@
+import BurgerMenu from "./BurgerMenu";
+import styles from "@/styles/Home.module.sass";
+
+const HomePage = () => {
+    return (
+        <div className={styles.home}>
+            <BurgerMenu />
+            <ul>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+                <li>asd</li>
+            </ul>
+        </div>
+    );
+};
+
+export default HomePage;
