@@ -1,3 +1,12 @@
+// mobile screen
+@media only screen and (max-width: 900px)
+    .container
+        footer
+            .orb
+                width: 110vw !important
+                height: 90vw !important
+    
+    
 @keyframes moveInCircle 
     0% 
         transform: rotate(0deg)
@@ -37,7 +46,29 @@
     background: linear-gradient(135deg, #ffb412, #f9336b)
     // background: linear-gradient(135deg, #be8106, #b03a16)
 
+    transition: all 3s ease
+
     position: relative
+
+    &.novaContainer
+        .darkBg
+            opacity: 1
+
+    .darkBg
+        opacity: 0
+
+        position: absolute
+        top: 0
+        left: 0
+
+        height: 100%
+        width: 100%
+        background: linear-gradient(135deg, #0a1e40, #020a1a)
+
+        transition: all 3s ease
+
+    .g1, .g2, .g3, .g4, .g5
+        will-change: transform, opacity
 
     .gradientBlobContainer
         filter: url(#goo) blur(90px)
@@ -57,6 +88,10 @@
 
         height: 100%
         width: 100%
+        transition: all 3s ease
+
+        &.novaGradientBlobContainer
+            opacity: 0
 
         svg
             // display: none
@@ -152,7 +187,6 @@
 
             opacity: 1
 
-
     .wrapper
         // display: none
         height: 100%
@@ -160,14 +194,24 @@
         padding: 3rem
 
         background-color: transparent
-        // background-image: radial-gradient(circle, rgba(51, 46, 146, 0.5) 6%, transparent 6%), radial-gradient(circle, rgba(45, 65, 153, 0.5) 6%, transparent 6%)
+        background-image: radial-gradient(circle, rgba(51, 46, 146, 0.2) 6%, transparent 6%), radial-gradient(circle, rgba(45, 65, 153, 0.2) 6%, transparent 6%)
         // background-image: radial-gradient(circle, rgba(255, 198, 118, 0.377) 6%, transparent 6%), radial-gradient(circle, rgba(250, 208, 131, 0.365) 6%, transparent 6%)
-        background-image: radial-gradient(circle, rgba(255, 198, 118, 0.177) 6%, transparent 6%), radial-gradient(circle, rgba(250, 208, 131, 0.165) 6%, transparent 6%)
+        // background-image: radial-gradient(circle, rgba(255, 198, 118, 0.177) 6%, transparent 6%), radial-gradient(circle, rgba(250, 208, 131, 0.165) 6%, transparent 6%)
         background-size: 3vh 3vh
         background-position: 0 0, 1.5vh 1.5vh
         // backdrop-filter: blur(4px)
+        transition: all 3s ease
 
         position: relative
+
+        &.novaWrapper
+            opacity: 0
+            
+            .title
+                transform: translateY(10rem) scale(0.5)
+
+            .wrapperMain
+                transform: translateY(5rem) translateX(-50%) scale(0.5)
 
         .title
             display: flex
@@ -177,6 +221,8 @@
 
             z-index: 3
 
+            transition: all 3s ease
+
             h1, p
                 font-size: 4rem
 
@@ -184,11 +230,74 @@
                 -webkit-background-clip: text
                 -webkit-text-fill-color: transparent
 
+        .wrapperMain
+            // background-color: red
+            // height: 100%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+            // animation: starButtonAnimation 4s ease
+            animation-delay: 1s
+
+            transition: all 3s ease
+
+            > button
+                display: grid
+                place-items: center
+
+                height: 3rem
+                width: 3rem
+
+                border-radius: 50%
+                border: 1px solid #ffffff3a
+
+                background-color: transparent
+
+                color: #f5f5f5
+                font-size: 1.5rem
+                font-weight: bold
+
+                transition: all 0.3s
+
+                &:hover
+                    background-color: #f5f5f517
+
+                    box-shadow: 0 0 40px #f86540
+
+                &:active
+                    background-color: #f5f5f549
+
+                > svg
+                    height: 55%
+                    width: 55%
+                    // mix-blend-mode: difference
+
+                    animation: starRotation 4s ease
+                    animation-delay: 1s
+
     footer
         position: absolute
         bottom: 0
-        left: 0
-        transform: translateY(60%) translateX( 50% )
+        left: 50%
+        transform: translateY(60%) translateX( -50% )
+
+        transition: all 6s ease
+
+        &.novaFooter
+            opacity: 0
+            bottom: 50%
+            transform: translateY(50%) translateX(-50%)
+
+            .orb
+                width: 130vw !important
+                height: 130vh !important
 
         .orb
             z-index: 3
@@ -201,36 +310,13 @@
             // background: url('/imgs/zenprof.png') no-repeat center / cover
             border-radius: 50%
             transform: scaleX(1.8)
+            transition: all 4s ease
             // animation: slide-orb 8s linear infinite
 
             filter: drop-shadow(0 -1rem 50px #d6bafe)
             animation: radiatingShadow 8s infinite ease-in-out
 
             box-shadow: inset 0 0 3vh #9d56ff, inset 0 0 5vh #c296ff, inset 0 -75px 6vh #d8cbf3
-
-            // .reflection
-            //     position: absolute
-            //     top: 15px
-            //     left: 50%
-
-            //     transform: translateX(-50%)
-            //     width: 50%
-            //     height: 30%
-            //     border-radius: 50%
-            //     box-shadow: inset 0 10px 30px #ffffff, inset -10px 20px rgba(46, 196, 182, 1)
-            //     mix-blend-mode: soft-light
-            
-            // .innerGlow 
-            //     position: absolute
-            //     top: -2.5%
-            //     left: 50%
-            //     transform: translateX(-50%)
-            //     width: 15%
-            //     height: 5%
-            //     border-radius: 50%
-            //     background: #531effc6
-            //     box-shadow: 0 0 10px #531effc6, 0 0 20px #531effc6, 0 0 30px #531effc6, 0 0 40px #531effc6, 0 0 50px #531effc6
-            //     filter: blur(60px)
 
             .orbGradientBlob
                 filter: url(#igoo) blur(40px)
@@ -250,72 +336,6 @@
 
                 height: 100%
                 width: 100%
-
-                // Grain texture overlay
-                // &::before
-                //     content: ""
-                //     position: absolute
-                //     width: 100%
-                //     height: 100%
-                //     top: 0
-                //     left: 0
-                //     background: url("/imgs/grain_bw.jpg")
-                //     opacity: 0.3
-                //     mix-blend-mode: hard-light
-                //     pointer-events: none
-
-                // &::before
-                //     content: ""
-                //     position: absolute
-                //     width: 100%
-                //     height: 100%
-                //     top: 0
-                //     left: 0
-                //     background: rgba(0, 0, 0, 0.1)
-                //     filter: url(#grain)
-                //     mix-blend-mode: overlay
-                //     pointer-events: none
-
-                // &::before
-                //     content: ""
-                //     position: absolute
-                //     width: 100%
-                //     height: 100%
-                //     top: 0
-                //     left: 0
-                //     background: url("data:image/svg+xml,\
-                //         <svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'>\
-                //             <filter id='noise'>\
-                //                 <feTurbulence type='fractalNoise' baseFrequency='5' numOctaves='3' stitchTiles='stitch'/>\
-                //                 <feColorMatrix type='saturate' values='0'/>\
-                //             </filter>\
-                //             <rect width='100%' height='100%' filter='url(#noise)' opacity='0.3'/>\
-                //         </svg>")
-                //     mix-blend-mode: hard-light
-                //     pointer-events: none
-
-                // &::before 
-                //     z-index: 3
-                //     content: ""
-                //     position: absolute
-                //     width: 100%
-                //     height: 100%
-                //     top: 0
-                //     left: 0
-                //     background: url("/svgs/noise.svg")
-                //     mix-blend-mode: soft-light
-                //     pointer-events: none
-
-                    // content: ""
-                    // position: absolute
-                    // width: 100%
-                    // height: 100%
-                    // top: 0
-                    // left: 0
-                    // background: rgba(0, 0, 0, 0.2)
-                    // // filter: contrast(10000%) brightness(10000%)
-                    // mix-blend-mode: overlay
-                    // pointer-events: none
 
                 svg
                     // display: none
@@ -428,3 +448,17 @@
     background-position: 0 0
   to
     background-position: -250vh 0 // Moves left, adjust if needed
+
+// ------------
+@keyframes starButtonAnimation
+    0%
+        top: 100%
+    100%
+        top: 50%
+
+@keyframes starRotation
+    0%
+        transform: rotate(-720deg)
+    100%
+        transform: rotate(0)
+        
