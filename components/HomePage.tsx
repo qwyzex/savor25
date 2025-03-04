@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.sass";
 
 const HomePage = () => {
     return (
-        <div className={styles.home}>
+        <div className={`mainScene  ${styles.home}`}>
             <BurgerMenu />
             <ul>
                 <li>asd</li>
