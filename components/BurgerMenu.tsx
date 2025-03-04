@@ -1,9 +1,7 @@
 import styles from "@/styles/Burger.module.sass";
 import { useRef, useState } from "react";
-import Box2 from "./boxes/2";
-import Box3 from "./boxes/3";
-import Box4 from "./boxes/4";
-import Box1 from "./boxes/1";
+import Head from "next/head";
+import Link from "next/link";
 
 const BurgerMenu = () => {
     const [openBurger, setOpenBurger] = useState<number>(0);
@@ -63,40 +61,61 @@ const BurgerMenu = () => {
             // Delay hiding the menu after the animation
             setTimeout(() => {
                 setOpenBurger(0);
-            }, 300); // Match animation duration (0.3s)
+            }, 600); // Match animation duration (0.3s)
         }
     };
 
     return (
-        <div className={styles.container}>
-            <header className={openBurger == 1 ? styles.open : ""}>
-                <section
-                    ref={menuRef}
-                    className={`${styles.theMenu} ${
-                        openBurger == 1 ? styles.opening : ""
-                    } ${openBurger == 2 ? styles.closing : ""}`}
-                >
-                    <Box1>
+        <>
+            <Head>
+                <link rel="preload" href="/svgs/Home.svg" as="image" />
+                <link rel="preload" href="/svgs/Branches.svg" as="image" />
+                <link rel="preload" href="/svgs/Booklet.svg" as="image" />
+                <link rel="preload" href="/svgs/Us.svg" as="image" />
+            </Head>
+            <div className={styles.container}>
+                <header className={openBurger == 1 ? styles.open : ""}>
+                    <section
+                        ref={menuRef}
+                        className={`${styles.theMenu} ${
+                            openBurger == 1 ? styles.opening : ""
+                        } ${openBurger == 2 ? styles.closing : ""}`}
+                    >
+                        {/* <Box1>
                         <a href="#">HOME</a>
-                    </Box1>
-                    <Box2>
+                        </Box1>
+                        <Box2>
                         <a href="#">BRANCHES</a>
-                    </Box2>
-                    <Box3>
+                        </Box2>
+                        <Box3>
                         <a href="#">BOOKLET</a>
                     </Box3>
                     <Box4>
                         <a href="#">WHAT OF US</a>
-                    </Box4>
-                </section>
-                <h1>Homepage</h1>
-                <button onClick={handleBurger}>
-                    <div>
-                        <GradientMenu />
-                    </div>
-                </button>
-            </header>
-        </div>
+                    </Box4> */}
+                        <div>
+                            <Link href="/"></Link>
+                        </div>
+                        <div>
+                            <Link href="/pendaftaran"></Link>
+                        </div>
+                        <div>
+                            <Link href="/juknis"></Link>
+                        </div>
+                        <div>
+                            <Link href="/us"></Link>
+                        </div>
+                    </section>
+                    <h1>SAVOR 25</h1>
+                    <button onClick={handleBurger}>
+                        <div>
+                            <GradientMenu />
+                        </div>
+                    </button>
+                    <h1>Homepage</h1>
+                </header>
+            </div>
+        </>
     );
 };
 
