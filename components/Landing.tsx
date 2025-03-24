@@ -13,7 +13,7 @@ const Landing = ({ bbSetter }: LandingProps) => {
 
     const [isNova, setIsNova] = useState(false);
     const [superNova, setSuperNova] = useState(false);
-    const [hideOrb, setHideOrb] = useState(false);
+    // const [hideOrb, setHideOrb] = useState(false);
     const orbRef = useRef<HTMLDivElement>(null);
 
     // Handle the nova animation
@@ -21,9 +21,9 @@ const Landing = ({ bbSetter }: LandingProps) => {
         setIsNova(true);
         setTimeout(() => {
             setSuperNova(true);
-        }, 3000);
+        }, 4000);
         setTimeout(() => {
-            setHideOrb(true);
+            // setHideOrb(true);
             bbSetter(true);
         }, 6000);
     };
@@ -97,6 +97,17 @@ const Landing = ({ bbSetter }: LandingProps) => {
                         <div className={styles.g5}></div>
                     </div>
                 )}
+                {!superNova && (
+                    <>
+                        {isNova && (
+                            <>
+                                <div className={`${styles.half} ${styles.h2}`}></div>
+                                <div className={`${styles.half} ${styles.h1}`}></div>
+                            </>
+                        )}
+                        <div className={`${styles.half} ${styles.h0}`}></div>
+                    </>
+                )}
                 <div
                     className={`${styles.wrapper} ${isNova ? styles.novaWrapper : ""} ${
                         superNova ? styles.superWrapper : ""
@@ -105,8 +116,14 @@ const Landing = ({ bbSetter }: LandingProps) => {
                     {!superNova && (
                         <>
                             <div className={styles.title}>
-                                <h1>SAVOR</h1>
-                                <p>2025</p>
+                                <h1>
+                                    <p>S</p>
+                                    <p>A</p>
+                                    <p>V</p>
+                                    <p>O</p>
+                                    <p>R</p>
+                                </h1>
+                                {/* <p>2025</p> */}
                             </div>
                             <div className={styles.wrapperMain}>
                                 <button onClick={handleNova}>
@@ -115,37 +132,6 @@ const Landing = ({ bbSetter }: LandingProps) => {
                             </div>
                         </>
                     )}
-                    {!hideOrb && (
-                        <footer className={`${isNova ? styles.novaFooter : ""}`}>
-                            <div
-                                ref={orbRef}
-                                className={`${styles.orb} ${
-                                    superNova ? styles.performantOrb : ""
-                                }`}
-                            >
-                                <div className={styles.orbGradientBlob}>
-                                    <svg xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <filter id="igoo">
-                                                <feGaussianBlur
-                                                    in="SourceGraphic"
-                                                    stdDeviation="3"
-                                                    result="blur"
-                                                />
-                                                <feBlend in="SourceGraphic" in2="igoo" />
-                                            </filter>
-                                        </defs>
-                                    </svg>
-                                    <div className={styles.g1}></div>
-                                    <div className={styles.g2}></div>
-                                    <div className={styles.g3}></div>
-                                    {/* <div className={styles.g4}></div>
-                                    <div className={styles.g5}></div> */}
-                                </div>
-                                <div className={styles.highlight}></div>
-                            </div>
-                        </footer>
-                    )}
                 </div>
             </main>
         </>
@@ -153,3 +139,35 @@ const Landing = ({ bbSetter }: LandingProps) => {
 };
 
 export default Landing;
+
+// {!hideOrb && (
+//     <footer className={`${isNova ? styles.novaFooter : ""}`}>
+//         <div
+//             ref={orbRef}
+//             className={`${styles.orb} ${
+//                 superNova ? styles.performantOrb : ""
+//             }`}
+//         >
+//             <div className={styles.orbGradientBlob}>
+//                 <svg xmlns="http://www.w3.org/2000/svg">
+//                     <defs>
+//                         <filter id="igoo">
+//                             <feGaussianBlur
+//                                 in="SourceGraphic"
+//                                 stdDeviation="3"
+//                                 result="blur"
+//                             />
+//                             <feBlend in="SourceGraphic" in2="igoo" />
+//                         </filter>
+//                     </defs>
+//                 </svg>
+//                 <div className={styles.g1}></div>
+//                 <div className={styles.g2}></div>
+//                 <div className={styles.g3}></div>
+//                 {/* <div className={styles.g4}></div>
+//                 <div className={styles.g5}></div> */}
+//             </div>
+//             <div className={styles.highlight}></div>
+//         </div>
+//     </footer>
+// )}
