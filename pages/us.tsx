@@ -1,18 +1,18 @@
 import BurgerMenu from "@/components/BurgerMenu";
-import styles from "@/styles/Guide.module.sass";
+import styles from "@/styles/Us.module.sass";
 import Head from "next/head";
 
-const GuidePage = () => {
+const UsPage = () => {
     return (
         <>
             <Head>
-                <title>Juknis SAVOR 25</title>
+                <title>Tentang SAVOR 25</title>
             </Head>
-            <div className={`mainScene  ${styles.Guide}`}>
+            <div className={`mainScene  ${styles.Us}`}>
                 <BurgerMenu />
             </div>
         </>
     );
 };
 
-export default GuidePage;
+export default UsPage;
