@@ -104,34 +104,36 @@
 
 @keyframes halfAnima0
     0%
-        right: -55.3%
+        transform: translateX(0)
         opacity: 1
     100%
-        right: -205.3%
+        transform: translateX(550%)
         opacity: 1
 
 @keyframes halfAnima1
     0%
-        right: -55.3%
+        transform: translateX(0)
         opacity: 1
     100%
-        right: 190.3%
+        transform: translateX(-235%)
         opacity: 1
 
 @keyframes halfAnima2
     0%
-        right: -55.3%
+        transform: translateX(0)
         opacity: 1
     100%
-        right: 250.3%
+        transform: translateX(-395%)
         opacity: 1
         
 @keyframes blindingLights
     0%
         // filter: saturate(0) brightness(2000%)
         filter: saturate(100%) brightness(100%)
-    50%
+    15%
         filter: saturate(0) brightness(100%)
+    50%
+        filter: saturate(5%) brightness(100%)
     100%
         filter: saturate(100%) brightness(100%)
         
@@ -148,45 +150,38 @@
 
     justify-content: space-between
     align-items: center
+    opacity: 1
 
-    height: 100vh
+    font-family: "Nova"
+
+    // flex: 1
+    height: 100%
+    // height: 100vh
     overflow: hidden
 
     // background: linear-gradient(135deg, #102b5a, #06183c)
     // background: linear-gradient(135deg, #0a1e40, #020a1a)
     background: linear-gradient(135deg, #ffb412, #f9336b)
 
-    transition: all 3s ease
+    transition: opacity 2s ease
+    transition-delay: 2s
 
     // filter: saturate(0) brightness(10000%)
 
     position: absolute
     width: 100%
-    z-index: -1
+    z-index: 1
 
-    &.superContainer
-        .darkBg
-            opacity: 1
-
-    .darkBg
-        opacity: 0
-
-        position: absolute
-        top: 0
-        left: 0
-
-        height: 100%
-        width: 100%
-        background: linear-gradient(135deg, #09092e, #1e0025)
-
-        transition: opacity 3s ease
-
+    &.preNovaContainer
+        animation: blindingLights 3s ease-out
+    
     .g1, .g2, .g3, .g4, .g5
         will-change: transform, opacity
 
     .gradientBlobContainer
         filter: url(#goo) blur(40px)
         mix-blend-mode: overlay
+        // blend
         // filter: url(#goo) blur(40px) contrast(145%) brightness(650%)
 
         width: 100%
@@ -203,7 +198,7 @@
         height: 100%
         width: 100%
 
-        transition: all 3s ease
+        transition: all 1s ease
 
         &.novaGradientBlobContainer
             opacity: 0
@@ -297,45 +292,46 @@
             opacity: 1
 
     &.novaContainer
+        opacity: 0
         // animation: blindingLights 2s ease
 
         .half
             &.h0
-                animation: halfAnima0 3s ease-in-out
+                animation: halfAnima0 4s ease-in-out
                 animation-delay: 0.3s
-                opacity: 0
+                // opacity: 0
             &.h1
-                animation: halfAnima1 3s ease-in-out
+                animation: halfAnima1 4s ease-in-out
                 animation-delay: 0.9s
-                opacity: 0
+                // opacity: 0
             &.h2
-                animation: halfAnima2 3s ease-in-out
+                animation: halfAnima2 4s ease-in-out
                 animation-delay: 0.6s
-                opacity: 0
+                // opacity: 0
 
 
     .half
         width: 100%
-        height: 200%
-        z-index: -1
+        height: 300%
         opacity: 1
 
-        rotate: 17deg
+        transform: translateX(0)
+
+        rotate: 17.25deg
         
         background: linear-gradient(135deg, #171738, #1e0025)
 
         position: absolute
         top: -50%
-        right: -55.3%
 
-        transition: all 3s ease
+        transition: all 4s ease
 
         &.h1
-            transition: all 3s ease
+            transition: all 4s ease
             background: linear-gradient(195deg, #0a2c58, #430855)
 
         &.h2
-            transition: all 3s ease
+            transition: all 4s ease
             background: linear-gradient(195deg, #490420, #570457)
 
     .wrapper
@@ -351,84 +347,137 @@
         background-position: 0 0, 1.5vh 1.5vh
         // backdrop-filter: blur(4px)
 
-        transition: all 3s ease
+        // transition: all 3s ease
+        transition-property: opacity, background-position
+        transition-duration: 3s, 2s
+        transition-delay: 0s, 1s
+        transition-timing-function: ease
+
         position: relative
 
         display: flex
         justify-content: center
         align-items: center
 
-        &.novaWrapper
+        // z-index: 2
+
+        &.preWrapper
             .title
-                h1
-                    p
-                        &:nth-child(1)
-                            opacity: 0
-                            transform: translateY(-150%)
-                            transition-delay: calc( 1s + 1s )
-                        &:nth-child(2)
-                            opacity: 0
-                            transform: translateY(-150%)
-                            transition-delay: calc( 1s + 0.6s )
-                        &:nth-child(3)
-                            opacity: 0
-                            transform: translateY(-150%)
-                            transition-delay: calc( 1s + 0.2s )
-                        &:nth-child(4)
-                            opacity: 0
-                            transform: translateY(-150%)
-                            transition-delay: calc( 1s + 0.4s )
-                        &:nth-child(5)
-                            opacity: 0
-                            transform: translateY(-150%)
-                            transition-delay: calc( 1s + 0.8s )
-                    
+                span
+                    margin-top: 8rem
+
+        &.novaWrapper
+            background-position: -7.5vh -7.5vh, 15vh 15vh
+            // background-image: radial-gradient(circle, rgba(255, 198, 118, 0) 6%, transparent 6%), radial-gradient(circle, rgba(250, 208, 131, 0) 6%, transparent 6%)
+
+            .title
+                span
+                    transform: translateY(-170%)
+                    opacity: 0
 
             .wrapperMain
                 // transform: translateY(5rem) translateX(-50%) scale(0.5)
 
             &.superWrapper
-                background-image: radial-gradient(circle, rgba(51, 46, 146, 0.1) 6%, transparent 6%), radial-gradient(circle, rgba(45, 65, 153, 0.1) 6%, transparent 6%)
-
+                opacity: 0
+                // background-image: radial-gradient(circle, rgba(51, 46, 146, 0.1) 6%, transparent 6%), radial-gradient(circle, rgba(45, 65, 153, 0.1) 6%, transparent 6%)
+               
         .title
+            height: 100%
+            width: 100%
+
             display: flex
             flex-direction: column
             justify-content: center
             align-items: center
 
-            user-select: none
-
-
-            z-index: 3
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
 
             transition: all 3s ease
             mix-blend-mode: exclusion
             // filter: brightness(550%) contrast(1000%)
 
-            h1
-                font-size: 25vw
-                // font-size: 4rem
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translate(-50%, -50%)
 
-                display: flex
-                flex-direction: row
-                // gap: -10rem
+            span
+                // font-size: 25vw
+                // font-size: 4rem
+                transform: translateY(0)
+
+                display: grid
+                place-items: center
+
+                overflow: visible
 
                 color: #ffffff
-                // background: linear-gradient(to bottom, white 50%, rgb(244, 221, 174) 75%, rgb(148, 81, 0) 100%)
-                // -webkit-background-clip: text
-                // -webkit-text-fill-color: transparent
+
+                margin-top: 0
+
+                // transition: all 1.5s ease-in
+                transition-property: margin-top, opacity, transform
+                transition-duration: 2.1s, 1.2s, 1.2s
+                transition-timing-function: ease-in-out, ease, ease-in
+                opacity: 1
+
+                > button
+                    // height: 100%
+                    
+                    aspect-ratio: 1
+                    width: 80%
+
+                    display: grid
+                    place-items: center
+                    // margin-bottom: 8rem
+
+                    // height: 3rem
+                    // width: 3rem
+
+                    border-radius: 50%
+                    border: 1px solid #ffffff88
+                    cursor: pointer
+
+                    background-color: transparent
+
+                    color: #f5f5f5
+                    font-size: 1.5rem
+                    font-weight: bold
+
+                    transition: all 0.3s
+                    transition-delay: 0
+                    animation-delay: 0
+                    
+                    box-shadow: 0 0 40px #f8654000
+
+                    &:hover
+                        background-color: #f5f5f517
+
+                        box-shadow: 0 0 40px #f86540
+
+                    &:active
+                        background-color: #f5f5f549
+
+                    > svg
+                        height: 55%
+                        width: 55%
+
+                        animation: starRotation 4s ease
+                        animation-delay: 1s
 
                 p
-                    font-size: 30rem
+                    // user-select: none
 
-                    transition: all 1.5s ease-in
-                    opacity: 1
-                    // filter: invert(100%)
-                    // mixble
+                &:nth-child(1)
+                    transition-delay: 0.9s, 2s, 2s
+                &:nth-child(2)
+                    transition-delay: 0.5s, 1.6s, 1.6s
+                &:nth-child(3)
+                    transition-delay: 0.1s, 1.2s, 1.2s
+                &:nth-child(4)
+                    transition-delay: 0.3s, 1.4s, 1.4s
+                &:nth-child(5)
+                    transition-delay: 0.7s, 1.8s, 1.8s
 
         .wrapperMain
             position: absolute
@@ -436,7 +485,7 @@
             left: 50%
             transform: translate(-50%, -50%)
 
-            display: flex
+            // display: flex
             flex-direction: column
             justify-content: center
             align-items: center
@@ -446,11 +495,12 @@
 
             transition: all 3s ease
 
+            z-index: 10
+
             > button
                 display: grid
                 place-items: center
                 // margin-bottom: 8rem
-                z-index: 10 !important
 
                 height: 3rem
                 width: 3rem
@@ -468,6 +518,8 @@
                 transition: all 0.3s
                 transition-delay: 0
                 animation-delay: 0
+                
+                box-shadow: 0 0 40px #f8654000
 
                 &:hover
                     background-color: #f5f5f517
@@ -484,165 +536,190 @@
                     animation: starRotation 4s ease
                     animation-delay: 1s
 
-        footer
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translateY(30%) translateX(-50%)
+        // footer
+        //     position: absolute
+        //     top: 50%
+        //     left: 50%
+        //     transform: translateY(30%) translateX(-50%)
 
-            &.novaFooter
-                animation: footerSuperNova 6s ease-in-out
+        //     &.novaFooter
+        //         animation: footerSuperNova 6s ease-in-out
 
-            .orb
-                z-index: 3
-                position: relative
-                overflow: hidden
+        //     .orb
+        //         z-index: 3
+        //         position: relative
+        //         overflow: hidden
 
-                // background-color: #5251c3
-                // background: linear-gradient(135deg, #9d56ff, #c296ff, #d8cbf3)
-                // background: linear-gradient(164deg,rgba(100, 20, 190, 1) 40%,#d164e7 85%,rgba(253, 52, 146, 0.9) 100%)
-                // background: radial-gradient(circle,rgba(100, 20, 190, 1) 30%,#d164e7 65%,rgba(253, 52, 146, 0.9) 100%)
-                background-color: hsla(296, 68%, 56%, 1);
-                background-image: radial-gradient(circle at 61% 22%, hsla(285, 99%, 79%, 1) 17%, transparent 73%), radial-gradient(circle at 69% 57%, hsla(304, 75%, 63%, 1) 17%, transparent 73%), radial-gradient(circle at 45% 5%, hsla(223, 60%, 72%, 1) 17%, transparent 73%), radial-gradient(circle at 6% 79%, hsla(285, 71%, 75%, 1) 17%, transparent 73%), radial-gradient(circle at 83% 100%, hsla(341, 83%, 60%, 1) 17%, transparent 73%);
-                background-blend-mode: normal, normal, normal, normal, normal
-                border-radius: 50%
+        //         // background-color: #5251c3
+        //         // background: linear-gradient(135deg, #9d56ff, #c296ff, #d8cbf3)
+        //         // background: linear-gradient(164deg,rgba(100, 20, 190, 1) 40%,#d164e7 85%,rgba(253, 52, 146, 0.9) 100%)
+        //         // background: radial-gradient(circle,rgba(100, 20, 190, 1) 30%,#d164e7 65%,rgba(253, 52, 146, 0.9) 100%)
+        //         background-color: hsla(296, 68%, 56%, 1)
+        //         background-image: radial-gradient(circle at 61% 22%, hsla(285, 99%, 79%, 1) 17%, transparent 73%), radial-gradient(circle at 69% 57%, hsla(304, 75%, 63%, 1) 17%, transparent 73%), radial-gradient(circle at 45% 5%, hsla(223, 60%, 72%, 1) 17%, transparent 73%), radial-gradient(circle at 6% 79%, hsla(285, 71%, 75%, 1) 17%, transparent 73%), radial-gradient(circle at 83% 100%, hsla(341, 83%, 60%, 1) 17%, transparent 73%)
+        //         background-blend-mode: normal, normal, normal, normal, normal
+        //         border-radius: 50%
 
-                // box-shadow: inset 0 0 5vh rgba(150, 50, 250, 0.8), inset 0 0 8vh rgba(200, 100, 255, 0.7), 0 0 10vh rgba(150, 50, 250, 1)
+        //         // box-shadow: inset 0 0 5vh rgba(150, 50, 250, 0.8), inset 0 0 8vh rgba(200, 100, 255, 0.7), 0 0 10vh rgba(150, 50, 250, 1)
 
-                // filter: drop-shadow(0 -1rem 50px #d6bafe)
-                filter: drop-shadow(0 0 10vh rgba(120, 20, 255, 1))
-                animation: radiatingShadow 5s infinite ease-in-out
+        //         // filter: drop-shadow(0 -1rem 50px #d6bafe)
+        //         filter: drop-shadow(0 0 10vh rgba(120, 20, 255, 1))
+        //         animation: radiatingShadow 5s infinite ease-in-out
 
-                // Add class for performant animation
-                &.performantOrb
-                    // Set transform-origin to ensure consistent scaling
-                    transform-origin: center center
-                    will-change: transform
-                    contain: layout paint style
+        //         // Add class for performant animation
+        //         &.performantOrb
+        //             // Set transform-origin to ensure consistent scaling
+        //             transform-origin: center center
+        //             will-change: transform
+        //             contain: layout paint style
 
-                .highlight
-                    position: absolute
-                    top: 0
-                    left: 0
+        //         .highlight
+        //             position: absolute
+        //             top: 0
+        //             left: 0
 
-                    height: 100%
-                    width: 100%
-                    // background-color: red
-                    border-radius: 50%
+        //             height: 100%
+        //             width: 100%
+        //             // background-color: red
+        //             border-radius: 50%
 
-                    box-shadow: inset 0 40px 14vh #620fd669, inset 0 0 7vh #ef78ff, inset 0 -75px 6vh #ffcad7
+        //             box-shadow: inset 0 40px 14vh #620fd669, inset 0 0 7vh #ef78ff, inset 0 -75px 6vh #ffcad7
 
-                .orbGradientBlob
-                    filter: url(#igoo) blur(40px)
-                    width: 100%
-                    height: 100%
+        //         .orbGradientBlob
+        //             filter: url(#igoo) blur(40px)
+        //             width: 100%
+        //             height: 100%
 
-                    background: url(https://grainy-gradients.vercel.app/noise.svg)
+        //             background: url(https://grainy-gradients.vercel.app/noise.svg)
 
-                    opacity: 0.8
+        //             opacity: 0.8
 
-                    position: absolute
-                    top: 0
-                    left: 0
+        //             position: absolute
+        //             top: 0
+        //             left: 0
 
-                    height: 100%
-                    width: 100%
+        //             height: 100%
+        //             width: 100%
 
-                    svg
-                        height: 100%
-                        width: 100%
+        //             svg
+        //                 height: 100%
+        //                 width: 100%
 
-                        position: absolute
-                        top: 0
-                        left: 0
+        //                 position: absolute
+        //                 top: 0
+        //                 left: 0
 
-                    .g1 
-                        position: absolute
-                        background: radial-gradient(circle at center, rgba(var(--orb-color1), 0.8) 0, rgba(var(--orb-color1), 0) 50%) no-repeat
-                        mix-blend-mode: var(--blending)
-                        width: calc(var(--circle-size) * 2)
+        //             .g1 
+        //                 position: absolute
+        //                 background: radial-gradient(circle at center, rgba(var(--orb-color1), 0.8) 0, rgba(var(--orb-color1), 0) 50%) no-repeat
+        //                 mix-blend-mode: var(--blending)
+        //                 width: calc(var(--circle-size) * 2)
 
-                        height: var(--circle-size)
+        //                 height: var(--circle-size)
 
-                        top: calc(50% - var(--circle-size) / 2)
+        //                 top: calc(50% - var(--circle-size) / 2)
 
-                        left: calc(50% - var(--circle-size) / 2)
-                        transform-origin: center center
+        //                 left: calc(50% - var(--circle-size) / 2)
+        //                 transform-origin: center center
 
-                        animation: moveVertical 6s ease infinite
-                        opacity: 1
-                    .g2 
-                        position: absolute
+        //                 animation: moveVertical 6s ease infinite
+        //                 opacity: 1
+        //             .g2 
+        //                 position: absolute
 
-                        background: radial-gradient(circle at center, rgba(var(--orb-color2), 0.8) 0, rgba(var(--orb-color2), 0) 50%) no-repeat
+        //                 background: radial-gradient(circle at center, rgba(var(--orb-color2), 0.8) 0, rgba(var(--orb-color2), 0) 50%) no-repeat
 
-                        mix-blend-mode: var(--blending)
-                        width: calc(var(--circle-size) * 2)
+        //                 mix-blend-mode: var(--blending)
+        //                 width: calc(var(--circle-size) * 2)
 
-                        height: var(--circle-size)
+        //                 height: var(--circle-size)
 
-                        top: calc(50% - var(--circle-size) / 2)
+        //                 top: calc(50% - var(--circle-size) / 2)
 
-                        left: calc(50% - var(--circle-size) / 2)
-                        transform-origin: calc(50% - 400px)
+        //                 left: calc(50% - var(--circle-size) / 2)
+        //                 transform-origin: calc(50% - 400px)
 
-                        animation: moveInCircle 4s reverse infinite
-                        opacity: 1
-                    .g3 
-                        position: absolute
+        //                 animation: moveInCircle 4s reverse infinite
+        //                 opacity: 1
+        //             .g3 
+        //                 position: absolute
 
-                        background: radial-gradient(circle at center, rgba(var(--orb-color3), 0.8) 0, rgba(var(--orb-color3), 0) 50%) no-repeat
+        //                 background: radial-gradient(circle at center, rgba(var(--orb-color3), 0.8) 0, rgba(var(--orb-color3), 0) 50%) no-repeat
 
-                        mix-blend-mode: var(--blending)
-                        width: calc(var(--circle-size) * 2)
+        //                 mix-blend-mode: var(--blending)
+        //                 width: calc(var(--circle-size) * 2)
 
-                        height: var(--circle-size)
+        //                 height: var(--circle-size)
 
-                        top: calc(50% - var(--circle-size) / 2 + 200px)
+        //                 top: calc(50% - var(--circle-size) / 2 + 200px)
 
-                        left: calc(50% - var(--circle-size) / 2 - 500px)
-                        transform-origin: calc(50% + 400px)
+        //                 left: calc(50% - var(--circle-size) / 2 - 500px)
+        //                 transform-origin: calc(50% + 400px)
 
-                        animation: moveInCircle 5s linear infinite
-                        opacity: 1
-                    .g4 
-                        position: absolute
+        //                 animation: moveInCircle 5s linear infinite
+        //                 opacity: 1
+        //             .g4 
+        //                 position: absolute
 
-                        background: radial-gradient(circle at center, rgba(var(--orb-color4), 0.8) 0, rgba(var(--orb-color4), 0) 50%) no-repeat
+        //                 background: radial-gradient(circle at center, rgba(var(--orb-color4), 0.8) 0, rgba(var(--orb-color4), 0) 50%) no-repeat
 
-                        mix-blend-mode: var(--blending)
-                        width: calc(var(--circle-size) * 3)
+        //                 mix-blend-mode: var(--blending)
+        //                 width: calc(var(--circle-size) * 3)
 
-                        height: var(--circle-size)
+        //                 height: var(--circle-size)
 
-                        top: calc(50% - var(--circle-size) / 2)
+        //                 top: calc(50% - var(--circle-size) / 2)
 
-                        left: calc(50% - var(--circle-size) / 2)
-                        transform-origin: calc(50% - 200px)
+        //                 left: calc(50% - var(--circle-size) / 2)
+        //                 transform-origin: calc(50% - 200px)
 
-                        animation: moveHorizontal 13s ease infinite
-                        opacity: 0.7
-                    .g5 
-                        position: absolute
+        //                 animation: moveHorizontal 13s ease infinite
+        //                 opacity: 0.7
+        //             .g5 
+        //                 position: absolute
 
-                        background: radial-gradient(circle at center, rgba(var(--orb-color5), 0.8) 0, rgba(var(--orb-color5), 0) 50%) no-repeat
+        //                 background: radial-gradient(circle at center, rgba(var(--orb-color5), 0.8) 0, rgba(var(--orb-color5), 0) 50%) no-repeat
 
-                        mix-blend-mode: var(--blending)
-                        width: calc(var(--circle-size) * 2)
+        //                 mix-blend-mode: var(--blending)
+        //                 width: calc(var(--circle-size) * 2)
 
-                        height: calc(var(--circle-size) * 2)
+        //                 height: calc(var(--circle-size) * 2)
 
-                        top: calc(50% - var(--circle-size))
+        //                 top: calc(50% - var(--circle-size))
 
-                        left: calc(50% - var(--circle-size))
-                        transform-origin: calc(50% - 800px) calc(50% + 200px)
+        //                 left: calc(50% - var(--circle-size))
+        //                 transform-origin: calc(50% - 800px) calc(50% + 200px)
 
-                        animation: moveInCircle 7s ease infinite
-                        opacity: 1
+        //                 animation: moveInCircle 7s ease infinite
+        //                 opacity: 1
 
-@media only screen and (max-width: 900px)
+// MOBILE
+@media only screen and (max-width: 768px)
     .container
+        .half
+            right: -7.6%
         .wrapper
+            .wrapperMain
+                > button
+                    display: none
+
+            .title
+                display: grid
+                grid-template-columns: repeat(2, 1fr) 
+                grid-template-rows: repeat(3, 1fr)
+                // gap: 0.1em
+                text-align: center
+
+                span
+                    position: relative
+
+                    p
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+
+                        font-size: 21rem
+
             footer
                 .orb
                     width: 60vh
@@ -656,9 +733,22 @@
                         // Use the transform-based animation instead of changing width/height
                         animation: orbSuperNovaMobile 6s ease, radiatingShadow 5s infinite ease-in-out
 
-@media only screen and (min-width: 900px)
+// DESKTOP
+@media only screen and (min-width: 768px)
     .container
+        .half
+            right: -47.76%
         .wrapper
+            .title
+                display: flex
+                flex-direction: row
+
+                span
+                    > button
+                        display: none
+                    p
+                        // font-size: calc( 50rem - 50vw )
+                        font-size: clamp( 10rem, 30vw, 30rem )
             footer
                 .orb
                     width: 50vw

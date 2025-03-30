@@ -1,6 +1,6 @@
 // import { DataContext } from "@/context/DataContext";
 import styles from "@/styles/Landing.module.sass";
-import { useState, useRef, useEffect, Dispatch, SetStateAction } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 // import { useContext } from "react";
 // import Image from "next/image";
 
@@ -11,33 +11,40 @@ interface LandingProps {
 const Landing = ({ bbSetter }: LandingProps) => {
     // const { data } = useContext(DataContext);
 
+    const [preNova, setPreNova] = useState(false);
     const [isNova, setIsNova] = useState(false);
     const [superNova, setSuperNova] = useState(false);
+    const [light, letThereBe] = useState(false);
     // const [hideOrb, setHideOrb] = useState(false);
-    const orbRef = useRef<HTMLDivElement>(null);
+    // const orbRef = useRef<HTMLDivElement>(null);
 
     // Handle the nova animation
     const handleNova = () => {
-        setIsNova(true);
+        setPreNova(true);
         setTimeout(() => {
-            setSuperNova(true);
+            setIsNova(true);
+        }, 1000);
+        setTimeout(() => {
+            bbSetter(true);
         }, 4000);
         setTimeout(() => {
-            // setHideOrb(true);
-            bbSetter(true);
+            setSuperNova(true);
+        }, 5000);
+        setTimeout(() => {
+            letThereBe(true);
         }, 6000);
     };
 
-    // Apply transform instead of width/height for performance
-    useEffect(() => {
-        if (!orbRef.current) return;
+    // // Apply transform instead of width/height for performance
+    // useEffect(() => {
+    //     if (!orbRef.current) return;
 
-        // Using transform for animations is more performant than changing width/height
-        if (superNova) {
-            // Add the will-change property before animation starts
-            // orbRef.current.style.willChange = "transform";
-        }
-    }, [superNova]);
+    //     // Using transform for animations is more performant than changing width/height
+    //     if (superNova) {
+    //         // Add the will-change property before animation starts
+    //         // orbRef.current.style.willChange = "transform";
+    //     }
+    // }, [superNova]);
 
     const StarSVG = () => {
         return (
@@ -60,80 +67,110 @@ const Landing = ({ bbSetter }: LandingProps) => {
 
     return (
         <>
-            <main
-                className={`${styles.container} ${isNova ? styles.novaContainer : ""} ${
-                    superNova ? styles.superContainer : ""
-                }`}
-            >
-                <div className={styles.darkBg}></div>
-                {!superNova && (
-                    <div
-                        className={`${styles.gradientBlobContainer} ${
-                            isNova ? styles.novaGradientBlobContainer : ""
-                        }`}
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <filter id="goo">
-                                    <feGaussianBlur
-                                        in="SourceGraphic"
-                                        stdDeviation="4"
-                                        result="blur"
-                                    />
-                                    <feColorMatrix
-                                        in="blur"
-                                        mode="matrix"
-                                        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
-                                        result="goo"
-                                    />
-                                    <feBlend in="SourceGraphic" in2="goo" />
-                                </filter>
-                            </defs>
-                        </svg>
-                        <div className={styles.g1}></div>
-                        <div className={styles.g2}></div>
-                        <div className={styles.g3}></div>
-                        <div className={styles.g4}></div>
-                        <div className={styles.g5}></div>
-                    </div>
-                )}
-                {!superNova && (
-                    <>
-                        {isNova && (
-                            <>
-                                <div className={`${styles.half} ${styles.h2}`}></div>
-                                <div className={`${styles.half} ${styles.h1}`}></div>
-                            </>
-                        )}
-                        <div className={`${styles.half} ${styles.h0}`}></div>
-                    </>
-                )}
-                <div
-                    className={`${styles.wrapper} ${isNova ? styles.novaWrapper : ""} ${
-                        superNova ? styles.superWrapper : ""
+            {!light && (
+                <main
+                    className={`${styles.container} ${
+                        preNova ? styles.preNovaContainer : ""
+                    } ${isNova ? styles.novaContainer : ""} ${
+                        superNova ? styles.superContainer : ""
                     }`}
                 >
+                    {/* {light
+                    ? "And God Said..."
+                    : superNova
+                    ? "Super Nova"
+                    : isNova
+                    ? "Nova"
+                    : preNova
+                    ? "Pre Nova"
+                    : "Idle"} */}
                     {!superNova && (
                         <>
-                            <div className={styles.title}>
-                                <h1>
-                                    <p>S</p>
-                                    <p>A</p>
-                                    <p>V</p>
-                                    <p>O</p>
-                                    <p>R</p>
-                                </h1>
-                                {/* <p>2025</p> */}
-                            </div>
-                            <div className={styles.wrapperMain}>
-                                <button onClick={handleNova}>
-                                    <StarSVG />
-                                </button>
+                            {isNova && (
+                                <>
+                                    <div className={`${styles.half} ${styles.h2}`}></div>
+                                    <div className={`${styles.half} ${styles.h1}`}></div>
+                                </>
+                            )}
+                            <div className={`${styles.half} ${styles.h0}`}></div>
+                        </>
+                    )}
+                    {!isNova && (
+                        <div
+                            className={`${styles.gradientBlobContainer} ${
+                                preNova ? styles.novaGradientBlobContainer : ""
+                            }`}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="goo">
+                                        <feGaussianBlur
+                                            in="SourceGraphic"
+                                            stdDeviation="4"
+                                            result="blur"
+                                        />
+                                        <feColorMatrix
+                                            in="blur"
+                                            mode="matrix"
+                                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                                            result="goo"
+                                        />
+                                        <feBlend in="SourceGraphic" in2="goo" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                            <div className={styles.g1}></div>
+                            <div className={styles.g2}></div>
+                            <div className={styles.g3}></div>
+                            <div className={styles.g4}></div>
+                            <div className={styles.g5}></div>
+                        </div>
+                    )}
+                    {!light && (
+                        <>
+                            <div
+                                className={`${styles.wrapper} ${
+                                    preNova ? styles.preWrapper : ""
+                                } ${isNova ? styles.novaWrapper : ""} ${
+                                    superNova ? styles.superWrapper : ""
+                                }`}
+                            >
+                                {!superNova && (
+                                    <>
+                                        <div className={styles.wrapperMain}>
+                                            <button onClick={handleNova}>
+                                                <StarSVG />
+                                            </button>
+                                        </div>
+                                        <div className={`noSelection ${styles.title}`}>
+                                            <span>
+                                                <p>S</p>
+                                            </span>
+                                            <span>
+                                                <p>A</p>
+                                            </span>
+                                            <span>
+                                                <p>V</p>
+                                            </span>
+                                            <span>
+                                                <p>O</p>
+                                            </span>
+                                            <span>
+                                                <p>R</p>
+                                            </span>
+                                            <span>
+                                                <button onClick={handleNova}>
+                                                    <StarSVG />
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </>
+                                )}
                             </div>
                         </>
                     )}
-                </div>
-            </main>
+                </main>
+            )}
         </>
     );
 };

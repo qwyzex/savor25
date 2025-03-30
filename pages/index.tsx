@@ -3,6 +3,7 @@ import Landing from "@/components/Landing";
 import Head from "next/head";
 import { useState } from "react";
 // import Image from "next/image";
+import styles from "@/styles/Roof.module.sass";
 
 export default function Home() {
     const [bigBang, setBigBang] = useState(false);
@@ -15,9 +16,10 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div>
-                <Landing bbSetter={setBigBang} />
+            <div className={styles.roof}>
+                {/* <h1>{bigBang ? " YES" : "NO"}</h1> */}
                 {bigBang && <HomePage />}
+                <Landing bbSetter={setBigBang} />
             </div>
         </>
     );
