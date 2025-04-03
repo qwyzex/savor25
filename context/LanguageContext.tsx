@@ -2,10 +2,7 @@ import { ReactNode, createContext, useState, useEffect, useContext } from "react
 
 // Define the shape of our language data
 interface LanguageData {
-    HOME_DESCRIPTION: string;
-    HOME_TITLE_1: string;
-    PAGE2_TITLE: string;
-    [key: string]: string; // Allow for additional keys
+    [key: string]: string;
 }
 
 // Define available languages
@@ -15,13 +12,23 @@ type Language = "en" | "id";
 const languageLibrary = {
     en: {
         HOME_DESCRIPTION: "Welcome to our competition platform",
-        HOME_TITLE_1: "Join the Fun",
-        PAGE2_TITLE: "Competition Details",
+        HOME_CHECK_IT_OUT_BUTTON: "CHECK IT OUT!",
+        HOME_WATCH_TRAILER: "Watch The Trailer!",
+        HOME_LIST_OF_COMPETITIONS: "List of Competitions",
+        HOME_KEY_DATES: "Key Dates & Highlights",
+        HOME_FAQ: "Frequently Asked Questions",
+        HOME_SPONSORS: "Sponsored and Supported By",
+        HOME_MORE_INFO: "More Information",
     },
     id: {
         HOME_DESCRIPTION: "Selamat datang di platform kompetisi kami",
-        HOME_TITLE_1: "Bergabunglah dalam Keseruan",
-        PAGE2_TITLE: "Detail Kompetisi",
+        HOME_CHECK_IT_OUT_BUTTON: "LIHAT SEKARANG!",
+        HOME_WATCH_TRAILER: "Tonton Trailer!",
+        HOME_LIST_OF_COMPETITIONS: "Daftar Kompetisi",
+        HOME_KEY_DATES: "Tanggal Penting",
+        HOME_FAQ: "Pertanyaan yang Sering Diajukan",
+        HOME_SPONSORS: "Didukung dan Disponsori Oleh",
+        HOME_MORE_INFO: "Informasi Lebih Lanjut",
     },
 };
 

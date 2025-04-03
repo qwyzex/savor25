@@ -2,8 +2,8 @@ import GenPage from "./GenPage";
 import styles from "@/styles/Home.module.sass";
 import Hr from "./Hr";
 import Button from "./Button";
-import Arrow from "./Arrow";
 import { useLanguage } from "@/context/LanguageContext";
+import ListBox from "./ListBox";
 
 const HomePage = () => {
     const { language, translations, setLanguage } = useLanguage();
@@ -18,71 +18,64 @@ const HomePage = () => {
                     <Hr />
                     <p>{translations.HOME_DESCRIPTION}</p>
                     <Button hyperlink href="#trailer" arrow>
-                        CHECK IT OUT!
+                        {translations.HOME_CHECK_IT_OUT_BUTTON}
                     </Button>
                     <button onClick={() => setLanguage("en")}>English</button>
                     <button onClick={() => setLanguage("id")}>Indonesian</button>
                 </section>
                 <section id={"trailer"}>
                     {/* TRAILER */}
-                    <h1>Watch The Trailer!</h1>
+                    <h1>{translations.HOME_WATCH_TRAILER}</h1>
                     <Hr />
                     <iframe
-                        width={640}
-                        height={360}
                         src="https://www.youtube.com/embed/19g66ezsKAg"
                         allowFullScreen
                     />
                 </section>
                 <section id={"competitions"}>
                     {/* LIST OF COMPETITIONS */}
-                    <h1>List of Competitions</h1>
+                    <h1>{translations.HOME_LIST_OF_COMPETITIONS}</h1>
                     <Hr />
                     <ListBox />
                 </section>
                 <section id={"dates"}>
                     {/* HIGHLIGHTS */}
-                    <h1>Key Dates & Highlights</h1>
+                    <h1>{translations.HOME_KEY_DATES}</h1>
                     <Hr />
                 </section>
                 <section id={"faq"}>
                     {/* FAQ */}
-                    <h1>Frequently Asked Questions</h1>
+                    <h1>{translations.HOME_FAQ}</h1>
                     <Hr />
                 </section>
                 <section id={"sponsors"}>
                     {/* CALLING OUT SPONSORS */}
-                    <h1>Sponsored and Supported By</h1>
+                    <h1>{translations.HOME_SPONSORS}</h1>
                     <Hr />
+                    <section className={styles.sponsorsList}>
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" />
+                    </section>
                 </section>
                 <section id={"additional"}>
                     {/* FOOTER */}
-                    <h1>More Information</h1>
+                    <h1>{translations.HOME_MORE_INFO}</h1>
                     <Hr />
+                    <Button>INSTAGRAM</Button>
+                    <Button>TIKTOK</Button>
+                    <Button>CONTACT PERSON</Button>
                 </section>
             </main>
         </GenPage>
     );
 };
-
-export function ListBox() {
-    return (
-        <div className={styles.listBox}>
-            <section className={styles.listBoxItem}>
-                <div>
-                    <h2>Basket 5v5</h2>
-                </div>
-                <div></div>
-                <div>SMP | Rp. 100.000</div>
-                <span className={styles.colorHighlight}></span>
-            </section>
-            <section className={styles.listBoxButton}>
-                <button>
-                    <Arrow />
-                </button>
-            </section>
-        </div>
-    );
-}
 
 export default HomePage;

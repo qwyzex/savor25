@@ -1,0 +1,108 @@
+.listBox
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+    // width: 15rem
+    max-width: 85vw
+    min-width: 15rem
+    width: 50rem
+
+    padding: 1rem 1.5rem
+
+    outline: 3px #ffffff00 dashed
+    outline-offset: 4px
+
+    // border-radius: 1rem 0 0 1rem
+
+    background-color: #9696962d
+    backdrop-filter: blur(4px)
+
+    cursor: pointer
+    transition: all 0.3s ease
+
+    position: relative
+
+    &:hover
+        outline: 3px #544c75 dashed
+        background-color: #ffffff2d
+        transform: translateY(-5px)
+
+        .colorHighlight
+            opacity: 1
+
+        .listBoxButton
+            > button
+                @media screen and ( max-width: 900px ) // MOBILE
+                    transform: translateX(45%) translateY(-45%)
+
+                @media screen and ( min-width: 900px ) // DESKTOP
+                    transform: translateX(85%) translateY(-85%)
+                    
+                background-color: #ff003c
+                outline: 2px #ffffff solid
+
+                > svg
+                    filter: invert(100%)
+
+    &:active
+        transform: translateY(-2px)
+
+    .listBoxItem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+
+        > div
+            &:nth-child(2)
+                // background-color: white
+                // background: 
+                height: 2px
+                width: 100%
+        
+            &:nth-child(3)
+                color: #dbdbdb
+            
+
+    .listBoxButton
+        > button
+            background: #ffffff
+            border: none
+
+            width: 2.5rem
+            height: 2.5rem
+
+            outline: 2px #ffffff00 solid
+            outline-offset: 4px
+
+            rotate: 45deg
+            transition: all 0.3s ease
+
+            > svg
+                width: inherit
+                height: inherit
+                aspect-ratio: 1
+                transition: all 0.3s ease
+
+    .colorHighlight
+        position: absolute
+        top: 0
+        left: 0
+        width: 75%
+        height: 100%
+        background-image: url('/svgs/gradientBase.svg')
+        background-size: cover
+
+        z-index: -1
+        opacity: 0
+        transition: all 0.8s ease
+
+        filter: hue-rotate(180deg)
+
+        // mask-image: linear-gradient(to right, white 0%, transparent 100%)
+        // -webkit-mask-image: linear-gradient(to right, white 0%, transparent 100%)
+
+        mask-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.15) 75%, transparent 100%)
+        // -webkit-mask-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0.95) 30%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.35) 75%, transparent 100%)
