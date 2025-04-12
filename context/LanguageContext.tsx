@@ -1,8 +1,10 @@
 import { ReactNode, createContext, useState, useEffect, useContext } from "react";
 
-// Define the shape of our language data
+// Define the shape of our language data;
+
 interface LanguageData {
-    [key: string]: string;
+    FAQ: Array<{ q: string; a: string }>;
+    [key: string]: string | Array<{ q: string; a: string }>;
 }
 
 // Define available languages
@@ -19,6 +21,48 @@ const languageLibrary = {
         HOME_FAQ: "Frequently Asked Questions",
         HOME_SPONSORS: "Sponsored and Supported By",
         HOME_MORE_INFO: "More Information",
+        FAQ: [
+            {
+                q: "What is Savor?",
+                a: "Savor is a competitive event organized by SMANSA’s student council, bringing together students to compete, collaborate, and showcase their talents across various categories.",
+            },
+            {
+                q: "Who can participate in Savor?",
+                a: "All Elementary School, Middleschool and Highschool students of Lampung are welcome to participate. Some competitions may have specific eligibility criteria based on grade level or extracurricular affiliation.",
+            },
+            {
+                q: "Do I need to register for Savor?",
+                a: "Yes, participants must register online before the deadline to compete in their chosen events. Walk-in participation is not allowed.",
+            },
+            {
+                q: "Is there a participation fee?",
+                a: "There are fees to participate in a category of competition. Details are listed in the competitions registration page and in the Guidebook.",
+            },
+            {
+                q: "Where can I find the schedule for the events?",
+                a: "The full schedule is available on the Savor homepage. You can also find updates through official OSIS social media channels.",
+            },
+            {
+                q: "Can I join more than one competition?",
+                a: "Yes, as long as the competition times don’t overlap. Be sure to check the schedule before registering for multiple events!",
+            },
+            {
+                q: "Will there be awards or certificates?",
+                a: "Absolutely! Winners will receive trophies and certificates, some categories may include development fund.",
+            },
+            {
+                q: "What should I wear during Savor?",
+                a: "Participants should wear their school uniform unless their category involves a performance or role that requires a specific costume. Please refer back to each category for details.",
+            },
+            {
+                q: "Can friends the public attend even if they’re not competing?",
+                a: "Yes! Everybody are encouraged to attend, support their friends, and enjoy the festivities. Some competitions are open for audience viewing.",
+            },
+            {
+                q: "Who should I contact for more information?",
+                a: 'You can contact the general contact person through the "More Information" section of the Homepage.',
+            },
+        ],
     },
     id: {
         HOME_DESCRIPTION: "Selamat datang di platform kompetisi kami",
@@ -29,6 +73,48 @@ const languageLibrary = {
         HOME_FAQ: "Pertanyaan yang Sering Diajukan",
         HOME_SPONSORS: "Didukung dan Disponsori Oleh",
         HOME_MORE_INFO: "Informasi Lebih Lanjut",
+        FAQ: [
+            {
+                q: "Apa itu Savor?",
+                a: "Savor adalah acara kompetisi yang diselenggarakan oleh OSIS SMANSA, yang mempertemukan para pelajar untuk berkompetisi, berkolaborasi, dan menampilkan bakat mereka dalam berbagai kategori.",
+            },
+            {
+                q: "Siapa saja yang bisa ikut serta dalam Savor?",
+                a: "Semua siswa SD, SMP, dan SMA Provinsi Lampung dipersilakan untuk berpartisipasi. Beberapa lomba mungkin memiliki syarat khusus berdasarkan jenjang pendidikan atau afiliasi ekstrakurikuler.",
+            },
+            {
+                q: "Apakah saya harus mendaftar untuk mengikuti Savor?",
+                a: "Ya, peserta harus mendaftar secara online sebelum batas waktu yang ditentukan untuk dapat mengikuti lomba pilihan mereka. Pendaftaran langsung di tempat tidak diperbolehkan.",
+            },
+            {
+                q: "Apakah ada biaya pendaftaran?",
+                a: "Ada biaya untuk mengikuti masing-masing kategori lomba. Rincian lengkap tersedia di halaman pendaftaran lomba dan di Buku Panduan.",
+            },
+            {
+                q: "Di mana saya bisa melihat jadwal lomba?",
+                a: "Jadwal lengkap tersedia di halaman utama Savor. Informasi terbaru juga bisa didapatkan melalui media sosial resmi OSIS.",
+            },
+            {
+                q: "Apakah saya bisa mengikuti lebih dari satu lomba?",
+                a: "Bisa, selama jadwal lomba yang diikuti tidak bertabrakan. Pastikan untuk mengecek jadwal terlebih dahulu sebelum mendaftar ke beberapa lomba!",
+            },
+            {
+                q: "Apakah akan ada hadiah atau sertifikat?",
+                a: "Tentu saja! Para pemenang akan mendapatkan trofi plakat dan sertifikat. Beberapa kategori lomba juga menyediakan dana pembinaan.",
+            },
+            {
+                q: "Apa yang harus saya kenakan selama Savor?",
+                a: "Peserta wajib mengenakan seragam sekolah kecuali jika kategori lomba mengharuskan kostum khusus. Silakan lihat kembali ketentuan tiap kategori untuk detailnya.",
+            },
+            {
+                q: "Apakah teman atau publik boleh datang meskipun tidak ikut lomba?",
+                a: "Boleh! Semua orang sangat dianjurkan untuk hadir, mendukung teman-temannya, dan menikmati suasana acara. Beberapa lomba terbuka untuk penonton.",
+            },
+            {
+                q: "Siapa yang bisa saya hubungi untuk informasi lebih lanjut?",
+                a: 'Kamu bisa menghubungi contact person umum yang tercantum di bagian "Informasi Lebih Lanjut" di halaman utama.',
+            },
+        ],
     },
 };
 

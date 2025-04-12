@@ -1,12 +1,22 @@
 import HomePage from "@/components/HomePage";
 import Landing from "@/components/Landing";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import Image from "next/image";
 import styles from "@/styles/Roof.module.sass";
 
 export default function Home() {
     const [bigBang, setBigBang] = useState(false);
+    const [noLanding, setNoLanding] = useState(false);
+
+    useEffect(() => {
+        // Check if big bang has already happened
+        const storedBigBang = sessionStorage.getItem("bigBang");
+        if (storedBigBang === "true") {
+            setBigBang(true);
+            setNoLanding(true);
+        }
+    }, []);
 
     return (
         <>
@@ -19,7 +29,7 @@ export default function Home() {
             <div className={styles.roof}>
                 {/* <h1>{bigBang ? " YES" : "NO"}</h1> */}
                 {bigBang && <HomePage />}
-                <Landing bbSetter={setBigBang} />
+                {!noLanding && <Landing bbSetter={setBigBang} />}
             </div>
         </>
     );

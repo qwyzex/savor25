@@ -137,9 +137,12 @@
     100%
         filter: saturate(100%) brightness(100%)
         
-
-
-
+@keyframes opacity
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+        
 
 
 //////////////////////////////////////////////////////////////
@@ -163,6 +166,7 @@
     // background: linear-gradient(135deg, #0a1e40, #020a1a)
     background: linear-gradient(135deg, #ffb412, #f9336b)
 
+    animation: opacity 1s ease
     transition: opacity 2s ease
     transition-delay: 2s
 

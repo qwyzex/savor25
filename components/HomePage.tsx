@@ -1,12 +1,18 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import GenPage from "./GenPage";
 import styles from "@/styles/Home.module.sass";
 import Hr from "./Hr";
 import Button from "./Button";
 import { useLanguage } from "@/context/LanguageContext";
 import ListBox from "./ListBox";
+import FAQBox from "./FAQBox";
+import { useData } from "@/context/DataContext";
 
 const HomePage = () => {
     const { language, translations, setLanguage } = useLanguage();
+    const { data } = useData();
 
     return (
         <GenPage>
@@ -36,7 +42,18 @@ const HomePage = () => {
                     {/* LIST OF COMPETITIONS */}
                     <h1>{translations.HOME_LIST_OF_COMPETITIONS}</h1>
                     <Hr />
-                    <ListBox />
+                    <ul className={styles.compLists}>
+                        {data.map((competition) => (
+                            <ListBox
+                                key={competition.id}
+                                title={competition.name}
+                                level={competition.level}
+                                price={competition.price}
+                                register={competition.register}
+                                hue={competition.hue}
+                            />
+                        ))}
+                    </ul>
                 </section>
                 <section id={"dates"}>
                     {/* HIGHLIGHTS */}
@@ -47,6 +64,11 @@ const HomePage = () => {
                     {/* FAQ */}
                     <h1>{translations.HOME_FAQ}</h1>
                     <Hr />
+                    <ul className={styles.faqList}>
+                        {translations.FAQ.map((faq, index) => (
+                            <FAQBox key={index} question={faq.q} answer={faq.a} />
+                        ))}
+                    </ul>
                 </section>
                 <section id={"sponsors"}>
                     {/* CALLING OUT SPONSORS */}

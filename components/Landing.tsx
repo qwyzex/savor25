@@ -25,6 +25,8 @@ const Landing = ({ bbSetter }: LandingProps) => {
             setIsNova(true);
         }, 1000);
         setTimeout(() => {
+            localStorage.setItem("bigBang", "true");
+            sessionStorage.setItem("bigBang", "true");
             bbSetter(true);
         }, 4000);
         setTimeout(() => {
