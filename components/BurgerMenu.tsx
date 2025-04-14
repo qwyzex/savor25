@@ -1,7 +1,7 @@
 import styles from "@/styles/Burger.module.sass";
 import { useRef, useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
+// import Link from "next/link";
 
 const BurgerMenu = () => {
     const [openBurger, setOpenBurger] = useState<number>(0);
@@ -41,6 +41,17 @@ const BurgerMenu = () => {
     };
 
     const handleBurger = () => {
+        const root = document.getElementById("_roof");
+        if (!root) return;
+
+        const isShifted = root.classList.contains("shifted");
+
+        if (!isShifted) {
+            root.classList.add("shifted");
+        } else {
+            root.classList.remove("shifted");
+        }
+
         if (openBurger == 0) {
             openMenu();
         } else if (openBurger == 1) {
@@ -75,24 +86,13 @@ const BurgerMenu = () => {
             </Head>
             <div className={styles.container}>
                 <header className={openBurger == 1 ? styles.open : ""}>
-                    <section
+                    {/* <section></section> */}
+                    {/* <section
                         ref={menuRef}
                         className={`${styles.theMenu} ${
                             openBurger == 1 ? styles.opening : ""
                         } ${openBurger == 2 ? styles.closing : ""}`}
                     >
-                        {/* <Box1>
-                        <a href="#">HOME</a>
-                        </Box1>
-                        <Box2>
-                        <a href="#">BRANCHES</a>
-                        </Box2>
-                        <Box3>
-                        <a href="#">BOOKLET</a>
-                    </Box3>
-                    <Box4>
-                        <a href="#">WHAT OF US</a>
-                    </Box4> */}
                         <div>
                             <Link href="/"></Link>
                         </div>
@@ -105,8 +105,8 @@ const BurgerMenu = () => {
                         <div>
                             <Link href="/us"></Link>
                         </div>
-                    </section>
-                    <h1>SAVOR 25</h1>
+                    </section> */}
+                    {/* <h1>SAVOR 25</h1> */}
                     <button onClick={handleBurger}>
                         <div>
                             <GradientMenu />

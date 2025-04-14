@@ -10,6 +10,24 @@ const BranchesPage = () => {
             </Head>
             <div className={`mainScene  ${styles.Branches}`}>
                 <BurgerMenu />
+                <div className={styles.fullNav}>
+                    <nav className={styles.menu}>
+                        <ul>
+                            <li>
+                                <a href="#">Quests</a>
+                            </li>
+                            <li>
+                                <a href="#">Equipment</a>
+                            </li>
+                            <li>
+                                <a href="#">Crafting</a>
+                            </li>
+                            <li>
+                                <a href="#">Guild Card</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </>
     );
