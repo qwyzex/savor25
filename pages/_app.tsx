@@ -1,4 +1,5 @@
 import "@/styles/globals.sass";
+import "@/styles/international.sass";
 import type { AppProps } from "next/app";
 import { DataProvider } from "@/context/DataContext";
 import { LanguageProvider } from "@/context/LanguageContext";
