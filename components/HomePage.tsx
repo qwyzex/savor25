@@ -26,8 +26,6 @@ const HomePage = () => {
                     <Button hyperlink href="#trailer" arrow>
                         {translations.HOME_CHECK_IT_OUT_BUTTON}
                     </Button>
-                    <button onClick={() => setLanguage("en")}>English</button>
-                    <button onClick={() => setLanguage("id")}>Indonesian</button>
                 </section>
                 <section id={"trailer"}>
                     {/* TRAILER */}

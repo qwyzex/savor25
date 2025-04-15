@@ -13,6 +13,11 @@ type Language = "en" | "id";
 // Language data library
 const languageLibrary = {
     en: {
+        NAV_HOME: "HOME",
+        NAV_REGISTER: "REGISTER",
+        NAV_GUIDEBOOK: "GUIDEBOOK",
+        NAV_OF_US: "& OF US",
+        LANG_STR: "Language",
         HOME_DESCRIPTION: "Welcome to our competition platform",
         HOME_CHECK_IT_OUT_BUTTON: "CHECK IT OUT!",
         HOME_WATCH_TRAILER: "Watch The Trailer!",
@@ -55,7 +60,7 @@ const languageLibrary = {
                 a: "Participants should wear their school uniform unless their category involves a performance or role that requires a specific costume. Please refer back to each category for details.",
             },
             {
-                q: "Can friends the public attend even if they’re not competing?",
+                q: "Can friends & the public attend even if they’re not competing?",
                 a: "Yes! Everybody are encouraged to attend, support their friends, and enjoy the festivities. Some competitions are open for audience viewing.",
             },
             {
@@ -65,6 +70,11 @@ const languageLibrary = {
         ],
     },
     id: {
+        NAV_HOME: "BERANDA",
+        NAV_REGISTER: "DAFTAR",
+        NAV_GUIDEBOOK: "JUKNIS",
+        NAV_OF_US: "DAN KAMI!",
+        LANG_STR: "::Bahasa",
         HOME_DESCRIPTION: "Selamat datang di platform kompetisi kami",
         HOME_CHECK_IT_OUT_BUTTON: "LIHAT SEKARANG!",
         HOME_WATCH_TRAILER: "Tonton Trailer!",

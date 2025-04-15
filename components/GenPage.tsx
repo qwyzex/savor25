@@ -8,7 +8,6 @@ export interface GenericProps {
 const GenPage = ({ children }: GenericProps) => {
     return (
         <div className={styles.container}>
-            <div className={styles.wrapper}></div>
             <div className={styles.main}>{children}</div>
             <BurgerMenu />
         </div>

@@ -26,7 +26,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div id="_roof" className={styles.roof}>
+            <div id="_roof" className={`${styles.roof}`}>
                 {/* <h1>{bigBang ? " YES" : "NO"}</h1> */}
                 {bigBang && <HomePage />}
                 {!noLanding && <Landing bbSetter={setBigBang} />}
