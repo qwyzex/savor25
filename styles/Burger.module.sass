@@ -19,9 +19,18 @@
         
         display: grid
         grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 1fr
         align-items: center
 
         z-index: 2
+
+        @media screen and (max-width: 768px)
+            display: flex
+            flex-direction: row-reverse
+            justify-content: space-between
+
+            .title
+                display: none
 
         h1
             &.title
@@ -37,16 +46,6 @@
             width: max-content
 
             padding: 0.1rem 1rem
-
-        @media screen and ( max-width: 900px )
-            flex-direction: row-reverse
-
-            h1
-                &:nth-child(1)
-                    display: none
-
-        @media screen and ( min-width: 900px )
-            flex-direction: row
 
         > button
             z-index: 999999

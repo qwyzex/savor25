@@ -21,7 +21,7 @@ interface DataContextProps {
 }
 
 export const DataContext = createContext<DataContextProps>({
-    data: null,
+    data: [],
 });
 
 export function DataProvider({ children }: DataProviderProps) {

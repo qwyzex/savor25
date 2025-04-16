@@ -16,7 +16,7 @@ const HomePage = () => {
 
     return (
         <GenPage>
-            <main className={styles.main}>
+            <main className={`mainScene ${styles.main}`}>
                 <section id={"title"}>
                     {/* TITLE */}
                     <h1>SAVOR 2025</h1>
@@ -41,9 +41,9 @@ const HomePage = () => {
                     <h1>{translations.HOME_LIST_OF_COMPETITIONS}</h1>
                     <Hr />
                     <ul className={styles.compLists}>
-                        {data.map((competition) => (
+                        {data.map((competition, index) => (
                             <ListBox
-                                key={competition.id}
+                                key={index}
                                 title={competition.name}
                                 level={competition.level}
                                 price={competition.price}

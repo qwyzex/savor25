@@ -68,6 +68,11 @@ const languageLibrary = {
                 a: 'You can contact the general contact person through the "More Information" section of the Homepage.',
             },
         ],
+        REGIS_TITLE: "Competitions List",
+        REGIS_SORT: "SORT",
+        REGIS_SORT_LEVEL: "Level",
+        REGIS_SORT_PRICE: "Price",
+        REGIS_SORT_EXTRA: "Extracurricular",
     },
     id: {
         NAV_HOME: "BERANDA",
@@ -125,6 +130,11 @@ const languageLibrary = {
                 a: 'Kamu bisa menghubungi contact person umum yang tercantum di bagian "Informasi Lebih Lanjut" di halaman utama.',
             },
         ],
+        REGIS_TITLE: "Daftar Kompetisi",
+        REGIS_SORT: "URUTKAN",
+        REGIS_SORT_LEVEL: "Tingkatan",
+        REGIS_SORT_PRICE: "Biaya",
+        REGIS_SORT_EXTRA: "Ekstrakurikuler",
     },
 };
 

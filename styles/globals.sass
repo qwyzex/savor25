@@ -105,10 +105,28 @@ body
 
 
 .mainScene
-    padding: 6rem 2rem
-    // overflow-y: scroll
+    max-width: 85vw
+    min-width: 15rem
+    width: 50rem
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 5rem
+
+    text-align: center
+
+    h1
+        font-size: 2.4rem
     
-    
+    > section
+        width: 100%
+
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
 
 .noSelection
     &::selection
@@ -194,3 +212,4 @@ body
             div
                 transform: rotate(-180deg) scale(1.4) !important
                 filter: drop-shadow(0 0 0.2rem #f9336b)
+
