@@ -144,10 +144,29 @@ body
     @media only screen and (max-width: 768px)
         transform-origin: center center
 
+    .closeNavOverlay
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: transparent
+        z-index: 10
+
+        cursor: pointer
+
     &.shifted
         border-radius: 25px
         box-shadow: 0 -30px 50px #20202086
         outline: 4px dashed #fff
+
+        // overflow: hidden
+        
+        .closeNavOverlay
+            display: block
+            // filter: blur(5px)
+            // backdrop-filter: blur(5px)
 
         // DESKTOP
         @media only screen and (min-width: 768px)
@@ -166,3 +185,12 @@ body
 
             // transform: translateX(-75%) translateY(-1.6%)
 
+#_header
+    &.headerNavOpen
+        button
+            transform: rotate(0deg) scale(0.8) !important
+            background-color: #ffeef31e
+
+            div
+                transform: rotate(-180deg) scale(1.4) !important
+                filter: drop-shadow(0 0 0.2rem #f9336b)

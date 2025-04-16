@@ -10,25 +10,31 @@
     left: 0
     width: 100%
 
+    // z-index: 9999
+
     header
-        // ========================
-        flex-direction: row-reverse
-
-        h1
-            &:nth-child(2)
-                display: none
-        // ========================
-
         width: 100%
 
         padding: 1.5rem 2rem
-        display: flex
-        justify-content: center
+        
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
         align-items: center
 
+        z-index: 2
+
         h1
+            &.title
+                grid-column: 1
+                justify-self: start
+            &.pageName
+                grid-column: 3
+                justify-self: end
+
             background-color: #ffffff
             color: #000000
+
+            width: max-content
 
             padding: 0.1rem 1rem
 
@@ -42,21 +48,15 @@
         @media screen and ( min-width: 900px )
             flex-direction: row
 
-        &.open
-            button
-                transform: rotate(0deg) scale(0.8) !important
-                background-color: #ffeef31e
-
-                div
-                    transform: rotate(-180deg) scale(1.4) !important
-                    filter: drop-shadow(0 0 0.2rem #f9336b)
-
         > button
-            z-index: 10
+            z-index: 999999
 
             height: 3rem
             width: 3rem
             position: relative
+
+            grid-column: 2
+            justify-self: center
 
             display: flex
             justify-content: center

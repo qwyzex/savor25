@@ -298,7 +298,21 @@
     justify-content: space-evenly
     align-items: flex-start
 
+    transition: all 0.3s ease
+
     gap: 1rem
+
+    &:has(ul > li:nth-child(1) > a:hover) 
+        backdrop-filter: hue-rotate(120deg)
+
+    &:has(ul > li:nth-child(2) > a:hover) 
+        backdrop-filter: hue-rotate(180deg)
+
+    &:has(ul > li:nth-child(3) > a:hover)
+        backdrop-filter: hue-rotate(240deg)
+
+    &:has(ul > li:nth-child(4) > a:hover) 
+        backdrop-filter: hue-rotate(310deg)
 
     @media screen and ( max-width: 768px )
         flex-direction: column

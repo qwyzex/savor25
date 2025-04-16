@@ -1,10 +1,7 @@
 import styles from "@/styles/Burger.module.sass";
-import { useState } from "react";
 // import Link from "next/link";
 
 const BurgerMenu = () => {
-    const [openBurger, setOpenBurger] = useState<boolean>(false);
-
     const GradientMenu = () => {
         return (
             <svg
@@ -39,30 +36,32 @@ const BurgerMenu = () => {
 
     const handleBurger = () => {
         const root = document.getElementById("_roof");
-        if (!root) return;
+        const header = document.getElementById("_header");
+        if (!root || !header) return;
 
         const isShifted = root.classList.contains("shifted");
+        const isOpen = header.classList.contains("headerNavOpen");
 
-        if (!isShifted) {
+        if (!isShifted && !isOpen) {
             root.classList.add("shifted");
-            setOpenBurger(true);
+            header.classList.add("headerNavOpen");
         } else {
             root.classList.remove("shifted");
-            setOpenBurger(false);
+            header.classList.remove("headerNavOpen");
         }
     };
 
     return (
         <>
-            <div className={styles.container}>
-                <header className={openBurger ? styles.open : ""}>
-                    {/* <h1>SAVOR 25</h1> */}
+            <div className={`headerContainer ${styles.container}`}>
+                <header id="_header" className={styles.header}>
+                    <h1 className={styles.title}>SAVOR 25</h1>
                     <button onClick={handleBurger}>
                         <div>
                             <GradientMenu />
                         </div>
                     </button>
-                    {/* <h1>Homepage</h1> */}
+                    <h1 className={styles.pageName}>Homepage</h1>
                 </header>
             </div>
         </>
