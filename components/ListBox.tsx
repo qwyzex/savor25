@@ -25,13 +25,13 @@ interface ListBoxProps {
     title: string;
     level: number;
     price: number;
-    register: string;
+    regCode: string;
     hue: number;
 }
 
-const ListBox = ({ title, level, price, register, hue }: ListBoxProps) => {
+const ListBox = ({ title, level, price, regCode, hue }: ListBoxProps) => {
     return (
-        <Link href={`/pendaftaran/${register}`} className={styles.listBox}>
+        <Link href={`/pendaftaran/${regCode}`} className={styles.listBox}>
             <section className={styles.listBoxItem}>
                 <div>
                     <h2>{title}</h2>

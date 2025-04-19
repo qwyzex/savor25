@@ -1,17 +1,29 @@
 import { ReactNode, createContext, useState, useEffect, useContext } from "react";
 
-// Define the shape of our language data;
+// Define the FAQ item type
+interface FAQItem {
+    q: string;
+    a: string;
+}
 
+// Define the shape of our language data
 interface LanguageData {
-    FAQ: Array<{ q: string; a: string }>;
-    [key: string]: string | Array<{ q: string; a: string }>;
+    // Special case for FAQ which is an array
+    FAQ: FAQItem[];
+    // All other keys are strings
+    [key: string]: string | FAQItem[];
+}
+
+// Type guard function to check if a translation value is a string
+function isString(value: string | FAQItem[]): value is string {
+    return typeof value === "string";
 }
 
 // Define available languages
 type Language = "en" | "id";
 
 // Language data library
-const languageLibrary = {
+const languageLibrary: Record<Language, LanguageData> = {
     en: {
         NAV_HOME: "HOME",
         NAV_REGISTER: "REGISTER",
@@ -138,11 +150,13 @@ const languageLibrary = {
     },
 };
 
-// Context props interface
+// Enhanced context props interface with helper functions
 interface LanguageContextProps {
     language: Language;
     translations: LanguageData;
     setLanguage: (lang: Language) => void;
+    // Helper function to safely get string translations
+    getStringTranslation: (key: string) => string;
 }
 
 // Create context with default values
@@ -150,6 +164,7 @@ export const LanguageContext = createContext<LanguageContextProps>({
     language: "en",
     translations: languageLibrary.en,
     setLanguage: () => {},
+    getStringTranslation: () => "",
 });
 
 interface LanguageProviderProps {
@@ -182,8 +197,25 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     // Get the appropriate translations based on current language
     const translations = languageLibrary[language];
 
+    // Helper function to safely get string translations
+    const getStringTranslation = (key: string): string => {
+        const value = translations[key];
+        if (isString(value)) {
+            return value;
+        }
+        console.warn(`Translation key "${key}" is not a string`);
+        return key; // Return the key as fallback
+    };
+
     return (
-        <LanguageContext.Provider value={{ language, translations, setLanguage }}>
+        <LanguageContext.Provider
+            value={{
+                language,
+                translations,
+                setLanguage,
+                getStringTranslation,
+            }}
+        >
             {children}
         </LanguageContext.Provider>
     );

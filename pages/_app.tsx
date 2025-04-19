@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import "@/styles/globals.sass";
 import "@/styles/international.sass";
 import type { AppProps } from "next/app";
@@ -22,7 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 
 function NavMenu() {
-    const { language, translations, setLanguage } = useLanguage();
+    const { language, setLanguage, getStringTranslation } = useLanguage();
 
     return (
         <>
@@ -36,7 +33,7 @@ function NavMenu() {
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 108.1 47"
-                                    enable-background="new 0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
                                 >
                                     <polygon
                                         fill="#F9336B"
@@ -49,7 +46,7 @@ function NavMenu() {
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 108.1 47"
-                                    enable-background="new 0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
                                 >
                                     <polygon
                                         fill="#FFB412"
@@ -59,7 +56,7 @@ function NavMenu() {
                             </div>
                         </div>
                         <div className="img-wrapper">
-                            <h1>{translations.NAV_HOME}</h1>
+                            <h1>{getStringTranslation("NAV_HOME")}</h1>
                         </div>
                     </Link>
                 </li>
@@ -72,7 +69,7 @@ function NavMenu() {
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 108.1 47"
-                                    enable-background="new 0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
                                 >
                                     <polygon
                                         fill="#F9336B"
@@ -85,7 +82,7 @@ function NavMenu() {
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 108.1 47"
-                                    enable-background="new 0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
                                 >
                                     <polygon
                                         fill="#FFB412"
@@ -95,7 +92,7 @@ function NavMenu() {
                             </div>
                         </div>
                         <div className="img-wrapper">
-                            <h1>{translations.NAV_REGISTER}</h1>
+                            <h1>{getStringTranslation("NAV_REGISTER")}</h1>
                         </div>
                     </Link>
                 </li>
@@ -108,7 +105,7 @@ function NavMenu() {
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 108.1 47"
-                                    enable-background="new 0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
                                 >
                                     <polygon
                                         fill="#F9336B"
@@ -121,7 +118,7 @@ function NavMenu() {
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 108.1 47"
-                                    enable-background="new 0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
                                 >
                                     <polygon
                                         fill="#FFB412"
@@ -131,7 +128,7 @@ function NavMenu() {
                             </div>
                         </div>
                         <div className="img-wrapper">
-                            <h1>{translations.NAV_GUIDEBOOK}</h1>
+                            <h1>{getStringTranslation("NAV_GUIDEBOOK")}</h1>
                         </div>
                     </Link>
                 </li>
@@ -144,7 +141,7 @@ function NavMenu() {
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 108.1 47"
-                                    enable-background="new 0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
                                 >
                                     <polygon
                                         fill="#F9336B"
@@ -157,7 +154,7 @@ function NavMenu() {
                                     x="0px"
                                     y="0px"
                                     viewBox="0 0 108.1 47"
-                                    enable-background="new 0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
                                 >
                                     <polygon
                                         fill="#FFB412"
@@ -167,7 +164,7 @@ function NavMenu() {
                             </div>
                         </div>
                         <div className="img-wrapper">
-                            <h1>{translations.NAV_OF_US}</h1>
+                            <h1>{getStringTranslation("NAV_OF_US")}</h1>
                         </div>
                     </Link>
                 </li>
@@ -182,7 +179,7 @@ function NavMenu() {
                     <input type="checkbox" className="orbButton orbOn"></input>
                 </div>
                 <div>
-                    <p>{translations.LANG_STR}</p>
+                    <p>{getStringTranslation("LANG_STR")}</p>
                     <button
                         onClick={() => setLanguage("id")}
                         className={`langButton langId ${

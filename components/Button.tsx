@@ -62,7 +62,7 @@ export default function Button({
                         color == "secondary" ? styles.secondary : ""
                     } ${color == "tertiary" ? styles.tertiary : ""}`}
                 >
-                    <a href={href}></a>
+                    <Link href={href}></Link>
                     {children}
                 </div>
             )}

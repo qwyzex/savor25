@@ -3,7 +3,7 @@ import { ReactNode, createContext, useContext } from "react";
 export interface CompDoc {
     name: string; // Nama
     extra: string; // Ekstrakurikuler
-    register: string; // Link pendaftaran
+    regCode: string; // Link pendaftaran
     booklet: string; // Link Juknis
     hue: number; // HUE Shifts
     level: number; // Tingkat pendidikan
@@ -29,7 +29,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Band",
             extra: "Band",
-            register: "band",
+            regCode: "band",
             booklet: "https://github.com",
             hue: 0,
             level: 0,
@@ -40,7 +40,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Basket 5v5",
             extra: "Basket",
-            register: "basket_5v5",
+            regCode: "basket_5v5",
             booklet: "https://github.com",
             hue: 30,
             level: 0,
@@ -52,7 +52,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Film Pendek",
             extra: "Cinematography",
-            register: "film_pendek",
+            regCode: "film_pendek",
             booklet: "https://github.com",
             hue: 300,
             level: 1,
@@ -64,7 +64,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Mobile Legends",
             extra: "E-Sports",
-            register: "mlbb",
+            regCode: "mlbb",
             booklet: "https://github.com",
             hue: 200,
             level: 0,
@@ -75,7 +75,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Futsal",
             extra: "Futsal",
-            register: "futsal",
+            regCode: "futsal",
             booklet: "https://github.com",
             hue: 40,
             level: 1,
@@ -87,7 +87,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Kriya",
             extra: "IPCA",
-            register: "kriya",
+            regCode: "kriya",
             booklet: "https://github.com",
             hue: 110,
             level: 1,
@@ -99,7 +99,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Coswalk",
             extra: "Japanese Club",
-            register: "coswalk",
+            regCode: "coswalk",
             booklet: "https://github.com",
             hue: 330,
             level: 0,
@@ -111,7 +111,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Roket Air",
             extra: "KIR",
-            register: "roket_air",
+            regCode: "roket_air",
             booklet: "https://github.com",
             hue: 180,
             level: 0,
@@ -123,7 +123,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Modern Dance",
             extra: "Modern Dance",
-            register: "modern_dance",
+            regCode: "modern_dance",
             booklet: "https://github.com",
             hue: 270,
             level: 10,
@@ -135,7 +135,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Olimpiade",
             extra: "Olimpiade",
-            register: "olimpiade",
+            regCode: "olimpiade",
             booklet: "https://github.com",
             hue: 120,
             level: 21,
@@ -146,7 +146,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Pidato Impromptu",
             extra: "Opini",
-            register: "pidato",
+            regCode: "pidato",
             booklet: "https://github.com",
             hue: 25,
             level: 1,
@@ -158,7 +158,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Solo Song",
             extra: "Paduan Suara",
-            register: "solo_song",
+            regCode: "solo_song",
             booklet: "https://github.com",
             hue: 0,
             level: 0,
@@ -170,7 +170,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "LKBB VARFOR",
             extra: "Paskibra",
-            register: "lkbb",
+            regCode: "lkbb",
             booklet: "https://github.com",
             hue: 190,
             level: 10,
@@ -182,7 +182,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "PMR Tandu Darurat",
             extra: "PMR",
-            register: "pmr_td",
+            regCode: "pmr_td",
             booklet: "https://github.com",
             hue: 50,
             level: 0,
@@ -193,7 +193,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "PMR Pertolongan Pertama",
             extra: "PMR",
-            register: "pmr_pp",
+            regCode: "pmr_pp",
             booklet: "https://github.com",
             hue: 50,
             level: 0,
@@ -204,7 +204,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Senam Pramuka",
             extra: "Pramuka",
-            register: "pramuka_senam",
+            regCode: "pramuka_senam",
             booklet: "https://github.com",
             hue: 85,
             level: 1,
@@ -215,7 +215,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Miniatur Pioneering Pramuka",
             extra: "Pramuka",
-            register: "pramuka_miniatur_pioneering",
+            regCode: "pramuka_miniatur_pioneering",
             booklet: "https://github.com",
             hue: 95,
             level: 0,
@@ -227,7 +227,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Dharmawacana Hindu",
             extra: "Rohin",
-            register: "dharmawacana_hindu",
+            regCode: "dharmawacana_hindu",
             booklet: "https://github.com",
             hue: 305,
             level: 1,
@@ -238,7 +238,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Hafalan Doa Hindu",
             extra: "Rohin",
-            register: "hafalan_doa_hindu",
+            regCode: "hafalan_doa_hindu",
             booklet: "https://github.com",
             hue: 305,
             level: 0,
@@ -250,7 +250,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Dai/Da’iyah",
             extra: "Rohis",
-            register: "dai_daiyah",
+            regCode: "dai_daiyah",
             booklet: "https://github.com",
             hue: 340,
             level: 1,
@@ -261,7 +261,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Tahfidz",
             extra: "Rohis",
-            register: "tahfidz",
+            regCode: "tahfidz",
             booklet: "https://github.com",
             hue: 340,
             level: 1,
@@ -273,7 +273,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Solo Song Rohani",
             extra: "Rokris",
-            register: "solo_song_rohani",
+            regCode: "solo_song_rohani",
             booklet: "https://github.com",
             hue: 340,
             level: 0,
@@ -285,7 +285,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Storytelling",
             extra: "English Club",
-            register: "storytelling",
+            regCode: "storytelling",
             booklet: "https://github.com",
             hue: 290,
             level: 0,
@@ -297,7 +297,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Poster Digital",
             extra: "Solusi",
-            register: "poster_digital",
+            regCode: "poster_digital",
             booklet: "https://github.com",
             hue: 160,
             level: 0,
@@ -309,7 +309,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Tari Kreasi",
             extra: "Traditional Dance",
-            register: "tari_kreasi",
+            regCode: "tari_kreasi",
             booklet: "https://github.com",
             hue: 210,
             level: 10,
@@ -320,7 +320,7 @@ export function DataProvider({ children }: DataProviderProps) {
         {
             name: "Baca Puisi",
             extra: "Teater Pena",
-            register: "baca_puisi",
+            regCode: "baca_puisi",
             booklet: "https://github.com",
             hue: 270,
             level: 0,

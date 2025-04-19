@@ -74,7 +74,7 @@ const BranchesPage = () => {
                                         title={competition.name}
                                         level={competition.level}
                                         price={competition.price}
-                                        register={competition.register}
+                                        regCode={competition.regCode}
                                         hue={competition.hue}
                                     />
                                 ))}
