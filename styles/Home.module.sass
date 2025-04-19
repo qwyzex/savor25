@@ -1,33 +1,51 @@
 .main
-    > section
-        iframe
-            max-width: 85vw
-            width: 40rem
-            aspect-ratio: 16 / 9
+    overflow-x: hidden
 
-
-.sponsorsList
-    width: 100%
-
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr))
-
-    place-items: center
-    place-content: center
-    justify-content: center
-    gap: 0.5rem
-    align-items: center
-
-    grid-auto-flow: dense
-    
-    > img
-        height: auto
-        width: 110px
-
-.faqList, .compLists
+#countdown
     display: flex
     flex-direction: column
-    align-items: center
-    justify-content: center
+    // gap: 1rem
 
-    gap: 1.4rem
+    > div
+        &:last-child
+            width: auto
+
+    .numbers
+        display: flex
+        gap: 1.3rem
+        justify-content: center
+        align-items: center
+
+        padding: 2.5rem
+
+        @media screen and ( max-width: 768px )
+            gap: 1rem
+
+            > div
+                height: 4.5rem !important
+                
+                h1
+                    font-size: 1.8rem
+
+        > div
+            aspect-ratio: 3 / 4
+            height: 6rem
+            position: relative
+
+            display: flex
+            justify-content: center
+            align-items: center    
+
+            background-image: url("/svgs/GradientNoise.svg")
+            background-size: cover
+
+            border-radius: 0.6rem
+
+            outline: 2px #ffffff dashed
+            outline-offset: 4px
+
+            > p
+                position: absolute
+                top: 125%
+                left: 50%
+                transform: translate(-50%, -50%)

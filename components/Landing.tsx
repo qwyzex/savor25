@@ -1,24 +1,16 @@
-// import { DataContext } from "@/context/DataContext";
 import styles from "@/styles/Landing.module.sass";
 import { useState, Dispatch, SetStateAction } from "react";
-// import { useContext } from "react";
-// import Image from "next/image";
 
 interface LandingProps {
     bbSetter: Dispatch<SetStateAction<boolean>>;
 }
 
 const Landing = ({ bbSetter }: LandingProps) => {
-    // const { data } = useContext(DataContext);
-
     const [preNova, setPreNova] = useState(false);
     const [isNova, setIsNova] = useState(false);
     const [superNova, setSuperNova] = useState(false);
     const [light, letThereBe] = useState(false);
-    // const [hideOrb, setHideOrb] = useState(false);
-    // const orbRef = useRef<HTMLDivElement>(null);
 
-    // Handle the nova animation
     const handleNova = () => {
         setPreNova(true);
         setTimeout(() => {
@@ -36,17 +28,6 @@ const Landing = ({ bbSetter }: LandingProps) => {
             letThereBe(true);
         }, 6000);
     };
-
-    // // Apply transform instead of width/height for performance
-    // useEffect(() => {
-    //     if (!orbRef.current) return;
-
-    //     // Using transform for animations is more performant than changing width/height
-    //     if (superNova) {
-    //         // Add the will-change property before animation starts
-    //         // orbRef.current.style.willChange = "transform";
-    //     }
-    // }, [superNova]);
 
     const StarSVG = () => {
         return (
@@ -178,35 +159,3 @@ const Landing = ({ bbSetter }: LandingProps) => {
 };
 
 export default Landing;
-
-// {!hideOrb && (
-//     <footer className={`${isNova ? styles.novaFooter : ""}`}>
-//         <div
-//             ref={orbRef}
-//             className={`${styles.orb} ${
-//                 superNova ? styles.performantOrb : ""
-//             }`}
-//         >
-//             <div className={styles.orbGradientBlob}>
-//                 <svg xmlns="http://www.w3.org/2000/svg">
-//                     <defs>
-//                         <filter id="igoo">
-//                             <feGaussianBlur
-//                                 in="SourceGraphic"
-//                                 stdDeviation="3"
-//                                 result="blur"
-//                             />
-//                             <feBlend in="SourceGraphic" in2="igoo" />
-//                         </filter>
-//                     </defs>
-//                 </svg>
-//                 <div className={styles.g1}></div>
-//                 <div className={styles.g2}></div>
-//                 <div className={styles.g3}></div>
-//                 {/* <div className={styles.g4}></div>
-//                 <div className={styles.g5}></div> */}
-//             </div>
-//             <div className={styles.highlight}></div>
-//         </div>
-//     </footer>
-// )}

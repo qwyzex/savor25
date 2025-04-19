@@ -365,22 +365,45 @@
 
         // z-index: 2
 
-        &.preWrapper
-            .title
-                span
-                    margin-top: 8rem
+        @media screen and ( max-width: 768px )
+            &.preWrapper
+                .title
+                    span
+                        // margin-top: 8rem !important
+                        &:nth-child(1)
+                            transform: translateX(100%) !important
+                        &:nth-child(2)
+                            top: 100%
+                        &:nth-child(3)
+                            top: -100%
+                        &:nth-child(4)
+                            top: 100%
+                        &:nth-child(5)
+                            top: -100%
+                        &:nth-child(6)
+                            transform: translateX(-100%) !important
+                            
+
+            &.novaWrapper
+                .title
+                    span
+                        opacity: 0
+                                
+
+        @media screen and ( min-width: 768px )
+            &.preWrapper
+                .title
+                    span
+                        margin-top: 8rem !important
+
+            &.novaWrapper
+                .title
+                    span
+                        transform: translateY(-170%)
+                        opacity: 0
 
         &.novaWrapper
             background-position: -7.5vh -7.5vh, 15vh 15vh
-            // background-image: radial-gradient(circle, rgba(255, 198, 118, 0) 6%, transparent 6%), radial-gradient(circle, rgba(250, 208, 131, 0) 6%, transparent 6%)
-
-            .title
-                span
-                    transform: translateY(-170%)
-                    opacity: 0
-
-            .wrapperMain
-                // transform: translateY(5rem) translateX(-50%) scale(0.5)
 
             &.superWrapper
                 opacity: 0
@@ -408,21 +431,21 @@
             span
                 // font-size: 25vw
                 // font-size: 4rem
-                transform: translateY(0)
 
                 display: grid
                 place-items: center
 
-                overflow: visible
+                // overflow: visible
 
                 color: #ffffff
 
-                margin-top: 0
+                top: 0%
+                // margin-top: 0
 
                 // transition: all 1.5s ease-in
-                transition-property: margin-top, opacity, transform
-                transition-duration: 2.1s, 1.2s, 1.2s
-                transition-timing-function: ease-in-out, ease, ease-in
+                transition-property: margin-top, opacity, transform, top
+                transition-duration: 2.1s, 1.2s, 1.2s, 1.2s
+                transition-timing-function: cubic-bezier(0.77, 0, 0.18, 1), ease, cubic-bezier(0.77, 0, 0.18, 1), cubic-bezier(0.77, 0, 0.18, 1)
                 opacity: 1
 
                 > button
@@ -469,19 +492,29 @@
                         animation: starRotation 4s ease
                         animation-delay: 1s
 
-                p
-                    // user-select: none
+                @media screen and ( max-width: 768px )
+                    &:nth-child(1)
+                        transition-delay: 0.9s, 2s, 1s, 1s
+                    &:nth-child(2)
+                        transition-delay: 0.5s, 1.6s, 0.6s, 0.6s
+                    &:nth-child(3)
+                        transition-delay: 0.1s, 1.2s, 0.2s, 0.2s
+                    &:nth-child(4)
+                        transition-delay: 0.3s, 1.4s, 0.4s, 0.4s
+                    &:nth-child(5)
+                        transition-delay: 0.7s, 1.8s, 0.8s, 0.8s
 
-                &:nth-child(1)
-                    transition-delay: 0.9s, 2s, 2s
-                &:nth-child(2)
-                    transition-delay: 0.5s, 1.6s, 1.6s
-                &:nth-child(3)
-                    transition-delay: 0.1s, 1.2s, 1.2s
-                &:nth-child(4)
-                    transition-delay: 0.3s, 1.4s, 1.4s
-                &:nth-child(5)
-                    transition-delay: 0.7s, 1.8s, 1.8s
+                @media screen and ( min-width: 768px )
+                    &:nth-child(1)
+                        transition-delay: 0.9s, 2s, 2s, 2s
+                    &:nth-child(2)
+                        transition-delay: 0.5s, 1.6s, 1.6s, 1.6s
+                    &:nth-child(3)
+                        transition-delay: 0.1s, 1.2s, 1.2s, 1.2s
+                    &:nth-child(4)
+                        transition-delay: 0.3s, 1.4s, 1.4s, 1.4s
+                    &:nth-child(5)
+                        transition-delay: 0.7s, 1.8s, 1.8s, 1.8s
 
         .wrapperMain
             position: absolute
@@ -539,162 +572,6 @@
 
                     animation: starRotation 4s ease
                     animation-delay: 1s
-
-        // footer
-        //     position: absolute
-        //     top: 50%
-        //     left: 50%
-        //     transform: translateY(30%) translateX(-50%)
-
-        //     &.novaFooter
-        //         animation: footerSuperNova 6s ease-in-out
-
-        //     .orb
-        //         z-index: 3
-        //         position: relative
-        //         overflow: hidden
-
-        //         // background-color: #5251c3
-        //         // background: linear-gradient(135deg, #9d56ff, #c296ff, #d8cbf3)
-        //         // background: linear-gradient(164deg,rgba(100, 20, 190, 1) 40%,#d164e7 85%,rgba(253, 52, 146, 0.9) 100%)
-        //         // background: radial-gradient(circle,rgba(100, 20, 190, 1) 30%,#d164e7 65%,rgba(253, 52, 146, 0.9) 100%)
-        //         background-color: hsla(296, 68%, 56%, 1)
-        //         background-image: radial-gradient(circle at 61% 22%, hsla(285, 99%, 79%, 1) 17%, transparent 73%), radial-gradient(circle at 69% 57%, hsla(304, 75%, 63%, 1) 17%, transparent 73%), radial-gradient(circle at 45% 5%, hsla(223, 60%, 72%, 1) 17%, transparent 73%), radial-gradient(circle at 6% 79%, hsla(285, 71%, 75%, 1) 17%, transparent 73%), radial-gradient(circle at 83% 100%, hsla(341, 83%, 60%, 1) 17%, transparent 73%)
-        //         background-blend-mode: normal, normal, normal, normal, normal
-        //         border-radius: 50%
-
-        //         // box-shadow: inset 0 0 5vh rgba(150, 50, 250, 0.8), inset 0 0 8vh rgba(200, 100, 255, 0.7), 0 0 10vh rgba(150, 50, 250, 1)
-
-        //         // filter: drop-shadow(0 -1rem 50px #d6bafe)
-        //         filter: drop-shadow(0 0 10vh rgba(120, 20, 255, 1))
-        //         animation: radiatingShadow 5s infinite ease-in-out
-
-        //         // Add class for performant animation
-        //         &.performantOrb
-        //             // Set transform-origin to ensure consistent scaling
-        //             transform-origin: center center
-        //             will-change: transform
-        //             contain: layout paint style
-
-        //         .highlight
-        //             position: absolute
-        //             top: 0
-        //             left: 0
-
-        //             height: 100%
-        //             width: 100%
-        //             // background-color: red
-        //             border-radius: 50%
-
-        //             box-shadow: inset 0 40px 14vh #620fd669, inset 0 0 7vh #ef78ff, inset 0 -75px 6vh #ffcad7
-
-        //         .orbGradientBlob
-        //             filter: url(#igoo) blur(40px)
-        //             width: 100%
-        //             height: 100%
-
-        //             background: url(https://grainy-gradients.vercel.app/noise.svg)
-
-        //             opacity: 0.8
-
-        //             position: absolute
-        //             top: 0
-        //             left: 0
-
-        //             height: 100%
-        //             width: 100%
-
-        //             svg
-        //                 height: 100%
-        //                 width: 100%
-
-        //                 position: absolute
-        //                 top: 0
-        //                 left: 0
-
-        //             .g1 
-        //                 position: absolute
-        //                 background: radial-gradient(circle at center, rgba(var(--orb-color1), 0.8) 0, rgba(var(--orb-color1), 0) 50%) no-repeat
-        //                 mix-blend-mode: var(--blending)
-        //                 width: calc(var(--circle-size) * 2)
-
-        //                 height: var(--circle-size)
-
-        //                 top: calc(50% - var(--circle-size) / 2)
-
-        //                 left: calc(50% - var(--circle-size) / 2)
-        //                 transform-origin: center center
-
-        //                 animation: moveVertical 6s ease infinite
-        //                 opacity: 1
-        //             .g2 
-        //                 position: absolute
-
-        //                 background: radial-gradient(circle at center, rgba(var(--orb-color2), 0.8) 0, rgba(var(--orb-color2), 0) 50%) no-repeat
-
-        //                 mix-blend-mode: var(--blending)
-        //                 width: calc(var(--circle-size) * 2)
-
-        //                 height: var(--circle-size)
-
-        //                 top: calc(50% - var(--circle-size) / 2)
-
-        //                 left: calc(50% - var(--circle-size) / 2)
-        //                 transform-origin: calc(50% - 400px)
-
-        //                 animation: moveInCircle 4s reverse infinite
-        //                 opacity: 1
-        //             .g3 
-        //                 position: absolute
-
-        //                 background: radial-gradient(circle at center, rgba(var(--orb-color3), 0.8) 0, rgba(var(--orb-color3), 0) 50%) no-repeat
-
-        //                 mix-blend-mode: var(--blending)
-        //                 width: calc(var(--circle-size) * 2)
-
-        //                 height: var(--circle-size)
-
-        //                 top: calc(50% - var(--circle-size) / 2 + 200px)
-
-        //                 left: calc(50% - var(--circle-size) / 2 - 500px)
-        //                 transform-origin: calc(50% + 400px)
-
-        //                 animation: moveInCircle 5s linear infinite
-        //                 opacity: 1
-        //             .g4 
-        //                 position: absolute
-
-        //                 background: radial-gradient(circle at center, rgba(var(--orb-color4), 0.8) 0, rgba(var(--orb-color4), 0) 50%) no-repeat
-
-        //                 mix-blend-mode: var(--blending)
-        //                 width: calc(var(--circle-size) * 3)
-
-        //                 height: var(--circle-size)
-
-        //                 top: calc(50% - var(--circle-size) / 2)
-
-        //                 left: calc(50% - var(--circle-size) / 2)
-        //                 transform-origin: calc(50% - 200px)
-
-        //                 animation: moveHorizontal 13s ease infinite
-        //                 opacity: 0.7
-        //             .g5 
-        //                 position: absolute
-
-        //                 background: radial-gradient(circle at center, rgba(var(--orb-color5), 0.8) 0, rgba(var(--orb-color5), 0) 50%) no-repeat
-
-        //                 mix-blend-mode: var(--blending)
-        //                 width: calc(var(--circle-size) * 2)
-
-        //                 height: calc(var(--circle-size) * 2)
-
-        //                 top: calc(50% - var(--circle-size))
-
-        //                 left: calc(50% - var(--circle-size))
-        //                 transform-origin: calc(50% - 800px) calc(50% + 200px)
-
-        //                 animation: moveInCircle 7s ease infinite
-        //                 opacity: 1
 
 // MOBILE
 @media only screen and (max-width: 768px)

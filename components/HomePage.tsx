@@ -1,97 +1,119 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import GenPage from "./GenPage";
 import styles from "@/styles/Home.module.sass";
 import Hr from "./Hr";
 import Button from "./Button";
 import { useLanguage } from "@/context/LanguageContext";
-import ListBox from "./ListBox";
-import FAQBox from "./FAQBox";
-import { useData } from "@/context/DataContext";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
-    const { language, translations, setLanguage } = useLanguage();
-    const { data } = useData();
+    const { getStringTranslation } = useLanguage();
+
+    const [timeLeft, setTimeLeft] = useState({
+        days: "00",
+        hours: "00",
+        minutes: "00",
+        seconds: "00",
+    });
+
+    // Replace this with your actual target time
+    const targetDate = new Date("2025-05-02T17:00:00Z");
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const now = new Date();
+            const diff = targetDate.getTime() - now.getTime();
+
+            if (diff <= 0) {
+                clearInterval(interval);
+                setTimeLeft({
+                    days: "00",
+                    hours: "00",
+                    minutes: "00",
+                    seconds: "00",
+                });
+                return;
+            }
+
+            const totalSeconds = Math.floor(diff / 1000);
+            const days = Math.floor(totalSeconds / 86400);
+            const hours = Math.floor((totalSeconds % 86400) / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+
+            setTimeLeft({
+                days: String(days).padStart(2, "0"),
+                hours: String(hours).padStart(2, "0"),
+                minutes: String(minutes).padStart(2, "0"),
+                seconds: String(seconds).padStart(2, "0"),
+            });
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const createGoogleCalendarUrl = () => {
+        const title = encodeURIComponent("Savor Launch Day");
+        const details = encodeURIComponent("Don't miss the Savor event!");
+        const location = encodeURIComponent("Metro, Lampung, Indonesia");
+
+        // Format: YYYYMMDDTHHmmssZ (UTC time)
+        const startUTC = "20250502T170000Z";
+        const endUTC = "20250502T180000Z";
+
+        return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=${startUTC}/${endUTC}`;
+    };
 
     return (
         <GenPage>
             <main className={`mainScene ${styles.main}`}>
-                <section id={"title"}>
-                    {/* TITLE */}
-                    <h1>SAVOR 2025</h1>
-                    <p>SMANSA Festive of Competitions Regional</p>
+                <section id={styles.countdown}>
+                    <h1>{getStringTranslation("HOME_COUNTDOWN_TITLE")}</h1>
                     <Hr />
-                    <p>{translations.HOME_DESCRIPTION}</p>
-                    <Button hyperlink href="#trailer" arrow>
-                        {translations.HOME_CHECK_IT_OUT_BUTTON}
+                    <p>
+                        {getStringTranslation("HOME_DESC_1")}
+                        <br />
+                        {getStringTranslation("HOME_DESC_2")}
+                        <br />
+                    </p>
+                    <div className={styles.numbers}>
+                        <div>
+                            <h1>{timeLeft.days}</h1>
+                            <p>{getStringTranslation("HOME_TERM_DAYS")}</p>
+                        </div>
+                        <h2>{":"}</h2>
+                        <div>
+                            <h1>{timeLeft.hours}</h1>
+                            <p>{getStringTranslation("HOME_TERM_HOURS")}</p>
+                        </div>
+                        <h2>{":"}</h2>
+                        <div>
+                            <h1>{timeLeft.minutes}</h1>
+                            <p>{getStringTranslation("HOME_TERM_MINUTES")}</p>
+                        </div>
+                        <h2>{":"}</h2>
+                        <div>
+                            <h1>{timeLeft.seconds}</h1>
+                            <p>{getStringTranslation("HOME_TERM_SECONDS")}</p>
+                        </div>
+                    </div>
+                    <Button
+                        hyperlink
+                        href={createGoogleCalendarUrl()}
+                        className={styles.addToCalendar}
+                    >
+                        {getStringTranslation("HOME_BUTTON_ADD_TO_CALENDAR")}
                     </Button>
-                </section>
-                <section id={"trailer"}>
-                    {/* TRAILER */}
-                    <h1>{translations.HOME_WATCH_TRAILER}</h1>
-                    <Hr />
-                    <iframe
-                        src="https://www.youtube.com/embed/19g66ezsKAg"
-                        allowFullScreen
-                    />
-                </section>
-                <section id={"competitions"}>
-                    {/* LIST OF COMPETITIONS */}
-                    <h1>{translations.HOME_LIST_OF_COMPETITIONS}</h1>
-                    <Hr />
-                    <ul className={styles.compLists}>
-                        {data.map((competition, index) => (
-                            <ListBox
-                                key={index}
-                                title={competition.name}
-                                level={competition.level}
-                                price={competition.price}
-                                regCode={competition.regCode}
-                                hue={competition.hue}
-                            />
-                        ))}
-                    </ul>
-                </section>
-                <section id={"dates"}>
-                    {/* HIGHLIGHTS */}
-                    <h1>{translations.HOME_KEY_DATES}</h1>
-                    <Hr />
-                </section>
-                <section id={"faq"}>
-                    {/* FAQ */}
-                    <h1>{translations.HOME_FAQ}</h1>
-                    <Hr />
-                    <ul className={styles.faqList}>
-                        {translations.FAQ.map((faq, index) => (
-                            <FAQBox key={index} question={faq.q} answer={faq.a} />
-                        ))}
-                    </ul>
-                </section>
-                <section id={"sponsors"}>
-                    {/* CALLING OUT SPONSORS */}
-                    <h1>{translations.HOME_SPONSORS}</h1>
-                    <Hr />
-                    <section className={styles.sponsorsList}>
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                    </section>
                 </section>
                 <section id={"additional"}>
                     {/* FOOTER */}
-                    <h1>{translations.HOME_MORE_INFO}</h1>
+                    <h1>{getStringTranslation("HOME_MORE_INFO")}</h1>
                     <Hr />
-                    <Button>INSTAGRAM</Button>
-                    <Button>TIKTOK</Button>
-                    <Button>CONTACT PERSON</Button>
+                    <Button hyperlink href={"https://www.instagram.com/official.savor"}>
+                        INSTAGRAM
+                    </Button>
+                    <Button hyperlink href={"https://wa.me/+6289690738670"}>
+                        CONTACT PERSON
+                    </Button>
                 </section>
             </main>
         </GenPage>

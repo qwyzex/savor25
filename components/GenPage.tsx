@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import BurgerMenu from "./BurgerMenu";
 import styles from "@/styles/Generic.module.sass";
+import BurgerMenu from "./BurgerMenu";
 
 export interface GenericProps {
     children: ReactNode;
