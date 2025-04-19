@@ -49,11 +49,14 @@ const HomePage = () => {
         }, 1000);
 
         return () => clearInterval(interval);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const createGoogleCalendarUrl = () => {
-        const title = encodeURIComponent("Savor Launch Day");
-        const details = encodeURIComponent("Don't miss the Savor event!");
+        const title = encodeURIComponent("Savor Open Registration Day");
+        const details = encodeURIComponent(
+            "Don't miss Savor 2025 Open Registration Date! Visit https://savor25.vercel.app for more information and registration details. See you there! 🎉✨🎊🎈🎆🎇"
+        );
         const location = encodeURIComponent("Metro, Lampung, Indonesia");
 
         // Format: YYYYMMDDTHHmmssZ (UTC time)
