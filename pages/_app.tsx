@@ -3,6 +3,7 @@ import "@/styles/international.sass";
 import type { AppProps } from "next/app";
 import { DataProvider } from "@/context/DataContext";
 import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
@@ -12,6 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
                 <div id="LOVE">
                     <NavMenu />
                 </div>
+                <Head>
+                    <link rel="icon" href="/imgs/icon_3.png" />
+                </Head>
                 <Component {...pageProps} />
             </DataProvider>
         </LanguageProvider>
@@ -28,15 +32,13 @@ function NavMenu() {
                     <p>{getStringTranslation("LANG_STR")}</p>
                     <button
                         onClick={() => setLanguage("id")}
-                        className={`langButton langId ${
-                            language == "id" ? "active" : ""
-                        }`}
+                        className={`langButton langId ${language == "id" ? "active" : ""
+                            }`}
                     ></button>
                     <button
                         onClick={() => setLanguage("en")}
-                        className={`langButton langEn ${
-                            language == "en" ? "active" : ""
-                        }`}
+                        className={`langButton langEn ${language == "en" ? "active" : ""
+                            }`}
                     ></button>
                 </div>
             </section>

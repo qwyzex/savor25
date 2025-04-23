@@ -1,6 +1,8 @@
 .main
     overflow-x: hidden
 
+    width: 100%
+
 #countdown
     display: flex
     flex-direction: column
@@ -26,6 +28,13 @@
                 
                 h1
                     font-size: 1.8rem
+
+        @media screen and ( max-width: 550px )
+            > div
+                height: 4rem !important
+                
+                h1
+                    font-size: 1.5rem
 
         > div
             aspect-ratio: 3 / 4
