@@ -3,6 +3,7 @@ import "@/styles/international.sass";
 import type { AppProps } from "next/app";
 import { DataProvider } from "@/context/DataContext";
 import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
+import { Analytics } from '@vercel/analytics/next';
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     <NavMenu />
                 </div>
                 <Component {...pageProps} />
+                <Analytics />
             </DataProvider>
         </LanguageProvider>
     );
