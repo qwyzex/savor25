@@ -34,7 +34,10 @@ function NavMenu() {
         const orbOn = localStorage.getItem("orbOn");
 
         if (orbOn) {
-            setGradientOn("true")
+            setGradientOn("true");
+        } else if (orbOn == null) {
+            localStorage.setItem("orbOn", "true")
+            setGradientOn("true");
         }
     }, []);
 

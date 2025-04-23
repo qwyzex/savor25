@@ -17,6 +17,9 @@ const Landing = ({ bbSetter }: LandingProps) => {
 
         if (withOrb == "true") {
             setOrb("true");
+        } else if (withOrb == null) {
+            localStorage.setItem("orbOn", "true")
+            setOrb("true");
         }
     }, []);
 

@@ -4,10 +4,15 @@
 
     display: flex
     flex-direction: row
+    gap: 0
 
-    background-color: red
+    background-color: #534c4f2c
 
-    height: 100vh
+    backdrop-filter: blur(4px)
+
+    box-shadow: 0 -20px 20px #00000025
+
+    height: 100%
 
     #backPanel
         width: max-content
@@ -15,7 +20,59 @@
         justify-content: center
         align-items: center
 
+        padding: 3rem
+
+        background-color: red
+
+        height: 100%
+
+    #info
+        display: flex
+        flex-direction: column
+        justify-content: start
+        align-items: flex-start
+
         padding: 2rem
 
-    #title
+        height: 100%
         width: 100%
+
+        .title
+            display: flex
+            flex-direction: column
+            justify-content: start
+            align-items: flex-start
+
+            gap: 0.4rem
+
+            .extra
+                font-style: italic
+
+            ul  
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: flex-start
+
+                gap: 1rem
+
+                li
+                    list-style: none
+
+                    display: flex
+                    flex-direction: row
+                    justify-content: start
+                    align-items: center
+
+                    gap: 1rem
+
+                    > button
+                        margin: 0
+
+
+.crested
+    padding: 0.8rem 1rem
+    background-color: #0d011ff5
+    backdrop-filter: blur(2px)
+
+    border-radius: 10px
