@@ -20,7 +20,6 @@ const Information = () => {
             <Head>
                 <title>Information</title>
                 <meta name="description" content="Savor 2025 Information" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
             <Roof>
                 <GenPage>

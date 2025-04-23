@@ -5,11 +5,16 @@ import { DataProvider } from "@/context/DataContext";
 import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <LanguageProvider>
             <DataProvider>
+                <Head>
+
+                    <link rel="icon" href="/imgs/icon_3.png" />
+                </Head>
                 <div id="LOVE">
                     <NavMenu />
                 </div>
