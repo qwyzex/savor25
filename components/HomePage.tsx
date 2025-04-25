@@ -114,7 +114,7 @@ const HomePage = () => {
                     <Button hyperlink href={"https://www.instagram.com/official.savor"}>
                         INSTAGRAM
                     </Button>
-                    <Button hyperlink href={"https://wa.me/+6289690738670"}>
+                    <Button hyperlink href={"https://wa.me/+6282177524039"}>
                         CONTACT PERSON
                     </Button>
                 </section>
