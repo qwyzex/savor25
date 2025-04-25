@@ -1,5 +1,5 @@
 import GenPage from "@/components/GenPage";
-import Hr, { R } from "@/components/Hr";
+import { R } from "@/components/Hr";
 import Roof from "@/components/Roof";
 import { useData } from "@/context/DataContext";
 import Head from "next/head";
@@ -7,6 +7,8 @@ import { useRouter } from "next/router";
 import styles from "@/styles/Info.module.sass";
 import Button from "@/components/Button";
 import { ReactNode } from "react";
+import FAQBox from "@/components/FAQBox";
+import Timeline from "@/components/Timeline";
 
 const Information = () => {
     const router = useRouter();
@@ -34,36 +36,43 @@ const Information = () => {
                                 <h1 className={styles.name}>{localData?.name}</h1>
                                 <p className={styles.extra}>{localData?.extra}</p>
                                 <R />
+                            </div>
+                            <div className={styles.critical}>
+                                <Button>REGISTER</Button>
+                                <ul>
+                                    <li>
+                                        <Crested>
+                                            <p>Tingkat: </p>
+                                            <p>{localData?.level}</p>
+                                        </Crested>
+                                    </li>
+                                    <li>
+                                        <Crested>
+                                            <p>Biaya: </p>
+                                            <p>{localData?.price}</p>
+                                        </Crested>
+                                    </li>
+                                    <li>
+                                        <Button>JUKNIS</Button>
+                                    </li>
+                                    <li>
+                                        <Button>CP</Button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className={styles.description}>
+                                <h3>Description</h3>
                                 <Crested>
                                     <p>{localData?.description}</p>
                                 </Crested>
-                                <ul>
-                                    <li>
-                                        <p>Tingkat: </p>
-                                        <Crested>
-                                            {localData?.level}
-                                        </Crested>
-                                    </li>
-                                    <li>
-                                        <p>Biaya: </p>
-                                        <Crested>
-                                            {localData?.price}
-                                        </Crested>
-                                    </li>
-                                    <li>
-                                        <p>Juknis: </p>
-                                        <Button>
-                                            {localData?.booklet}
-                                        </Button>
-                                    </li>
-                                    <li>
-                                        <p>CP: </p>
-                                        <Button>
-                                            {localData?.cp}
-                                        </Button>
-
-                                    </li>
-                                </ul>
+                            </div>
+                            <div className={styles.timeline}>
+                                <h1>Timeline</h1>
+                                <Timeline active={[-1, 2, 4, 8]} />
+                            </div>
+                            <div className={styles.faq}>
+                                <h1>FAQ</h1>
+                                <FAQBox question="Lorem ipsum" answer="Lorem ipsum" />
                             </div>
                         </section>
                     </main>
@@ -76,7 +85,5 @@ const Information = () => {
 export default Information;
 
 const Crested = ({ children }: { children: ReactNode }) => {
-    return (
-        <div className={styles.crested}>{children}</div>
-    )
-}
+    return <div className={styles.crested}>{children}</div>;
+};

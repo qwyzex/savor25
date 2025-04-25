@@ -32,6 +32,8 @@
         justify-content: start
         align-items: flex-start
 
+        overflow-y: scroll
+
         padding: 2rem
 
         height: 100%
@@ -48,27 +50,68 @@
             .extra
                 font-style: italic
 
-            ul  
-                display: flex
-                flex-direction: column
-                justify-content: center
-                align-items: flex-start
+        .critical
+            width: 100%
 
-                gap: 1rem
+            > button
+                width: 100%
+
+            ul
+                display: grid
+                grid-template-columns: repeat(auto-fill, minmax(100px, 25%))
 
                 li
+                    aspect-ratio: 4 / 3
+                    width: 100%
+                    padding: 1rem
+
+                    // background-color: #ff0000
+
                     list-style: none
 
                     display: flex
-                    flex-direction: row
-                    justify-content: start
+                    flex-direction: column
+                    justify-content: center
                     align-items: center
 
-                    gap: 1rem
+                    > *
+                        height: 100%
+                        width: 100%
 
-                    > button
                         margin: 0
 
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+
+        .description
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: start
+
+            gap: 0.4rem
+
+            width: 100%
+
+            > div
+                width: 100%
+
+        .faq
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: start
+
+            gap: 0.4rem
+
+            width: 100%
+
+            > div
+                margin: 0
+                width: 100%
+                
 
 .crested
     padding: 0.8rem 1rem

@@ -1,0 +1,57 @@
+.main_timeline
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    gap: 1rem
+
+    > section
+        display: flex
+        flex-direction: row
+
+        position: relative
+
+        gap: 1.5rem
+
+        &::before
+            content: ""
+
+            width: 99%
+            height: 4px
+
+            position: absolute
+            top: 50%
+            left: 50%
+
+            transform: translateY(-50%) translateX(-50%)
+
+            background-color: #ffffff
+
+        > div
+            z-index: 1
+
+            aspect-ratio: 1 / 1
+            border-radius: 50%
+
+            width: 50px
+
+            background-image: url("/svgs/gradientBase.svg")
+            background-size: cover
+
+            filter: hue-rotate(240deg)
+
+            display: grid
+            place-items: center
+
+            outline: 3px dotted #ffffff40
+            outline-offset: 2px
+
+            &.active
+                filter: hue-rotate(180deg)
+
+            &.bf
+                filter: hue-rotate(40deg)
+
+            &.libur
+                filter: hue-rotate(180deg) grayscale(1)
