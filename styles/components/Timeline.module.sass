@@ -59,14 +59,101 @@
             display: grid
             place-items: center
 
-            outline: 3px dotted #ffffff40
-            outline-offset: 2px
+            outline: 2px dashed #ffffff25
+            outline-offset: 3px
 
-            &.active
-                filter: hue-rotate(180deg)
+            cursor: pointer
+
+            transition: all 0.3s ease
+
+            &:hover
+                outline: 2px dashed #ffc3c6
+
+                .tooltip
+                    opacity: 1
+                    visibility: visible
 
             &.bf
                 filter: hue-rotate(40deg)
 
             &.libur
                 filter: hue-rotate(180deg) grayscale(1)
+
+            &.active
+                filter: hue-rotate(180deg)
+
+            .tooltip
+                position: absolute
+                bottom: 120% // you can adjust this
+                left: 50%
+                transform: translateX(-50%)
+                color: white
+                white-space: nowrap
+
+                opacity: 0
+                visibility: hidden
+                transition: all 0.3s ease
+
+                display: flex
+                flex-direction: column
+                align-items: center
+
+                > p
+                    background-color: #fff
+                    padding: 0.6rem 0.8rem
+                    border-radius: 0.4rem
+                    font-size: 0.9rem
+
+                    color: #202020
+
+                .tooltipArrow
+                    width: 0
+                    height: 0
+                    border-left: 8px solid transparent
+                    border-right: 8px solid transparent
+                    border-top: 8px solid #fff
+    article
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+
+        gap: 0.6rem 1.2rem
+
+        > div
+            display: flex
+            flex-direction: row
+            gap: 0.6rem
+
+            &:nth-child(1)
+                > div
+                    filter: hue-rotate(240deg)
+            &:nth-child(2)
+                > div
+                    filter: hue-rotate(180deg)
+            &:nth-child(3)
+                > div
+                    filter: hue-rotate(40deg)
+            &:nth-child(4)
+                > div
+                    filter: hue-rotate(180deg) grayscale(1)
+
+            > div
+                height: 20px
+                width: 20px
+
+                border-radius: 30%
+
+                background-image: url("/svgs/gradientBase.svg")
+                background-size: cover
+
+@media screen and ( max-width: 550px )
+    .wide
+        display: none !important
+    .small
+        display: flex !important
+
+@media screen and ( min-width: 550px )
+    .wide
+        display: flex !important
+    .small
+        display: none !important
+    

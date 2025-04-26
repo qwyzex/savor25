@@ -7,8 +7,12 @@ import { useRouter } from "next/router";
 import styles from "@/styles/Info.module.sass";
 import Button from "@/components/Button";
 import { ReactNode } from "react";
-import FAQBox from "@/components/FAQBox";
 import Timeline from "@/components/Timeline";
+import { SVG_Call, SVG_Dollar, SVG_External, SVG_Guidebook, SVG_Level, SVG_Regist } from "@/components/Icons";
+import { getLevelLabel } from "@/components/ListBox";
+import HL from "@/components/HL";
+import Link from "next/link";
+import Arrow from "@/components/Arrow";
 
 const Information = () => {
     const router = useRouter();
@@ -27,38 +31,64 @@ const Information = () => {
             <Roof>
                 <GenPage>
                     <main className={`mainScene ${styles.main}`}>
-                        <section id={styles.backPanel}>
-                            <Button>BACK</Button>
+                        <section id={styles.backPanel}
+                            style={{
+                                filter: `hue-rotate(${localData?.hue}deg)`,
+                                boxShadow: `0 0 40px ${`hsla(${(340 + (localData?.hue || 0))}, 70%, 70%, 55%)`}`
+                            }}>
+                            <button>
+                                <Arrow />
+                            </button>
+                            <Link href="/pendaftaran"></Link>
                         </section>
                         <section id={styles.info}>
                             <div className={styles.title}>
                                 {/* TITLE */}
                                 <h1 className={styles.name}>{localData?.name}</h1>
-                                <p className={styles.extra}>{localData?.extra}</p>
+                                <p className={styles.extra}>{localData?.extra} - {localData?.cpFull}</p>
                                 <R />
                             </div>
                             <div className={styles.info_main}>
                                 <section>
                                     <div className={styles.critical}>
-                                        <Button>REGISTER</Button>
+                                        <Button hyperlink href={localData?.form}>
+                                            <p>
+                                                REGISTER
+                                                <SVG_Regist />
+                                            </p>
+                                        </Button>
                                         <ul>
                                             <li>
                                                 <Crested>
-                                                    <p>Tingkat: </p>
-                                                    <p>{localData?.level}</p>
+                                                    <SVG_Level />
+                                                    <p>Jenjang</p>
+                                                    {/* <Button>{getLevelLabel(localData?.level || 0)}</Button> */}
+                                                    <HL>{getLevelLabel(localData?.level || 0)}</HL>
                                                 </Crested>
                                             </li>
                                             <li>
                                                 <Crested>
-                                                    <p>Biaya: </p>
-                                                    <p>{localData?.price}</p>
+                                                    <SVG_Dollar />
+                                                    <p>Biaya:</p>
+                                                    {/* <Button>{`Rp. ${localData?.price.toLocaleString('id-ID')}`}</Button> */}
+                                                    <HL>{`Rp. ${localData?.price.toLocaleString('id-ID')}`}</HL>
                                                 </Crested>
                                             </li>
                                             <li>
-                                                <Button>JUKNIS</Button>
+                                                <Button hyperlink href={localData?.booklet}>
+                                                    <SVG_Guidebook />
+                                                    <p>
+                                                        JUKNIS
+                                                    </p>
+                                                </Button>
                                             </li>
                                             <li>
-                                                <Button>CP</Button>
+                                                <Button hyperlink href={`https://wa.me/+62${localData?.cp}`}>
+                                                    <SVG_Call />
+                                                    <p>
+                                                        CP
+                                                    </p>
+                                                </Button>
                                             </li>
                                         </ul>
                                     </div>
@@ -71,7 +101,7 @@ const Information = () => {
                                         </Crested>
                                     </div>
                                     <div className={styles.timeline}>
-                                        <Timeline active={[-1, 2, 4, 8]} />
+                                        <Timeline active={localData?.hx} />
                                     </div>
                                 </section>
                             </div>

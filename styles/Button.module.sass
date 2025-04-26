@@ -52,14 +52,34 @@
         outline: 2px #ffffff dashed
         color: #fff
 
+        > svg
+            transform: translateY(-5px)
+
+        svg
+            fill: #fff
+
         &::before
             opacity: 1
 
     &:active
         transform: translateY(-2px)
         
-
-    &.arrow
+    svg
+        scale: 0.9
+        color: #000
+        fill: #000
         
+        transition: all 0.3s ease
+
+    > svg
+        scale: 1.2
+
+    p
+        display: flex
+        justify-content: center
+        align-items: center
+
+        svg
+            transform: translateY(0.1rem) translateX(0.3rem)
 
 

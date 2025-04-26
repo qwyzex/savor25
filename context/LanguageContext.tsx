@@ -31,13 +31,15 @@ const languageLibrary: Record<Language, LanguageData> = {
         NAV_OF_US: "& OF US",
         LANG_STR: "Language",
         HOME_DESCRIPTION: "Welcome to our competition platform",
-        HOME_CHECK_IT_OUT_BUTTON: "CHECK IT OUT!",
+        HOME_CHECK_IT_OUT_1_BUTTON: "CHECK OUT THE TRAILER!",
+        HOME_CHECK_IT_OUT_2_BUTTON: "SEE THE LIST OF COMPETITIONS!",
         HOME_WATCH_TRAILER: "Watch The Trailer!",
         HOME_LIST_OF_COMPETITIONS: "List of Competitions",
         HOME_KEY_DATES: "Key Dates & Highlights",
         HOME_FAQ: "Frequently Asked Questions",
         HOME_SPONSORS: "Sponsored and Supported By",
         HOME_MORE_INFO: "More Information",
+        HOME_BUSINESS_INQUIRY: "BUSINESS INQUIRY / PUBLIC RELATION",
         FAQ: [
             {
                 q: "What is Savor?",
@@ -93,13 +95,15 @@ const languageLibrary: Record<Language, LanguageData> = {
         NAV_OF_US: "DAN KAMI!",
         LANG_STR: "::Bahasa",
         HOME_DESCRIPTION: "Selamat datang di platform kompetisi kami",
-        HOME_CHECK_IT_OUT_BUTTON: "LIHAT SEKARANG!",
+        HOME_CHECK_IT_OUT_1_BUTTON: "PERIKSA TRAILER-NYA!!",
+        HOME_CHECK_IT_OUT_2_BUTTON: "CEK DAFTAR PERLOMBAAN!",
         HOME_WATCH_TRAILER: "Tonton Trailer!",
         HOME_LIST_OF_COMPETITIONS: "Daftar Kompetisi",
         HOME_KEY_DATES: "Tanggal Penting",
         HOME_FAQ: "Pertanyaan yang Sering Diajukan",
         HOME_SPONSORS: "Didukung dan Disponsori Oleh",
         HOME_MORE_INFO: "Informasi Lebih Lanjut",
+        HOME_BUSINESS_INQUIRY: "PERTANYAAN BISNIS / HUMAS",
         FAQ: [
             {
                 q: "Apa itu Savor?",
@@ -144,7 +148,7 @@ const languageLibrary: Record<Language, LanguageData> = {
         ],
         REGIS_TITLE: "Daftar Kompetisi",
         REGIS_SORT: "URUTKAN",
-        REGIS_SORT_LEVEL: "Tingkatan",
+        REGIS_SORT_LEVEL: "Jenjang",
         REGIS_SORT_PRICE: "Biaya",
         REGIS_SORT_EXTRA: "Ekstrakurikuler",
     },
@@ -163,7 +167,7 @@ interface LanguageContextProps {
 export const LanguageContext = createContext<LanguageContextProps>({
     language: "en",
     translations: languageLibrary.en,
-    setLanguage: () => {},
+    setLanguage: () => { },
     getStringTranslation: () => "",
 });
 

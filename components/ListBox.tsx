@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "@/styles/components/ListBox.module.sass";
 import Arrow from "./Arrow";
 
-const getLevelLabel = (level: number) => {
+export const getLevelLabel = (level: number) => {
     switch (level) {
         case 0:
             return "SMA";

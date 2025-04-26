@@ -32,39 +32,33 @@ export default function Button({
             {!hyperlink ? (
                 <button
                     onClick={onClick}
-                    className={`${className} ${styles.button} ${
-                        arrow ? styles.arrow : ""
-                    } ${
-                        size == "small"
+                    className={`${className} ${styles.button} ${arrow ? styles.arrow : ""
+                        } ${size == "small"
                             ? styles.small
                             : size == "medium"
-                            ? styles.medium
-                            : styles.large
-                    } ${color == "primary" ? styles.primary : ""} ${
-                        color == "secondary" ? styles.secondary : ""
-                    } ${color == "tertiary" ? styles.tertiary : ""}`}
+                                ? styles.medium
+                                : styles.large
+                        } ${color == "primary" ? styles.primary : ""} ${color == "secondary" ? styles.secondary : ""
+                        } ${color == "tertiary" ? styles.tertiary : ""}`}
                     disabled={disabled}
                     type={type}
                 >
                     {children}
                 </button>
             ) : (
-                <div
-                    className={`${className} ${styles.button} ${
-                        arrow ? styles.arrow : ""
-                    } ${
-                        size == "small"
+                <button
+                    className={`${className} ${styles.button} ${arrow ? styles.arrow : ""
+                        } ${size == "small"
                             ? styles.small
                             : size == "medium"
-                            ? styles.medium
-                            : styles.large
-                    } ${color == "primary" ? styles.primary : ""} ${
-                        color == "secondary" ? styles.secondary : ""
-                    } ${color == "tertiary" ? styles.tertiary : ""}`}
+                                ? styles.medium
+                                : styles.large
+                        } ${color == "primary" ? styles.primary : ""} ${color == "secondary" ? styles.secondary : ""
+                        } ${color == "tertiary" ? styles.tertiary : ""}`}
                 >
-                    <Link href={href}></Link>
+                    <Link href={href} target="_blank"></Link>
                     {children}
-                </div>
+                </button>
             )}
         </>
     );

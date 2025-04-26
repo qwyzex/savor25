@@ -11,7 +11,7 @@ import FAQBox from "./FAQBox";
 import { useData } from "@/context/DataContext";
 
 const HomePage = () => {
-    const { language, translations, setLanguage } = useLanguage();
+    const { language, translations, getStringTranslation, setLanguage } = useLanguage();
     const { data } = useData();
 
     return (
@@ -24,7 +24,10 @@ const HomePage = () => {
                     <Hr />
                     <p>{translations.HOME_DESCRIPTION}</p>
                     <Button hyperlink href="#trailer" arrow>
-                        {translations.HOME_CHECK_IT_OUT_BUTTON}
+                        {translations.HOME_CHECK_IT_OUT_1_BUTTON}
+                    </Button>
+                    <Button hyperlink href="#competitions" arrow>
+                        {translations.HOME_CHECK_IT_OUT_2_BUTTON}
                     </Button>
                 </section>
                 <section id={"trailer"}>
@@ -91,6 +94,7 @@ const HomePage = () => {
                     <Hr />
                     <Button hyperlink href={"https://instagram.com/official.savor"}>INSTAGRAM</Button>
                     <Button hyperlink href={"https://wa.me/+6282177524039"}>CONTACT PERSON</Button>
+                    <Button hyperlink href={"https://wa.me/+6282171933493"}>{getStringTranslation("HOME_BUSINESS_INQUIRY")}</Button>
                 </section>
             </main>
         </GenPage>
