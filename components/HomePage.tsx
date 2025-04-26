@@ -117,6 +117,9 @@ const HomePage = () => {
                     <Button hyperlink href={"https://wa.me/+6282177524039"}>
                         CONTACT PERSON
                     </Button>
+                    <Button hyperlink href={"https://wa.me/+6282171933493"}>
+                        {getStringTranslation("HOME_BUSINESS_INQUIRY")}
+                    </Button>
                 </section>
             </main>
         </GenPage>

@@ -35,6 +35,7 @@ const languageLibrary: Record<Language, LanguageData> = {
         HOME_TERM_MINUTES: "MINUTES",
         HOME_TERM_SECONDS: "SECONDS",
         HOME_MORE_INFO: "More Information",
+        HOME_BUSINESS_INQUIRY: "BUSINESS INQUIRY / PUBLIC RELATION",
         FAQ: [],
     },
     id: {
@@ -49,6 +50,7 @@ const languageLibrary: Record<Language, LanguageData> = {
         HOME_TERM_SECONDS: "DETIK",
         HOME_BUTTON_ADD_TO_CALENDAR: "Kabari semesta kan kehadiranmu - tandai harinya!",
         HOME_MORE_INFO: "Informasi Lebih Lanjut",
+        HOME_BUSINESS_INQUIRY: "PERTANYAAN BISNIS / HUMAS",
         FAQ: [],
     },
 };
@@ -66,7 +68,7 @@ interface LanguageContextProps {
 export const LanguageContext = createContext<LanguageContextProps>({
     language: "en",
     translations: languageLibrary.en,
-    setLanguage: () => {},
+    setLanguage: () => { },
     getStringTranslation: () => "",
 });
 
