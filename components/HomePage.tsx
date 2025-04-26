@@ -89,9 +89,8 @@ const HomePage = () => {
                     {/* FOOTER */}
                     <h1>{translations.HOME_MORE_INFO}</h1>
                     <Hr />
-                    <Button>INSTAGRAM</Button>
-                    <Button>TIKTOK</Button>
-                    <Button>CONTACT PERSON</Button>
+                    <Button hyperlink href={"https://instagram.com/official.savor"}>INSTAGRAM</Button>
+                    <Button hyperlink href={"https://wa.me/+6282177524039"}>CONTACT PERSON</Button>
                 </section>
             </main>
         </GenPage>

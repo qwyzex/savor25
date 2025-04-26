@@ -33,7 +33,7 @@ export function DataProvider({ children }: DataProviderProps) {
             booklet: "https://github.com",
             hue: 0,
             level: 0,
-            description: "Group music performance showcasing musical skill and teamwork.",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis optio at nisi totam omnis earum vel, ut suscipit doloremque maxime perferendis magnam harum eligendi molestiae sapiente quasi molestias facilis est.\n Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore maiores sapiente, maxime voluptas, voluptates dolore officiis praesentium in illum asperiores quam quod veniam saepe sequi quas. Quisquam quae corporis numquam?\n Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, itaque? Adipisci impedit commodi possimus neque. Temporibus quidem aut fugiat, nulla possimus quia exercitationem odio assumenda ad ab. Quaerat, amet ut.",
             price: 180000,
             cp: "082281019574",
         },

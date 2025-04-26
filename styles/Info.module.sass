@@ -3,8 +3,21 @@
     width: 100%
 
     display: flex
-    flex-direction: row
     gap: 0
+
+    @media screen and ( max-width: 1150px )
+        flex-direction: column
+
+        #backPanel
+            width: 100%
+            height: max-content
+
+    @media screen and ( min-width: 1150px )
+        flex-direction: row
+
+        #backPanel
+            height: 100%
+            width: max-content
 
     background-color: #534c4f2c
 
@@ -15,29 +28,75 @@
     height: 100%
 
     #backPanel
-        width: max-content
-
         justify-content: center
         align-items: center
 
-        padding: 3rem
+        padding: 0 3rem
 
         background-color: red
-
-        height: 100%
 
     #info
         display: flex
         flex-direction: column
         justify-content: start
         align-items: flex-start
+        
+        overflow-y: auto
 
-        overflow-y: scroll
+        .info_main
+            > section
+                width: 100%
+
+            @media screen and ( max-width: 1150px )
+                display: flex
+                flex-direction: column
+                justify-content: start
+                gap: 2rem
+
+                #backPanel
+                    width: 100%
+                    height: max-content
+
+                .critical
+                    ul
+                        grid-template-columns: repeat(auto-fill, minmax(25%, 25%)) !important
+
+                        li
+                            aspect-ratio: 3 / 4 !important
+
+                        @media screen and ( max-width: 500px )
+                            display: flex
+                            flex-direction: column
+
+                            li
+                                aspect-ratio: 7 / 2 !important
+
+                                > *
+                                    font-size: 1.6rem
+
+            @media screen and ( min-width: 1150px )
+                display: flex
+                flex-direction: row
+                gap: 2rem
+
+                #backPanel
+                    height: 100%
+                    width: max-content
+
+        gap: 2.5rem
 
         padding: 2rem
 
         height: 100%
         width: 100%
+
+        > section
+            height: max-content
+
+            &:nth-child(2)
+                display: flex
+                flex-direction: column
+                gap: 2rem
 
         .title
             display: flex
@@ -58,12 +117,13 @@
 
             ul
                 display: grid
-                grid-template-columns: repeat(auto-fill, minmax(100px, 25%))
+                grid-template-columns: repeat(auto-fill, minmax(100px, 50%))
 
                 li
+                    // aspect-ratio: 3 / 4 
                     aspect-ratio: 4 / 3
                     width: 100%
-                    padding: 1rem
+                    padding: 0.5rem
 
                     // background-color: #ff0000
 
@@ -74,11 +134,13 @@
                     justify-content: center
                     align-items: center
 
+
                     > *
                         height: 100%
                         width: 100%
 
                         margin: 0
+                        font-size: 3vw
 
                         display: flex
                         flex-direction: column
@@ -119,3 +181,6 @@
     backdrop-filter: blur(2px)
 
     border-radius: 10px
+
+    &.left
+        text-align: left
