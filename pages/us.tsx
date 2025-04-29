@@ -1,4 +1,6 @@
 import BurgerMenu from "@/components/BurgerMenu";
+import GenPage from "@/components/GenPage";
+import Roof from "@/components/Roof";
 import styles from "@/styles/Us.module.sass";
 import Head from "next/head";
 
@@ -8,9 +10,11 @@ const UsPage = () => {
             <Head>
                 <title>Tentang SAVOR 25</title>
             </Head>
-            <div className={`mainScene  ${styles.Us}`}>
-                <BurgerMenu />
-            </div>
+            <Roof>
+                <GenPage>
+                    <main className={`mainScene`}></main>
+                </GenPage>
+            </Roof>
         </>
     );
 };

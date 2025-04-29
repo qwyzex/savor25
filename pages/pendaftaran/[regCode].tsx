@@ -51,7 +51,7 @@ const Information = () => {
                             <div className={styles.info_main}>
                                 <section>
                                     <div className={styles.critical}>
-                                        <Button hyperlink href={localData?.form}>
+                                        <Button hyperlink newTab href={localData?.form}>
                                             <p>
                                                 REGISTER
                                                 <SVG_Regist />
@@ -75,7 +75,7 @@ const Information = () => {
                                                 </Crested>
                                             </li>
                                             <li>
-                                                <Button hyperlink href={localData?.booklet}>
+                                                <Button hyperlink newTab href={localData?.booklet}>
                                                     <SVG_Guidebook />
                                                     <p>
                                                         JUKNIS
@@ -83,7 +83,7 @@ const Information = () => {
                                                 </Button>
                                             </li>
                                             <li>
-                                                <Button hyperlink href={`https://wa.me/+62${localData?.cp}`}>
+                                                <Button hyperlink newTab href={`https://wa.me/+62${localData?.cp}`}>
                                                     <SVG_Call />
                                                     <p>
                                                         CP

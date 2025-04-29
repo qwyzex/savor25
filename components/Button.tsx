@@ -13,6 +13,7 @@ export interface ButtonProps {
     size?: "small" | "medium" | "large";
     hyperlink?: boolean;
     href?: string;
+    newTab?: boolean;
 }
 
 export default function Button({
@@ -26,6 +27,7 @@ export default function Button({
     size = "medium",
     hyperlink = false,
     href = "",
+    newTab = false,
 }: ButtonProps) {
     return (
         <>
@@ -56,7 +58,7 @@ export default function Button({
                         } ${color == "primary" ? styles.primary : ""} ${color == "secondary" ? styles.secondary : ""
                         } ${color == "tertiary" ? styles.tertiary : ""}`}
                 >
-                    <Link href={href} target="_blank"></Link>
+                    <Link href={href} target={newTab ? "_blank" : "_self"}></Link>
                     {children}
                 </button>
             )}

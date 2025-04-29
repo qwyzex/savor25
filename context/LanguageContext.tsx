@@ -87,6 +87,13 @@ const languageLibrary: Record<Language, LanguageData> = {
         REGIS_SORT_LEVEL: "Level",
         REGIS_SORT_PRICE: "Price",
         REGIS_SORT_EXTRA: "Extracurricular",
+        BURGER_REGISTER: "Competitions",
+        BURGER_GUIDEBOOK: "Guidebook",
+        BURGER_OF_US: "And of Us",
+        GUIDE_TITLE_1: "SAVOR 25 Guidebook",
+        GUIDE_TITLE_2: "Competition Guides",
+        GUIDE_DESC: "The SAVOR 25 technical guidelines is a complete guide to participating in the SAVOR 25 competition. It contains important information about the terms and conditions, competition categories, and registration guidelines. Please be sure to read this manual carefully before registering.",
+        GUIDE_OF: "Guide of",
     },
     id: {
         NAV_HOME: "BERANDA",
@@ -151,6 +158,13 @@ const languageLibrary: Record<Language, LanguageData> = {
         REGIS_SORT_LEVEL: "Jenjang",
         REGIS_SORT_PRICE: "Biaya",
         REGIS_SORT_EXTRA: "Ekstrakurikuler",
+        BURGER_REGISTER: "Pendaftaran",
+        BURGER_GUIDEBOOK: "Juknis",
+        BURGER_OF_US: "Tentang Kami",
+        GUIDE_TITLE_1: "Juknis SAVOR 25",
+        GUIDE_TITLE_2: "Juknis Perlombaan",
+        GUIDE_DESC: "Juknis SAVOR 25 adalah panduan lengkap untuk mengikuti kompetisi SAVOR 25. Di dalamnya terdapat informasi penting mengenai syarat dan ketentuan, kategori lomba, serta panduan pendaftaran. Pastikan untuk membaca juknis ini dengan seksama sebelum mendaftar.",
+        GUIDE_OF: "Juknis Perlombaan",
     },
 };
 

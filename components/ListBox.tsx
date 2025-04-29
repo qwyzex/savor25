@@ -9,12 +9,10 @@ export const getLevelLabel = (level: number) => {
         case 1:
             return "SMP";
         case 2:
-            return "SD";
-        case 21:
-            return "SD & SMP";
-        case 10:
             return "SMP & SMA";
-        case 9:
+        case 3:
+            return "SD & SMP";
+        case 4:
             return "Public";
         default:
             return "Unknown";

@@ -7,6 +7,9 @@
 
     overflow: hidden
 
+    h1
+        text-align: left
+
     @media screen and ( max-width: 1150px )
         flex-direction: column
 
@@ -119,11 +122,11 @@
                         li
                             aspect-ratio: 3 / 4 !important
 
-                            &:nth-child(2)
-                                div
-                                    > p
-                                        &:nth-child(3)
-                                            font-size: 0.9rem
+                            // &:nth-child(2)
+                            //     div
+                            //         > p
+                            //             &:nth-child(3)
+                            //                 font-size: 0.9rem
 
                         @media screen and ( max-width: 550px )
                             grid-template-columns: repeat(auto-fill, minmax(25%, 50%)) !important
@@ -198,6 +201,8 @@
                     align-items: center
 
                     > div
+                        padding: 0.3rem
+
                         > button
                             margin: 10px 0 0 0
 
@@ -212,7 +217,7 @@
                         width: 100%
 
                         margin: 0
-                        font-size: 1.4vw
+                        font-size: clamp(0.7rem, 1.1rem, 1.6rem)
 
                         display: flex
                         flex-direction: column

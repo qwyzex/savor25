@@ -121,6 +121,12 @@ const Landing = ({ bbSetter }: LandingProps) => {
                                         <div className={styles.wrapperMain}>
                                             <button onClick={handleNova}>
                                                 <StarSVG />
+                                                <div>
+                                                    <p>
+                                                        CONTINUE
+                                                    </p>
+                                                    <div className={styles.tooltipArrow}></div>
+                                                </div>
                                             </button>
                                         </div>
                                         <div className={`noSelection ${styles.title}`}>
