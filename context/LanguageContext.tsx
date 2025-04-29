@@ -37,7 +37,10 @@ const languageLibrary: Record<Language, LanguageData> = {
         HOME_LIST_OF_COMPETITIONS: "List of Competitions",
         HOME_KEY_DATES: "Key Dates & Highlights",
         HOME_FAQ: "Frequently Asked Questions",
-        HOME_SPONSORS: "Sponsored and Supported By",
+        // HOME_SPONSORS: "Sponsored and Supported By",
+        HOME_SPONSORS: "Calling Out Sponsors and Partners",
+        HOME_SPONSORS_DESC: "We are open for sponsorship and partnership opportunities. If you are interested in collaborating with us, please reach out to us through the contact below.",
+        HOME_SPONSORS_CALL: "Reach out to us!",
         HOME_MORE_INFO: "More Information",
         HOME_BUSINESS_INQUIRY: "BUSINESS INQUIRY / PUBLIC RELATION",
         FAQ: [
@@ -108,7 +111,10 @@ const languageLibrary: Record<Language, LanguageData> = {
         HOME_LIST_OF_COMPETITIONS: "Daftar Kompetisi",
         HOME_KEY_DATES: "Tanggal Penting",
         HOME_FAQ: "Pertanyaan yang Sering Diajukan",
-        HOME_SPONSORS: "Didukung dan Disponsori Oleh",
+        // HOME_SPONSORS: "Didukung dan Disponsori Oleh",
+        HOME_SPONSORS: "Terbuka Bagi Para Sponsor dan Mitra",
+        HOME_SPONSORS_DESC: "Kami terbuka untuk peluang sponsor dan kemitraan. Jika Anda tertarik untuk berkolaborasi dengan kami, silakan hubungi kami melalui kontak dibawah.",
+        HOME_SPONSORS_CALL: "Hubungi kami!",
         HOME_MORE_INFO: "Informasi Lebih Lanjut",
         HOME_BUSINESS_INQUIRY: "PERTANYAAN BISNIS / HUMAS",
         FAQ: [

@@ -8,7 +8,7 @@ import styles from "@/styles/Info.module.sass";
 import Button from "@/components/Button";
 import { ReactNode } from "react";
 import Timeline from "@/components/Timeline";
-import { SVG_Call, SVG_Dollar, SVG_External, SVG_Guidebook, SVG_Level, SVG_Regist } from "@/components/Icons";
+import { SVG_Call, SVG_Dollar, SVG_Guidebook, SVG_Level, SVG_Regist } from "@/components/Icons";
 import { getLevelLabel } from "@/components/ListBox";
 import HL from "@/components/HL";
 import Link from "next/link";
@@ -25,7 +25,7 @@ const Information = () => {
     return (
         <>
             <Head>
-                <title>Information</title>
+                <title>{localData?.name} - SAVOR 25</title>
                 <meta name="description" content="Savor 2025 Information" />
             </Head>
             <Roof>

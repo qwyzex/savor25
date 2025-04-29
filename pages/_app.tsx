@@ -123,7 +123,7 @@ function NavMenu() {
                     </Link>
                 </li>
                 <li>
-                    <Link className="link-wrapper" href="juknis">
+                    <Link className="link-wrapper" href="/juknis">
                         {/* <span className="fallback">Archive</span> */}
                         <div className="shape-wrapper">
                             <div className="shape red-fill jelly">
@@ -159,7 +159,7 @@ function NavMenu() {
                     </Link>
                 </li>
                 <li>
-                    <Link className="link-wrapper" href="us">
+                    <Link className="link-wrapper" href="/us">
                         {/* <span className="fallback">About</span> */}
                         <div className="shape-wrapper">
                             <div className="shape red-fill jelly">

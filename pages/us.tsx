@@ -8,11 +8,12 @@ const UsPage = () => {
     return (
         <>
             <Head>
-                <title>Tentang SAVOR 25</title>
+                <title>ABOUT SAVOR</title>
             </Head>
             <Roof>
                 <GenPage>
-                    <main className={`mainScene`}></main>
+                    <main className={`mainScene`}>
+                    </main>
                 </GenPage>
             </Roof>
         </>

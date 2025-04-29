@@ -9,6 +9,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import ListBox from "./ListBox";
 import FAQBox from "./FAQBox";
 import { useData } from "@/context/DataContext";
+import Image from "next/image";
 
 const HomePage = () => {
     const { language, translations, getStringTranslation, setLanguage } = useLanguage();
@@ -56,10 +57,11 @@ const HomePage = () => {
                         ))}
                     </ul>
                 </section>
-                <section id={"dates"}>
+                <section id={"dates"} className={styles.dates}>
                     {/* HIGHLIGHTS */}
                     <h1>{translations.HOME_KEY_DATES}</h1>
                     <Hr />
+                    <Image src={"/imgs/Timeline.jpg"} width={600} height={800} />
                 </section>
                 <section id={"faq"}>
                     {/* FAQ */}
@@ -75,7 +77,10 @@ const HomePage = () => {
                     {/* CALLING OUT SPONSORS */}
                     <h1>{translations.HOME_SPONSORS}</h1>
                     <Hr />
+                    <p>{getStringTranslation("HOME_SPONSORS_DESC")}</p>
+                    <Button hyperlink newTab href={"https://wa.me/+6282171933493"}>{getStringTranslation("HOME_SPONSORS_CALL")}</Button>
                     <section className={styles.sponsorsList}>
+                        {/* <img src="/imgs/ccl.jpg" alt="1" />
                         <img src="/imgs/ccl.jpg" alt="1" />
                         <img src="/imgs/ccl.jpg" alt="1" />
                         <img src="/imgs/ccl.jpg" alt="1" />
@@ -84,17 +89,16 @@ const HomePage = () => {
                         <img src="/imgs/ccl.jpg" alt="1" />
                         <img src="/imgs/ccl.jpg" alt="1" />
                         <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
-                        <img src="/imgs/ccl.jpg" alt="1" />
+                        <img src="/imgs/ccl.jpg" alt="1" /> */}
                     </section>
                 </section>
                 <section id={"additional"}>
                     {/* FOOTER */}
                     <h1>{translations.HOME_MORE_INFO}</h1>
                     <Hr />
-                    <Button hyperlink href={"https://instagram.com/official.savor"}>INSTAGRAM</Button>
-                    <Button hyperlink href={"https://wa.me/+6282177524039"}>CONTACT PERSON</Button>
-                    <Button hyperlink href={"https://wa.me/+6282171933493"}>{getStringTranslation("HOME_BUSINESS_INQUIRY")}</Button>
+                    <Button hyperlink newTab href={"https://instagram.com/official.savor"}>INSTAGRAM</Button>
+                    <Button hyperlink newTab href={"https://wa.me/+6282177524039"}>CONTACT PERSON</Button>
+                    <Button hyperlink newTab href={"https://wa.me/+6282171933493"}>{getStringTranslation("HOME_BUSINESS_INQUIRY")}</Button>
                 </section>
             </main>
         </GenPage>
