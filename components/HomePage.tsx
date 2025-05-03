@@ -16,7 +16,7 @@ const HomePage = () => {
     });
 
     // Replace this with your actual target time
-    const targetDate = new Date("2025-05-02T17:00:00Z");
+    const targetDate = new Date("2025-05-06T17:00:00Z");
 
     useEffect(() => {
         const interval = setInterval(() => {
