@@ -60,8 +60,8 @@ const HomePage = () => {
         const location = encodeURIComponent("Metro, Lampung, Indonesia");
 
         // Format: YYYYMMDDTHHmmssZ (UTC time)
-        const startUTC = "20250502T170000Z";
-        const endUTC = "20250502T180000Z";
+        const startUTC = "20250506T170000Z";
+        const endUTC = "20250506T180000Z";
 
         return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=${startUTC}/${endUTC}`;
     };
