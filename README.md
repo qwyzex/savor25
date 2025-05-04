@@ -34,7 +34,7 @@ Welcome to the official website of **SAVOR 2025** — _SMANSA Festive Regional C
 - **Architecture**: Modular and scalable, designed from scratch 🧠  
 - **Backend**: Not yet integrated — currently static, may evolve 🌱
 
-Everything — from design to architecture to programming — is handcrafted and maintained by a single contributor (me–@qwyzex, Ihsan Fashbir Danurrahardjo). ✍️🧑‍💻
+Everything — from design to architecture to programming — is handcrafted and maintained by a single contributor (me – @qwyzex, Ihsan Fashbir Danurrahardjo). ✍️🧑‍💻
 
 ---
 
