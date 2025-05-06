@@ -1,40 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# SAVOR 2025 · Official Website 🎉✨
 
-## Getting Started
+Welcome to the official website of **SAVOR 2025** — _SMANSA Festive Regional Competition_! This is the central platform for everything related to SAVOR: competition info, registrations, updates, and documentation.
 
-First, run the development server:
+> A celebration of talent, spirit, and unity — brought to life by the students of SMAN 1 Metro. 🏫💫
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About the Event 🏆
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+**SAVOR** is an interschool competition that fuses creativity, intelligence, and performance into one unforgettable experience. From intense tournaments to dazzling showcases, SAVOR 2025 brings it all together in one arena. 🎭🎨⚔️
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## Website Features 🖥️
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Event & Competition Directory**  
+  Clear, categorized listing of all competition branches with rules and details. 📋
 
-## Learn More
+- **Registration System**  
+  Participants can register individually or as a team — quick and intuitive. 📝👥
 
-To learn more about Next.js, take a look at the following resources:
+- **Live Announcements**  
+  Real-time updates to keep everyone in the loop. 🔔📢
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- **Information Hub**  
+  Dates, venues, criteria, and guides — all centralized. 📅📍
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Tech Stack ⚙️
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frontend**: [Next.js](https://nextjs.org/), [Sass](https://sass-lang.com/)  
+- **Architecture**: Modular and scalable, designed from scratch 🧠  
+- **Backend**: Not yet integrated — currently static, may evolve 🌱
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Everything — from design to architecture to programming — is handcrafted and maintained by a single contributor (me – @qwyzex, Ihsan Fashbir Danurrahardjo). ✍️🧑‍💻
+
+---
+
+## Licensing & Permissions 🚫
+
+**This project is not open source.**  
+Forking, redistributing, or using this codebase for personal or commercial projects is **not permitted** without explicit written consent from the creator. 🔒
+
+All rights reserved.  
+For collaboration or permission inquiries, please reach out via the appropriate contact channel. ✉️
+
+---
+
+**SAVOR 2025**  
+Let the celebration begin! 🎊🔥
