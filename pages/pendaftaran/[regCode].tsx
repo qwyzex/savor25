@@ -13,10 +13,12 @@ import { getLevelLabel } from "@/components/ListBox";
 import HL from "@/components/HL";
 import Link from "next/link";
 import Arrow from "@/components/Arrow";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Information = () => {
     const router = useRouter();
     const { data } = useData();
+    const { getStringTranslation } = useLanguage();
 
     const { regCode } = router.query;
 
@@ -99,6 +101,9 @@ const Information = () => {
                                         <Crested left>
                                             <p>{localData?.description}</p>
                                         </Crested>
+                                        <p>
+                                            {getStringTranslation("INFO_NOTE")}
+                                        </p>
                                     </div>
                                     <div className={styles.timeline}>
                                         <Timeline active={localData?.hx} />

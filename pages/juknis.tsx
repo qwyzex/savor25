@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import GenPage from "@/components/GenPage";
 import HL from "@/components/HL";
 import Hr from "@/components/Hr";
@@ -30,6 +31,9 @@ const GuidePage = () => {
                             <Hr />
                             <div className={styles.content}>
                                 <p>{getStringTranslation("GUIDE_DESC")}</p>
+                                <Button hyperlink newTab href={"https://drive.google.com/drive/folders/1-1y-sd-85S-DNzv0c78V-ROngP_7PCzI?usp=drive_link"}>
+                                    {getStringTranslation("GUIDE_GENERAL")}
+                                </Button>
                             </div>
                         </section>
                         <section className={styles.guides}>
