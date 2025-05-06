@@ -1,9 +1,9 @@
-import BurgerMenu from "@/components/BurgerMenu";
+// import BurgerMenu from "@/components/BurgerMenu";
 import Button from "@/components/Button";
 import GenPage from "@/components/GenPage";
 import Hr from "@/components/Hr";
 import Roof from "@/components/Roof";
-import styles from "@/styles/Us.module.sass";
+// import styles from "@/styles/Us.module.sass";
 import Head from "next/head";
 
 const UsPage = () => {
