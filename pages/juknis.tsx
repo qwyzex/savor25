@@ -43,7 +43,7 @@ const GuidePage = () => {
                                     {data?.map((item, index) => (
                                         <li key={index}>
                                             <p>
-                                                {getStringTranslation("GUIDE_OF")}
+                                                {getStringTranslation("GUIDE_OF")}{" "}
                                                 <HL>
                                                     {item.name}
                                                 </HL>

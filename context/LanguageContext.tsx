@@ -97,6 +97,8 @@ const languageLibrary: Record<Language, LanguageData> = {
         GUIDE_TITLE_2: "Competition Guides",
         GUIDE_DESC: "The SAVOR 25 technical guidelines is a complete guide to participating in the SAVOR 25 competition. It contains important information about the terms and conditions, competition categories, and registration guidelines. Please be sure to read this manual carefully before registering.",
         GUIDE_OF: "Guide of",
+        UNDER_DEV: "UNDER DEVELOPMENT",
+        UNDER_DEV_DESC: "This page is currently under development. Please check back later for updates.",
     },
     id: {
         NAV_HOME: "BERANDA",
@@ -171,6 +173,8 @@ const languageLibrary: Record<Language, LanguageData> = {
         GUIDE_TITLE_2: "Juknis Perlombaan",
         GUIDE_DESC: "Juknis SAVOR 25 adalah panduan lengkap untuk mengikuti kompetisi SAVOR 25. Di dalamnya terdapat informasi penting mengenai syarat dan ketentuan, kategori lomba, serta panduan pendaftaran. Pastikan untuk membaca juknis ini dengan seksama sebelum mendaftar.",
         GUIDE_OF: "Juknis Perlombaan",
+        UNDER_DEV: "SEDANG DALAM PENGEMBANGAN",
+        UNDER_DEV_DESC: "Halaman ini sedang dalam pengembangan. Silakan periksa kembali nanti untuk pembaruan.",
     },
 };
 
