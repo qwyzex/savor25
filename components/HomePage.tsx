@@ -61,7 +61,7 @@ const HomePage = () => {
                     {/* HIGHLIGHTS */}
                     <h1>{translations.HOME_KEY_DATES}</h1>
                     <Hr />
-                    <Image src={"/imgs/Timeline.jpg"} width={600} height={800} />
+                    <img src={"/imgs/Timeline_2.jpg"} />
                 </section>
                 <section id={"faq"}>
                     {/* FAQ */}
@@ -78,7 +78,9 @@ const HomePage = () => {
                     <h1>{translations.HOME_SPONSORS}</h1>
                     <Hr />
                     <p>{getStringTranslation("HOME_SPONSORS_DESC")}</p>
-                    <Button hyperlink newTab href={"https://wa.me/+6282171933493"}>{getStringTranslation("HOME_SPONSORS_CALL")}</Button>
+                    <Button hyperlink newTab href={"https://wa.me/+6282171933493"}>
+                        {getStringTranslation("HOME_SPONSORS_CALL")}
+                    </Button>
                     <section className={styles.sponsorsList}>
                         {/* <img src="/imgs/ccl.jpg" alt="1" />
                         <img src="/imgs/ccl.jpg" alt="1" />
@@ -96,9 +98,26 @@ const HomePage = () => {
                     {/* FOOTER */}
                     <h1>{translations.HOME_MORE_INFO}</h1>
                     <Hr />
-                    <Button hyperlink newTab href={"https://instagram.com/official.savor"}>INSTAGRAM</Button>
-                    <Button hyperlink newTab href={"https://wa.me/+6282177524039"}>CONTACT PERSON</Button>
-                    <Button hyperlink newTab href={"https://wa.me/+6282171933493"}>{getStringTranslation("HOME_BUSINESS_INQUIRY")}</Button>
+                    <Button
+                        hyperlink
+                        newTab
+                        href={"https://instagram.com/official.savor"}
+                    >
+                        INSTAGRAM
+                    </Button>
+                    <Button hyperlink newTab href={"https://wa.me/+6282177524039"}>
+                        CONTACT PERSON
+                    </Button>
+                    <Button hyperlink newTab href={"https://wa.me/+6282171933493"}>
+                        {getStringTranslation("HOME_BUSINESS_INQUIRY")}
+                    </Button>
+                    <Button
+                        hyperlink
+                        newTab
+                        href={"https://whatsapp.com/channel/0029VbAhRhB96H4RUaaX4x2f"}
+                    >
+                        WHATSAPP CHANNEL
+                    </Button>
                 </section>
             </main>
         </GenPage>
