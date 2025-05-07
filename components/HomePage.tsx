@@ -24,22 +24,23 @@ const HomePage = () => {
                     <p>SMANSA Festive Regional Competitions</p>
                     <Hr />
                     <p>{translations.HOME_DESCRIPTION}</p>
-                    {/* <Button hyperlink href="#trailer" arrow>
+                    <Button hyperlink href="#trailer" arrow>
                         {translations.HOME_CHECK_IT_OUT_1_BUTTON}
-                    </Button> */}
+                    </Button>
                     <Button hyperlink href="#competitions" arrow>
                         {translations.HOME_CHECK_IT_OUT_2_BUTTON}
                     </Button>
                 </section>
                 {/* TRAILER */}
-                {/* <section id={"trailer"}>
+                <section id={"trailer"}>
                     <h1>{translations.HOME_WATCH_TRAILER}</h1>
                     <Hr />
                     <iframe
-                        src="https://www.youtube.com/embed/19g66ezsKAg"
+                        src="https://www.youtube.com/embed/NipJ8xQJkYY"
+                        // https://youtu.be/NipJ8xQJkYY?si=HmTNr5ycrw47H6BV
                         allowFullScreen
                     />
-                </section> */}
+                </section>
                 <section id={"competitions"}>
                     {/* LIST OF COMPETITIONS */}
                     <h1>{translations.HOME_LIST_OF_COMPETITIONS}</h1>
