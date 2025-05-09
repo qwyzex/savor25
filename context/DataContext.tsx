@@ -84,21 +84,21 @@ export function DataProvider({ children }: DataProviderProps) {
             "cpFull": "085279203763",
             "hx": [5]
         },
-        // {
-        //     "name": "Basket 5v5",
-        //     "extra": "Basketball",
-        //     "regCode": "basket_5v5",
-        //     "description": "Kompetisi Basket 5v5 terbuka untuk siswa SMA/SMK/MA sederajat se-Provinsi Lampung. Setiap tim terdiri dari 10-12 pemain dan 2 official (manajer dan pelatih bersertifikat). Pertandingan menggunakan sistem gugur dengan durasi 4x10 menit, mengacu pada aturan PERBASI/FIBA 2024. Peserta wajib mengenakan jersey seragam dengan nomor punggung. Penilaian berdasarkan keterampilan dan sportivitas.",
-        //     "form": "https://forms.gle/9f9R4bmBFdP1emzM6",
-        //     "booklet": "https://drive.google.com/drive/folders/1JMzRa9UIRoZjeRvpFoQ1jvLEvE7sYfpb?usp=drive_link",
-        //     "edu": "SMA",
-        //     "level": 0,
-        //     "hue": 30,
-        //     "price": 500000,
-        //     "cp": "81539347721",
-        //     "cpFull": "081539347721",
-        //     "hx": [0, 1, 2, 3]
-        // },
+	{
+	    "name": "Basket 5v5",
+	    "extra": "Basketball",
+	    "regCode": "basket_5v5",
+            "description": "Kompetisi Basket 5v5 terbuka untuk siswa SMA/SMK/MA sederajat se-Kota Metro. Setiap tim terdiri dari 10-12 pemain dan 2 official (manajer dan pelatih bersertifikat). Pertandingan mengacu pada aturan PERBASI/FIBA 2024. Peserta wajib mengenakan jersey seragam dengan nomor punggung. Penilaian berdasarkan keterampilan dan sportivitas.",
+            "form": "https://forms.gle/9f9R4bmBFdP1emzM6",
+            "booklet": "https://drive.google.com/drive/folders/10Gcynaqt-twJlTEK--sEo7cQuBUiETRQ",
+            "edu": "SMA",
+            "level": 0,
+            "hue": 30,
+            "price": 500000,
+            "cp": "81539347721",
+            "cpFull": "081539347721",
+            "hx": [-1, 0, 1, 2, 3, 4]
+        },
         {
             "name": "Coswalk",
             "extra": "Japanese Club",
