@@ -6,6 +6,7 @@ import { LanguageProvider, useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     <NavMenu />
                 </div>
                 <Component {...pageProps} />
+                <Analytics />
             </DataProvider>
         </LanguageProvider>
     );
