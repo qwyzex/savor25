@@ -12,7 +12,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <LanguageProvider>
             <DataProvider>
                 <Head>
-
                     <link rel="icon" href="/imgs/icon_3.png" />
                 </Head>
                 <div id="LOVE">
@@ -27,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
 function NavMenu() {
     const { language, setLanguage, getStringTranslation } = useLanguage();
 
-    const [gradientOn, setGradientOn] = useState<"true" | "false">("false")
+    const [gradientOn, setGradientOn] = useState<"true" | "false">("false");
 
     // check for gradient orb in localStorage
     useEffect(() => {
@@ -36,7 +35,7 @@ function NavMenu() {
         if (orbOn) {
             setGradientOn("true");
         } else if (orbOn == null) {
-            localStorage.setItem("orbOn", "true")
+            localStorage.setItem("orbOn", "true");
             setGradientOn("true");
         }
     }, []);
@@ -45,7 +44,7 @@ function NavMenu() {
         const newValue = gradientOn === "true" ? "false" : "true";
         setGradientOn(newValue); // update state
         localStorage.setItem("orbOn", newValue); // update localStorage
-    }
+    };
 
     return (
         <>
@@ -202,19 +201,26 @@ function NavMenu() {
                         <p>Gradient</p>
                         <p>Orb</p>
                     </div>
-                    <input onClick={handleGradientOn} checked={gradientOn == "true" ? true : false} type="checkbox" className="orbButton orbOn"></input>
+                    <input
+                        onClick={handleGradientOn}
+                        checked={gradientOn == "true" ? true : false}
+                        type="checkbox"
+                        className="orbButton orbOn"
+                    ></input>
                 </div>
                 <div>
                     <p>{getStringTranslation("LANG_STR")}</p>
                     <button
                         onClick={() => setLanguage("id")}
-                        className={`langButton langId ${language == "id" ? "active" : ""
-                            }`}
+                        className={`langButton langId ${
+                            language == "id" ? "active" : ""
+                        }`}
                     ></button>
                     <button
                         onClick={() => setLanguage("en")}
-                        className={`langButton langEn ${language == "en" ? "active" : ""
-                            }`}
+                        className={`langButton langEn ${
+                            language == "en" ? "active" : ""
+                        }`}
                     ></button>
                 </div>
             </section>
