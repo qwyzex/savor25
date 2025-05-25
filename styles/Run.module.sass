@@ -44,7 +44,7 @@
 
 .instaFeed
     width: 100%
-    padding: 3rem 1rem
+    padding: 2rem 1rem
 
     border-radius: 20px
 
@@ -52,3 +52,15 @@
 
     > * 
         width: 100%
+
+.sponsorButtons
+    display: flex
+    align-items: center
+    gap: 1rem
+
+    @media screen and ( min-width: 768px )
+        flex-direction: row
+        
+    @media screen and ( max-width: 768px )
+        flex-direction: column
+        

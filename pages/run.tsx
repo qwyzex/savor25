@@ -25,7 +25,7 @@ const UsPage = () => {
                         <section className={styles.title}>
                             <h1>SAVOR RUN</h1>
                             <h2>
-                                “Pace the race, Brace teh wave!”
+                                “Pace the race, Brace the wave!”
                             </h2>
                             <S />
                             <p>
@@ -76,8 +76,7 @@ const UsPage = () => {
                                     Untuk informasi lebih lanjut, silakan hubungi kami melalui kontak di bawah ini:
                                     ☎️:
                                 </p>
-                                <div>
-
+                                <div className={styles.sponsorButtons}>
                                     <Button hyperlink newTab href={"https://wa.me/+6285896211584"}>
                                         SPONSORSHIP
                                     </Button>
