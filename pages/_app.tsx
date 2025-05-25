@@ -159,6 +159,43 @@ function NavMenu() {
                     </Link>
                 </li>
                 <li>
+                    <Link className="link-wrapper" href="/run">
+                        {/* <span className="fallback">About</span> */}
+                        <div className="shape-wrapper">
+                            <div className="shape red-fill jelly">
+                                <svg
+                                    x="0px"
+                                    y="0px"
+                                    viewBox="0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
+                                >
+                                    <polygon
+                                        fill="#F9336B"
+                                        points="19.5,0 110.7,0 80.1,32.7 3.1,47"
+                                    />
+                                </svg>
+                            </div>
+                            <div className="shape cyan-fill jelly">
+                                <svg
+                                    x="0px"
+                                    y="0px"
+                                    viewBox="0 0 108.1 47"
+                                    enableBackground="new 0 0 108.1 47"
+                                >
+                                    <polygon
+                                        fill="#FFB412"
+                                        points="11,3 85.1,0 118.8,45.6 14.3,29"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div className="img-wrapper">
+                            {/* <h1>{getStringTranslation("NAV_OF_US")}</h1> */}
+                            <h1>SAVORRUN</h1>
+                        </div>
+                    </Link>
+                </li>
+                <li>
                     <Link className="link-wrapper" href="/us">
                         {/* <span className="fallback">About</span> */}
                         <div className="shape-wrapper">
@@ -218,6 +255,7 @@ function NavMenu() {
                     ></button>
                 </div>
             </section>
+
         </>
     );
 }

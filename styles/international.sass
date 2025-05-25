@@ -302,8 +302,10 @@
 
     gap: 1rem
 
+    backdrop-filter: hue-rotate(360deg)
+
     &:has(ul > li:nth-child(1) > a:hover) 
-        backdrop-filter: hue-rotate(120deg)
+        backdrop-filter: hue-rotate(130deg)
 
     &:has(ul > li:nth-child(2) > a:hover) 
         backdrop-filter: hue-rotate(180deg)
@@ -313,6 +315,9 @@
 
     &:has(ul > li:nth-child(4) > a:hover) 
         backdrop-filter: hue-rotate(310deg)
+
+    &:has(ul > li:nth-child(5) > a:hover) 
+        backdrop-filter: hue-rotate(400deg)
 
     @media screen and ( max-width: 768px )
         flex-direction: column
@@ -370,20 +375,6 @@
 
                 > p
                     // mix-blend-mode: normal
-
-            &:nth-child(1)
-                &::before
-                    background-image: url('/imgs/1.png')
-            &:nth-child(2)
-                &::before
-                    background-image: url('/imgs/2.png')
-            &:nth-child(3)
-                &::before
-                    background-image: url('/imgs/3.png')
-            &:nth-child(4)
-                &::before
-                    background-image: url('/imgs/4.png')
-
             
             &:nth-child(even)
                 > a

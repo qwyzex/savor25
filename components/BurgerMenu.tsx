@@ -17,6 +17,8 @@ const BurgerMenu = () => {
                 return getStringTranslation("BURGER_GUIDEBOOK");
             case "/us":
                 return getStringTranslation("BURGER_OF_US");
+            case "/run":
+                return "SAVORRUN";
             default:
                 return "General";
         }

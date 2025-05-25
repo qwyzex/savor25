@@ -1,10 +1,13 @@
 import styles from "@/styles/Roof.module.sass";
+import { useRouter } from "next/router";
 import { ReactNode } from "react";
 interface RoofType {
     children: ReactNode;
 }
 
 const Roof = ({ children }: RoofType) => {
+    const router = useRouter();
+
     const handleBurger = () => {
         const root = document.getElementById("_roof");
         const header = document.getElementById("_header");
@@ -23,7 +26,7 @@ const Roof = ({ children }: RoofType) => {
     };
 
     return (
-        <div id={"_roof"} className={styles.roof}>
+        <div id={"_roof"} className={`${router.pathname == "/run" ? styles.run : ""} ${styles.roof}`}>
             <div className={"closeNavOverlay"} onClick={handleBurger}></div>
             {children}
         </div>

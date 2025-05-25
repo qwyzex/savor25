@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import styles from "@/styles/Button.module.sass";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export interface ButtonProps {
     children: ReactNode;
@@ -29,6 +30,8 @@ export default function Button({
     href = "",
     newTab = false,
 }: ButtonProps) {
+    const router = useRouter();
+
     return (
         <>
             {!hyperlink ? (
@@ -41,7 +44,9 @@ export default function Button({
                                 ? styles.medium
                                 : styles.large
                         } ${color == "primary" ? styles.primary : ""} ${color == "secondary" ? styles.secondary : ""
-                        } ${color == "tertiary" ? styles.tertiary : ""}`}
+                        } ${color == "tertiary" ? styles.tertiary : ""}
+                        ${router.pathname == "/run" && styles.run}
+                        `}
                     disabled={disabled}
                     type={type}
                 >
@@ -56,7 +61,9 @@ export default function Button({
                                 ? styles.medium
                                 : styles.large
                         } ${color == "primary" ? styles.primary : ""} ${color == "secondary" ? styles.secondary : ""
-                        } ${color == "tertiary" ? styles.tertiary : ""}`}
+                        } ${color == "tertiary" ? styles.tertiary : ""}
+                        ${router.pathname == "/run" && styles.run}
+                        `}
                 >
                     <Link href={href} target={newTab ? "_blank" : "_self"}></Link>
                     {children}
