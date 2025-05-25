@@ -90,20 +90,7 @@ const UsPage = () => {
                             </article>
                         </section>
                         <section>
-                            <h2>Accepting Volunteers!</h2>
-                            <S />
-                            <p>
-                                Hi Volunteers! Are you ready to be part of something big? Join us in making SAVOR RUN 2025 a success! 🏃‍♀️🏃‍♂️
-                                <br />
-                                Kami mencari sukarelawan yang antusias untuk membantu berbagai tugas menjelang dan selama acara berlangsung. Jika Kamu memiliki minat dalam olahraga lari dan ingin berkontribusi, kami ingin Kamu bergabung dengan tim kami!
-                                <br />
-                                <Button hyperlink newTab href={"https://wa.me/+6285183335612"}>
-                                    Hubungi Kami!
-                                </Button>
-                            </p>
-                        </section>
-                        <section>
-                            <h2>Instagram Feed</h2>
+			    <h2>Instagram Feed</h2>
                             <S />
                             <div className={styles.instaFeed}>
                                 <InstaFeed />
