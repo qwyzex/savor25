@@ -7,11 +7,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <LanguageProvider>
             <DataProvider>
+	    	<SpeedInsights />
                 <Head>
                     <link rel="icon" href="/imgs/icon_3.png" />
                 </Head>
