@@ -84,10 +84,10 @@ export function DataProvider({ children }: DataProviderProps) {
             "cpFull": "085279203763",
             "hx": [5]
         },
-	{
-	    "name": "Basket 5v5",
-	    "extra": "Basketball",
-	    "regCode": "basket_5v5",
+        {
+            "name": "Basket 5v5",
+            "extra": "Basketball",
+            "regCode": "basket_5v5",
             "description": "Kompetisi Basket 5v5 terbuka untuk siswa SMA/SMK/MA sederajat se-Kota Metro. Setiap tim terdiri dari 10-12 pemain dan 2 official (manajer dan pelatih bersertifikat). Pertandingan mengacu pada aturan PERBASI/FIBA 2024. Peserta wajib mengenakan jersey seragam dengan nomor punggung. Penilaian berdasarkan keterampilan dan sportivitas.",
             "form": "https://forms.gle/9f9R4bmBFdP1emzM6",
             "booklet": "https://drive.google.com/drive/folders/10Gcynaqt-twJlTEK--sEo7cQuBUiETRQ",
@@ -97,7 +97,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 500000,
             "cp": "81539347721",
             "cpFull": "081539347721",
-            "hx": [-1, 0, 1, 2, 3, 4]
+            "hx": [3, 4, 5, 6, 7, 8]
         },
         {
             "name": "Coswalk",
@@ -127,7 +127,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 60000,
             "cp": "81280029925",
             "cpFull": "081280029925",
-            "hx": [2]
+            "hx": [3]
         },
         {
             "name": "Dharmawacana Hindu",
@@ -157,7 +157,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 120000,
             "cp": "85783894030",
             "cpFull": "085783894030",
-            "hx": [0, 1, 3]
+            "hx": [0, 1, 2]
         },
         {
             "name": "Film Pendek",
@@ -187,7 +187,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 250000,
             "cp": "85832750891",
             "cpFull": "085832750891",
-            "hx": [5, 6, 7, 8]
+            "hx": [-1, 0, 1, 2]
         },
         {
             "name": "Kriya",
@@ -313,7 +313,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "name": "PMR Tandu Darurat",
             "extra": "PMR",
             "regCode": "pmr_td",
-            "description": "Kompetisi Peragaan Tandu Darurat PMR diperuntukkan bagi anggota PMR Wira SMA se-Provinsi Lampung. Setiap tim berisi 5 orang membuat tandu darurat dengan tali dan peralatan standar. Penilaian mencakup kekuatan tandu, ketepatan simpul, kerapihan, dan kecepatan. Peserta harus membawa peralatan seperti mitela dan pembalut gulung. Setiap sekolah boleh mengirimkan 1 tim putra dan 1 tim putri.",
+            "description": "Kompetisi Peragaan Tandu Darurat PMR diperuntukkan bagi anggota PMR Wira SMA se-Provinsi Lampung. Setiap tim berisi 2 orang membuat tandu darurat dengan tali dan peralatan standar. Penilaian mencakup kekuatan tandu, ketepatan simpul, kerapihan, dan kecepatan. Peserta harus membawa peralatan seperti mitela dan pembalut gulung. Setiap sekolah boleh mengirimkan 1 tim putra dan 1 tim putri.",
             "form": "https://forms.gle/nLrxE8toA2sZV2dV9",
             "booklet": "https://drive.google.com/drive/folders/1bUN4Ji_aggUPzrL8gY4SwTercX5lKMe2?usp=drive_link",
             "edu": "SMA",
@@ -427,7 +427,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 60000,
             "cp": "87895262725",
             "cpFull": "087895262725",
-            "hx": [2]
+            "hx": [3]
         },
         {
             "name": "Tari Kreasi",

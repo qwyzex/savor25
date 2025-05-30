@@ -25,9 +25,11 @@ interface ListBoxProps {
     price: number;
     regCode: string;
     hue: number;
+    button?: boolean;
+    buttonText?: string;
 }
 
-const ListBox = ({ title, level, price, regCode, hue }: ListBoxProps) => {
+const ListBox = ({ title, level, price, regCode, hue, button, buttonText }: ListBoxProps) => {
     return (
         <Link href={`/pendaftaran/${regCode}`} className={styles.listBox}>
             <section className={styles.listBoxItem}>
@@ -36,7 +38,11 @@ const ListBox = ({ title, level, price, regCode, hue }: ListBoxProps) => {
                 </div>
                 <div></div>
                 <div>
-                    {getLevelLabel(level)} | Rp. {price.toLocaleString("id-ID")}
+                    {
+                        !button ?
+                            `${getLevelLabel(level)} | Rp. ${price.toLocaleString("id-ID")}`
+                            : buttonText
+                    }
                 </div>
                 <span
                     style={{ filter: `hue-rotate(${hue}deg)` }}

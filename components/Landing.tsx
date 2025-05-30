@@ -148,6 +148,12 @@ const Landing = ({ bbSetter }: LandingProps) => {
                                             <span>
                                                 <button onClick={handleNova}>
                                                     <StarSVG />
+                                                    <div>
+                                                        <p>
+                                                            CONTINUE
+                                                        </p>
+                                                        <div className={styles.tooltipArrow}></div>
+                                                    </div>
                                                 </button>
                                             </span>
                                         </div>

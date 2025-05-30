@@ -1,6 +1,26 @@
 .main
     padding-bottom: 7rem
 
+    .registration
+        > div
+            > div
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 1rem
+
+                // width: 100%
+
+                @media screen and ( min-width: 768px )
+                    flex-direction: row
+                    
+                @media screen and ( max-width: 768px )
+                    flex-direction: column
+            > ol
+                li
+                    text-align: left
+                    padding-bottom: 0.7rem
+
     .guides
         ul
             display: flex

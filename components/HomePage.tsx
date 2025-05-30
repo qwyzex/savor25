@@ -18,10 +18,11 @@ const HomePage = () => {
     return (
         <GenPage>
             <main className={`mainScene ${styles.main}`}>
-                <section id={"title"}>
+                <section id={"title"} className={styles.title}>
                     {/* TITLE */}
-                    <h1>SAVOR 2025</h1>
-                    <p>SMANSA Festive Regional Competitions</p>
+                    <img alt="SAVOR Logo" src={"/imgs/FEED_SAVOR.png"} />
+                    <Hr />
+                    <h1>SMANSA Festive Regional Competitions</h1>
                     <Hr />
                     <p>{translations.HOME_DESCRIPTION}</p>
                     <Button hyperlink href="#trailer" arrow>
@@ -33,7 +34,7 @@ const HomePage = () => {
                 </section>
                 {/* TRAILER */}
                 <section id={"trailer"}>
-                    <h1>{translations.HOME_WATCH_TRAILER}</h1>
+                    <h2>{translations.HOME_WATCH_TRAILER}</h2>
                     <Hr />
                     <iframe
                         src="https://www.youtube.com/embed/NipJ8xQJkYY"
@@ -41,12 +42,30 @@ const HomePage = () => {
                         allowFullScreen
                     />
                 </section>
+                <section id="run">
+                    {/* RUNNING */}
+                    <div className={styles.runImage}>
+                        <Image
+                            src={"/imgs/run/Logo.png"}
+                            alt="Running"
+                            width={400}
+                            height={300}
+                        />
+                    </div>
+                    <Hr />
+                    <p>{translations.HOME_RUNNING_DESC}</p>
+                    <Button hyperlink href="/run" arrow>
+                        {translations.HOME_RUNNING_BUTTON}
+                    </Button>
+                </section>
                 <section id={"competitions"}>
                     {/* LIST OF COMPETITIONS */}
-                    <h1>{translations.HOME_LIST_OF_COMPETITIONS}</h1>
+                    <h2>{translations.HOME_LIST_OF_COMPETITIONS}</h2>
                     <Hr />
                     <ul className={styles.compLists}>
-                        {data.map((competition, index) => (
+                        {data.sort((a, b) => {
+                            return b.price - a.price;
+                        }).slice(0, 6).map((competition, index) => (
                             <ListBox
                                 key={index}
                                 title={competition.name}
@@ -56,17 +75,27 @@ const HomePage = () => {
                                 hue={competition.hue}
                             />
                         ))}
+                        <ListBox
+                            key={-1}
+                            button={true}
+                            buttonText=">> Lihat +20 kompetisi lain yang tersedia "
+                            title={"Kompetisi Lainnya"}
+                            level={0}
+                            price={0}
+                            regCode={""}
+                            hue={289}
+                        />
                     </ul>
                 </section>
                 <section id={"dates"} className={styles.dates}>
                     {/* HIGHLIGHTS */}
-                    <h1>{translations.HOME_KEY_DATES}</h1>
+                    <h2>{translations.HOME_KEY_DATES}</h2>
                     <Hr />
                     <img src={"/imgs/Timeline_2.jpg"} />
                 </section>
                 <section id={"faq"}>
                     {/* FAQ */}
-                    <h1>{translations.HOME_FAQ}</h1>
+                    <h2>{translations.HOME_FAQ}</h2>
                     <Hr />
                     <ul className={styles.faqList}>
                         {translations.FAQ.map((faq, index) => (
@@ -76,7 +105,7 @@ const HomePage = () => {
                 </section>
                 <section id={"sponsors"}>
                     {/* CALLING OUT SPONSORS */}
-                    <h1>{translations.HOME_SPONSORS}</h1>
+                    <h2>{translations.HOME_SPONSORS}</h2>
                     <Hr />
                     <p>{getStringTranslation("HOME_SPONSORS_DESC")}</p>
                     <Button hyperlink newTab href={"https://wa.me/+6282171933493"}>
@@ -97,7 +126,7 @@ const HomePage = () => {
                 </section>
                 <section id={"additional"}>
                     {/* FOOTER */}
-                    <h1>{translations.HOME_MORE_INFO}</h1>
+                    <h2>{translations.HOME_MORE_INFO}</h2>
                     <Hr />
                     <Button
                         hyperlink

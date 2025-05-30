@@ -6,6 +6,7 @@ interface TimelineProps {
 
 const Timeline = ({ active }: TimelineProps) => {
     const dates: { [key: number]: string } = {
+        [-1]: "22 Juli 2025",
         0: "23 Juli 2025",
         1: "24 Juli 2025",
         2: "25 Juli 2025",
@@ -24,6 +25,13 @@ const Timeline = ({ active }: TimelineProps) => {
             <div className={styles.main_timeline}>
                 {/* DESKTOP */}
                 <section className={styles.wide}>
+                    <div title={dates[-1]} className={`${active?.includes(-1) ? styles.active : ""} ${styles.bf}`}>
+                        H-2
+                        <div className={styles.tooltip}>
+                            <p>{dates[-1]}</p>
+                            <div className={styles.tooltipArrow} />
+                        </div>
+                    </div>
                     <div title={dates[0]} className={`${active?.includes(0) ? styles.active : ""} ${styles.bf}`}>
                         H-1
                         <div className={styles.tooltip}>
@@ -52,7 +60,7 @@ const Timeline = ({ active }: TimelineProps) => {
                             <div className={styles.tooltipArrow} />
                         </div>
                     </div>
-                    <div title={dates[4]} className={styles.libur}>
+                    <div title={dates[4]} className={`${active?.includes(4) ? styles.active : styles.libur}`}>
                         H+4
                         <div className={styles.tooltip}>
                             <p>{dates[4]}</p>
@@ -89,7 +97,7 @@ const Timeline = ({ active }: TimelineProps) => {
                             <div className={styles.tooltipArrow} />
                         </div>
                     </div>
-                    <div title={dates[9]} className={styles.libur}>
+                    <div title={dates[9]} className={`${active?.includes(9) ? styles.active : styles.libur}`}>
                         H+9
                         <div className={styles.tooltip}>
                             <p>{dates[9]}</p>
@@ -107,6 +115,13 @@ const Timeline = ({ active }: TimelineProps) => {
 
                 {/* MOBILE */}
                 <section className={styles.small}>
+                    <div title={dates[-1]} className={`${active?.includes(0) ? styles.active : ""} ${styles.bf}`}>
+                        H-2
+                        <div className={styles.tooltip}>
+                            <p>{dates[-1]}</p>
+                            <div className={styles.tooltipArrow} />
+                        </div>
+                    </div>
                     <div title={dates[0]} className={`${active?.includes(0) ? styles.active : ""} ${styles.bf}`}>
                         H-1
                         <div className={styles.tooltip}>
@@ -128,6 +143,8 @@ const Timeline = ({ active }: TimelineProps) => {
                             <div className={styles.tooltipArrow} />
                         </div>
                     </div>
+                </section>
+                <section className={styles.small}>
                     <div title={dates[3]} className={`${active?.includes(3) ? styles.active : ""}`}>
                         H+3
                         <div className={styles.tooltip}>
@@ -135,9 +152,7 @@ const Timeline = ({ active }: TimelineProps) => {
                             <div className={styles.tooltipArrow} />
                         </div>
                     </div>
-                </section>
-                <section className={styles.small}>
-                    <div title={dates[4]} className={styles.libur}>
+                    <div title={dates[4]} className={`${active?.includes(4) ? styles.active : styles.libur}`}>
                         H+4
                         <div className={styles.tooltip}>
                             <p>{dates[4]}</p>
@@ -174,7 +189,7 @@ const Timeline = ({ active }: TimelineProps) => {
                             <div className={styles.tooltipArrow} />
                         </div>
                     </div>
-                    <div title={dates[9]} className={styles.libur}>
+                    <div title={dates[9]} className={`${active?.includes(9) ? styles.active : styles.libur}`}>
                         H+9
                         <div className={styles.tooltip}>
                             <p>{dates[9]}</p>

@@ -36,8 +36,57 @@ const GuidePage = () => {
                                 </Button>
                             </div>
                         </section>
+                        <section className={styles.registration}>
+                            <h2>
+                                {getStringTranslation("GUIDE_TITLE_REGISTRATION")}
+                            </h2>
+                            <Hr />
+                            <div className={styles.content}>
+                                <ol>
+                                    <li>
+                                        {getStringTranslation("GUIDE_DESC_REGISTRATION_1")}
+                                    </li>
+                                    <li>
+                                        {getStringTranslation("GUIDE_DESC_REGISTRATION_2")}
+                                    </li>
+                                    <li>
+                                        {getStringTranslation("GUIDE_DESC_REGISTRATION_3")}
+                                    </li>
+                                    <li>
+                                        {getStringTranslation("GUIDE_DESC_REGISTRATION_4")}
+                                    </li>
+                                    <li>
+                                        {getStringTranslation("GUIDE_DESC_REGISTRATION_5")}
+                                    </li>
+                                    <li>
+                                        {getStringTranslation("GUIDE_DESC_REGISTRATION_6")}
+                                    </li>
+                                    <li>
+                                        {getStringTranslation("GUIDE_DESC_REGISTRATION_7")}
+                                    </li>
+                                    <li>
+                                        {getStringTranslation("GUIDE_DESC_REGISTRATION_8")}
+                                    </li>
+                                </ol>
+                                <div>
+                                    <Button
+                                        hyperlink
+                                        newTab
+                                        href={
+                                            "https://drive.google.com/file/d/19-PCEckI3lunyyxmW_V28aqnjQ3Y_2qd/view?usp=drive_link"
+                                        }
+                                    >
+                                        {getStringTranslation("GUIDE_REGISTRATION")}
+                                    </Button>
+                                    <Button hyperlink href="/pendaftaran">
+                                        {getStringTranslation("NAV_REGISTER")}
+                                        {" >>"}
+                                    </Button>
+                                </div>
+                            </div>
+                        </section>
                         <section className={styles.guides}>
-                            <h1>{getStringTranslation("GUIDE_TITLE_2")}</h1>
+                            <h2>{getStringTranslation("GUIDE_TITLE_2")}</h2>
                             <Hr />
                             <div className={styles.content}>
                                 <ul>

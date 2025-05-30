@@ -13,7 +13,7 @@ import Head from "next/head";
 import { useState } from "react";
 
 const BranchesPage = () => {
-    const { language, translations, setLanguage } = useLanguage();
+    const { language, getStringTranslation, setLanguage } = useLanguage();
     const { data } = useData();
 
     // State to track current sorting criterion
@@ -24,9 +24,9 @@ const BranchesPage = () => {
     const sortLabels = {
         default: "Default",
         name: "A-Z",
-        level: translations.REGIS_SORT_LEVEL,
-        price: translations.REGIS_SORT_PRICE,
-        extra: translations.REGIS_SORT_EXTRA,
+        level: getStringTranslation("REGIS_SORT_LEVEL"),
+        price: getStringTranslation("REGIS_SORT_PRICE"),
+        extra: getStringTranslation("REGIS_SORT_EXTRA"),
     };
 
     // Handle button click to cycle through sorting criteria
@@ -62,10 +62,15 @@ const BranchesPage = () => {
                 <GenPage>
                     <main className={`mainScene ${styles.main}`}>
                         <section>
-                            <h1>{translations.REGIS_TITLE}</h1>
+                            <h1>{getStringTranslation("REGIS_TITLE")}</h1>
                             <Hr />
+                            <p>{getStringTranslation("REGIS_DESC")}</p>
+                            <Button hyperlink href="/juknis">
+                                {getStringTranslation("REGIS_JUKNIS")}
+                                {" >>"}
+                            </Button>
                             <Button onClick={handleSort}>
-                                {translations.REGIS_SORT}: {sortLabels[sortBy]}
+                                {getStringTranslation("REGIS_SORT")}: {sortLabels[sortBy]}
                             </Button>
                             <ul className={styles.compLists}>
                                 {sortedData.map((competition, index) => (
