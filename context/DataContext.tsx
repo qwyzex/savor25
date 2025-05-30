@@ -23,6 +23,7 @@ export interface CompDoc {
     price: number,
     cp: string,
     cpFull: string,
+    cpLink: string,
     hx: Array<number>,
 }
 
@@ -48,6 +49,7 @@ export const DataContext = createContext<DataContextProps>({
         price: 0,
         cp: "",
         cpFull: "",
+        cpLink: "",
         hx: [],
     }],
 });
@@ -67,6 +69,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 50000,
             "cp": "85218217952",
             "cpFull": "085218217952",
+            "cpLink": "85218217952",
             "hx": [5]
         },
         {
@@ -82,6 +85,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 180000,
             "cp": "85279203763",
             "cpFull": "085279203763",
+            "cpLink": "85279203763",
             "hx": [5]
         },
         {
@@ -97,6 +101,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 500000,
             "cp": "81539347721",
             "cpFull": "081539347721",
+            "cpLink": "81539347721",
             "hx": [3, 4, 5, 6, 7, 8]
         },
         {
@@ -112,6 +117,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 70000,
             "cp": "83809532175",
             "cpFull": "083809532175",
+            "cpLink": "83809532175",
             "hx": [5]
         },
         {
@@ -127,6 +133,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 60000,
             "cp": "81280029925",
             "cpFull": "081280029925",
+            "cpLink": "81280029925",
             "hx": [3]
         },
         {
@@ -142,6 +149,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 50000,
             "cp": "82382322116",
             "cpFull": "082382322116",
+            "cpLink": "82382322116",
             "hx": [7]
         },
         {
@@ -157,6 +165,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 120000,
             "cp": "85783894030",
             "cpFull": "085783894030",
+            "cpLink": "85783894030",
             "hx": [0, 1, 2]
         },
         {
@@ -172,6 +181,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 50000,
             "cp": "88286202249",
             "cpFull": "088286202249",
+            "cpLink": "88286202249",
             "hx": [8]
         },
         {
@@ -187,6 +197,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 250000,
             "cp": "85832750891",
             "cpFull": "085832750891",
+            "cpLink": "85832750891",
             "hx": [-1, 0, 1, 2]
         },
         {
@@ -202,6 +213,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 75000,
             "cp": "8.95339E+11",
             "cpFull": "0895339111022",
+            "cpLink": "895339111022",
             "hx": [8]
         },
         {
@@ -217,6 +229,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 300000,
             "cp": "82175089080",
             "cpFull": "082175089080",
+            "cpLink": "82175089080",
             "hx": [3]
         },
         {
@@ -232,6 +245,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 65000,
             "cp": "82376124318",
             "cpFull": "082376124318",
+            "cpLink": "82376124318",
             "hx": [8]
         },
         {
@@ -247,6 +261,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 150000,
             "cp": "85832697158",
             "cpFull": "085832697158",
+            "cpLink": "85832697158",
             "hx": [7]
         },
         {
@@ -262,6 +277,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 50000,
             "cp": "81273858388",
             "cpFull": "081273858388",
+            "cpLink": "81273858388",
             "hx": [1, 2]
         },
         {
@@ -277,6 +293,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 50000,
             "cp": "82382322116",
             "cpFull": "082382322116",
+            "cpLink": "82382322116",
             "hx": [7]
         },
         {
@@ -292,6 +309,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 50000,
             "cp": "85709034351",
             "cpFull": "085709034351",
+            "cpLink": "85709034351",
             "hx": [6]
         },
         {
@@ -307,6 +325,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 75000,
             "cp": "8.95383E+11",
             "cpFull": "0895382509408",
+            "cpLink": "895382509408",
             "hx": [1]
         },
         {
@@ -322,6 +341,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 75000,
             "cp": "85658846635",
             "cpFull": "085658846635",
+            "cpLink": "85658846635",
             "hx": [1]
         },
         {
@@ -337,6 +357,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 65000,
             "cp": "85257264599",
             "cpFull": "085257264599",
+            "cpLink": "85257264599",
             "hx": [3]
         },
         {
@@ -352,6 +373,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 75000,
             "cp": "83179925043",
             "cpFull": "083179925043",
+            "cpLink": "83179925043",
             "hx": [3]
         },
         {
@@ -367,6 +389,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 65000,
             "cp": "87892500548",
             "cpFull": "087892500548",
+            "cpLink": "87892500548",
             "hx": [2]
         },
         {
@@ -382,6 +405,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 75000,
             "cp": "82175099715",
             "cpFull": "082175099715",
+            "cpLink": "82175099715",
             "hx": [6]
         },
         {
@@ -397,6 +421,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 50000,
             "cp": "82181531725",
             "cpFull": "082181531725",
+            "cpLink": "82181531725",
             "hx": [7]
         },
         {
@@ -412,6 +437,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 75000,
             "cp": "8.95371E+11",
             "cpFull": "0895370907289",
+            "cpLink": "895370907289",
             "hx": [8]
         },
         {
@@ -427,6 +453,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 60000,
             "cp": "87895262725",
             "cpFull": "087895262725",
+            "cpLink": "87895262725",
             "hx": [3]
         },
         {
@@ -442,6 +469,7 @@ export function DataProvider({ children }: DataProviderProps) {
             "price": 125000,
             "cp": "82177874504",
             "cpFull": "082177874504",
+            "cpLink": "82177874504",
             "hx": [8]
         }
     ];

@@ -85,7 +85,7 @@ const Information = () => {
                                                 </Button>
                                             </li>
                                             <li>
-                                                <Button hyperlink newTab href={`https://wa.me/+62${localData?.cp}`}>
+                                                <Button hyperlink newTab href={`https://wa.me/+62${localData?.cpLink}`}>
                                                     <SVG_Call />
                                                     <p>
                                                         CP
