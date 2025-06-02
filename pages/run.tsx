@@ -50,7 +50,16 @@ const UsPage = () => {
                             <S />
                             <h3>📅 Tanggal 2 Agustus 2025</h3>
                             <h3>🕘 Pendaftaran dibuka 4 Juni 2025</h3>
-
+                            <S />
+                            <p>Tautan Pendaftaran SAVORRUN Bagi Kalangan Umum</p>
+                            <p>{"{"} Rp. 150.000 {"}"}</p>
+                            <Button hyperlink newTab href="https://youtube.com">{">"} Pendaftaran Umum {"<"}</Button>
+                            <p>Nikmati Potongan Harga Sebagai Pelajar [ S&K berlaku ]</p>
+                            <p>{"{"} Rp. 130.000 {"}"}</p>
+                            <Button hyperlink newTab href="https://youtube.com">! Saya Seorang Pelajar !</Button>
+                            <p>Tautan Pendaftaran Khusus Murid SMA Negeri 1 Metro</p>
+                            <p>{"{"} Rp. 120.000 {"}"}</p>
+                            <Button hyperlink newTab href="https://youtube.com">~ Daftar Sebagai Murid SMAN 1 Metro ~</Button>
                         </section>
                         <section>
                             <h2>Upcoming Update...</h2>
@@ -90,7 +99,7 @@ const UsPage = () => {
                             </article>
                         </section>
                         <section>
-			    <h2>Instagram Feed</h2>
+                            <h2>Instagram Feed</h2>
                             <S />
                             <div className={styles.instaFeed}>
                                 <InstaFeed />
