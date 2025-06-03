@@ -53,13 +53,13 @@ const UsPage = () => {
                             <S />
                             <p>Tautan Pendaftaran SAVORRUN Bagi Kalangan Umum</p>
                             <p>{"{"} Rp. 150.000 {"}"}</p>
-                            <Button hyperlink newTab href="https://youtube.com">{">"} Pendaftaran Umum {"<"}</Button>
+                            <Button hyperlink newTab href="https://forms.gle/Aw3vfq84pQsa56hd7">{">"} Pendaftaran Umum {"<"}</Button>
                             <p>Nikmati Potongan Harga Sebagai Pelajar [ S&K berlaku ]</p>
                             <p>{"{"} Rp. 130.000 {"}"}</p>
-                            <Button hyperlink newTab href="https://youtube.com">! Saya Seorang Pelajar !</Button>
+                            <Button hyperlink newTab href="https://forms.gle/6Dx5F8mGucYxtic8A">! Saya Seorang Pelajar !</Button>
                             <p>Tautan Pendaftaran Khusus Murid SMA Negeri 1 Metro</p>
                             <p>{"{"} Rp. 120.000 {"}"}</p>
-                            <Button hyperlink newTab href="https://youtube.com">~ Daftar Sebagai Murid SMAN 1 Metro ~</Button>
+                            <Button hyperlink newTab href="https://forms.gle/Dcbe4hWPU1rwfU5V8">~ Daftar Sebagai Murid SMAN 1 Metro ~</Button>
                         </section>
                         <section>
                             <h2>Upcoming Update...</h2>
