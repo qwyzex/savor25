@@ -115,6 +115,12 @@ const languageLibrary: Record<Language, LanguageData> = {
         GUIDE_OF: "Guide of",
         UNDER_DEV: "UNDER DEVELOPMENT",
         UNDER_DEV_DESC: "This page is currently under development. Please check back later for updates.",
+        REPORT_BUG_TITLE: "Report a Bug",
+        REPORT_BUG_DESC: "If you encounter any issues or bugs while using the site, please report them to us so we can fix them as soon as possible.",
+        REPORT_BUG_LINK: "Report Bug",
+        CONTRIBUTE_TITLE: "Contribute to SAVOR 25",
+        CONTRIBUTE_DESC: "SAVOR25 webapp is currently maintained by only one person, and we are looking for contributors to help us improve the app. If you are interested in contributing, please reach out to us through the link below.",
+        CONTRIBUTE_LINK: "Contribute Here",
     },
     id: {
         NAV_HOME: "BERANDA",
@@ -207,6 +213,12 @@ const languageLibrary: Record<Language, LanguageData> = {
         GUIDE_OF: "Juknis Perlombaan",
         UNDER_DEV: "SEDANG DALAM PENGEMBANGAN",
         UNDER_DEV_DESC: "Halaman ini sedang dalam pengembangan. Silakan periksa kembali nanti untuk pembaruan.",
+        REPORT_BUG_TITLE: "Laporkan Bug",
+        REPORT_BUG_DESC: "Jika Anda menemukan masalah atau bug saat menggunakan situs, harap laporkan kepada kami agar kami dapat segera memperbaikinya.",
+        REPORT_BUG_LINK: "Laporkan Bug",
+        CONTRIBUTE_TITLE: "Kontribusi untuk SAVOR 25",
+        CONTRIBUTE_DESC: "Aplikasi web SAVOR25 saat ini dikelola oleh satu orang, dan kami mencari kontributor untuk membantu kami meningkatkan aplikasi ini. Jika Anda tertarik untuk berkontribusi, silakan hubungi kami melalui tautan di bawah.",
+        CONTRIBUTE_LINK: "Kontribusi di Sini",
     },
 };
 
