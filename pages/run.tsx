@@ -1,16 +1,12 @@
-// import BurgerMenu from "@/components/BurgerMenu";
 import Button from "@/components/Button";
 import GenPage from "@/components/GenPage";
 import { S } from "@/components/Hr";
 import Roof from "@/components/Roof";
 import InstaFeed from "@/components/RunFeed";
-// import { useLanguage } from "@/context/LanguageContext";
 import styles from "@/styles/Run.module.sass";
 import Head from "next/head";
 
 const UsPage = () => {
-    // const { getStringTranslation } = useLanguage();
-
     return (
         <>
             <Head>
