@@ -7,8 +7,14 @@ import { useRouter } from "next/router";
 import styles from "@/styles/Info.module.sass";
 import Button from "@/components/Button";
 import { ReactNode } from "react";
-import Timeline from "@/components/Timeline";
-import { SVG_Call, SVG_Dollar, SVG_Guidebook, SVG_Level, SVG_Regist } from "@/components/Icons";
+// import Timeline from "@/components/Timeline";
+import {
+    SVG_Call,
+    SVG_Dollar,
+    SVG_Guidebook,
+    SVG_Level,
+    SVG_Regist,
+} from "@/components/Icons";
 import { getLevelLabel } from "@/components/ListBox";
 import HL from "@/components/HL";
 import Link from "next/link";
@@ -33,11 +39,14 @@ const Information = () => {
             <Roof>
                 <GenPage>
                     <main className={`mainScene ${styles.main}`}>
-                        <section id={styles.backPanel}
+                        <section
+                            id={styles.backPanel}
                             style={{
                                 filter: `hue-rotate(${localData?.hue}deg)`,
-                                boxShadow: `0 0 40px ${`hsla(${(340 + (localData?.hue || 0))}, 70%, 70%, 55%)`}`
-                            }}>
+                                boxShadow: `0 0 40px ${`hsla(${340 + (localData?.hue || 0)
+                                    }, 70%, 70%, 55%)`}`,
+                            }}
+                        >
                             <button>
                                 <Arrow />
                             </button>
@@ -47,14 +56,23 @@ const Information = () => {
                             <div className={styles.title}>
                                 {/* TITLE */}
                                 <h1 className={styles.name}>{localData?.name}</h1>
-                                <p className={styles.extra}>{localData?.extra} - {localData?.cpFull}</p>
+                                <p className={styles.extra}>
+                                    {localData?.extra} - {localData?.cpFull}
+                                </p>
                                 <R />
                             </div>
                             <div className={styles.info_main}>
                                 <section>
                                     <div className={styles.critical}>
-                                        <Button hyperlink newTab href={localData?.form}>
+                                        <Button
+                                            // newTab
+                                            disabled={true}
+                                        // href={" "}
+                                        >
                                             <p>
+                                                [ {getStringTranslation(
+                                                    "REGIS_CLOSED_TEXT"
+                                                )} ]{" "}
                                                 REGISTER
                                                 <SVG_Regist />
                                             </p>
@@ -65,7 +83,11 @@ const Information = () => {
                                                     <SVG_Level />
                                                     <p>Jenjang</p>
                                                     {/* <Button>{getLevelLabel(localData?.level || 0)}</Button> */}
-                                                    <HL>{getLevelLabel(localData?.level || 0)}</HL>
+                                                    <HL>
+                                                        {getLevelLabel(
+                                                            localData?.level || 0
+                                                        )}
+                                                    </HL>
                                                 </Crested>
                                             </li>
                                             <li>
@@ -73,23 +95,29 @@ const Information = () => {
                                                     <SVG_Dollar />
                                                     <p>Biaya:</p>
                                                     {/* <Button>{`Rp. ${localData?.price.toLocaleString('id-ID')}`}</Button> */}
-                                                    <HL>{`Rp. ${localData?.price.toLocaleString('id-ID')}`}</HL>
+                                                    <HL>{`Rp. ${localData?.price.toLocaleString(
+                                                        "id-ID"
+                                                    )}`}</HL>
                                                 </Crested>
                                             </li>
                                             <li>
-                                                <Button hyperlink newTab href={localData?.booklet}>
+                                                <Button
+                                                    hyperlink
+                                                    newTab
+                                                    href={localData?.booklet}
+                                                >
                                                     <SVG_Guidebook />
-                                                    <p>
-                                                        JUKNIS
-                                                    </p>
+                                                    <p>JUKNIS</p>
                                                 </Button>
                                             </li>
                                             <li>
-                                                <Button hyperlink newTab href={`https://wa.me/+62${localData?.cpLink}`}>
+                                                <Button
+                                                    hyperlink
+                                                    newTab
+                                                    href={`https://wa.me/+62${localData?.cpLink}`}
+                                                >
                                                     <SVG_Call />
-                                                    <p>
-                                                        CP
-                                                    </p>
+                                                    <p>CP</p>
                                                 </Button>
                                             </li>
                                         </ul>
@@ -101,13 +129,11 @@ const Information = () => {
                                         <Crested left>
                                             <p>{localData?.description}</p>
                                         </Crested>
-                                        <p>
-                                            {getStringTranslation("INFO_NOTE")}
-                                        </p>
+                                        <p>{getStringTranslation("INFO_NOTE")}</p>
                                     </div>
-                                    <div className={styles.timeline}>
+                                    {/* <div className={styles.timeline}>
                                         <Timeline active={localData?.hx} />
-                                    </div>
+                                    </div> */}
                                 </section>
                             </div>
                             {/* <div className={styles.faq}>
@@ -124,6 +150,8 @@ const Information = () => {
 
 export default Information;
 
-const Crested = ({ children, left = false }: { children: ReactNode, left?: boolean }) => {
-    return <div className={`${left ? styles.left : ""} ${styles.crested}`}>{children}</div>;
+const Crested = ({ children, left = false }: { children: ReactNode; left?: boolean }) => {
+    return (
+        <div className={`${left ? styles.left : ""} ${styles.crested}`}>{children}</div>
+    );
 };

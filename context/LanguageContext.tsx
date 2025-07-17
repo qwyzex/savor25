@@ -30,18 +30,21 @@ const languageLibrary: Record<Language, LanguageData> = {
         NAV_GUIDEBOOK: "GUIDEBOOK",
         NAV_OF_US: "& OF US",
         LANG_STR: "Language",
-        HOME_DESCRIPTION: "Dive into the biggest interschool event of the year, hosted by SMAN 1 Metro. From academic showdowns to creative showcases, SAVOR is your stage to shine, connect, and compete. Join hundreds of students in celebrating talent, unity, and the spirit of youth — all in one unforgettable experience.",
+        HOME_DESCRIPTION:
+            "Dive into the biggest interschool event of the year, hosted by SMAN 1 Metro. From academic showdowns to creative showcases, SAVOR is your stage to shine, connect, and compete. Join hundreds of students in celebrating talent, unity, and the spirit of youth — all in one unforgettable experience.",
         HOME_CHECK_IT_OUT_1_BUTTON: "CHECK OUT THE TRAILER!",
         HOME_CHECK_IT_OUT_2_BUTTON: "SEE THE LIST OF COMPETITIONS!",
         HOME_WATCH_TRAILER: "Watch The Trailer!",
-        HOME_RUNNING_DESC: "SAVORRUN is a fun run event that combines fitness and community spirit. Participants will run through a scenic route, enjoying the outdoors while competing for the best time. SAVORRUN will be held on the peak day of SAVOR 25, and is open to all students and the public.",
+        HOME_RUNNING_DESC:
+            "SAVORRUN is a fun run event that combines fitness and community spirit. Participants will run through a scenic route, enjoying the outdoors while competing for the best time. SAVORRUN will be held on the peak day of SAVOR 25, and is open to all students and the public.",
         HOME_RUNNING_BUTTON: "Join the Run!",
         HOME_LIST_OF_COMPETITIONS: "List of Competitions",
         HOME_KEY_DATES: "Key Dates & Highlights",
         HOME_FAQ: "Frequently Asked Questions",
         // HOME_SPONSORS: "Sponsored and Supported By",
         HOME_SPONSORS: "Calling Out Sponsors and Partners",
-        HOME_SPONSORS_DESC: "We are open for sponsorship and partnership opportunities. If you are interested in collaborating with us, please reach out to us through the contact below.",
+        HOME_SPONSORS_DESC:
+            "We are open for sponsorship and partnership opportunities. If you are interested in collaborating with us, please reach out to us through the contact below.",
         HOME_SPONSORS_CALL: "Reach out to us!",
         HOME_MORE_INFO: "More Information",
         HOME_BUSINESS_INQUIRY: "BUSINESS INQUIRY / PUBLIC RELATION",
@@ -88,38 +91,55 @@ const languageLibrary: Record<Language, LanguageData> = {
             },
         ],
         REGIS_TITLE: "Competitions List",
-        REGIS_DESC: "Welcome to the SAVOR 25 competitions registration page! Here you can find all the competitions available for registration. Please read the competition guidelines carefully before registering.",
+        REGIS_DESC:
+            "Welcome to the SAVOR 25 competitions registration page! Here you can find all the competitions available for registration. Please read the competition guidelines carefully before registering.",
         REGIS_JUKNIS: "Guidebook & Registration Guidelines",
         REGIS_SORT: "SORT",
         REGIS_SORT_LEVEL: "Level",
         REGIS_SORT_PRICE: "Price",
         REGIS_SORT_EXTRA: "Extracurricular",
-        INFO_NOTE: " !=> Always refer to the competition's guidebook for the most accurate and up-to-date information.",
+        REGIS_CLOSED_TEXT: "CLOSED",
+        REGIS_CLOSED_WARNING:
+            '⚠️ Online registration for the SAVOR competition has closed. If participants have transferred the registration fee but have not yet registered online, please contact the competition contact person via the "CP" button on each competition page below.',
+        INFO_NOTE:
+            " !=> Always refer to the competition's guidebook for the most accurate and up-to-date information.",
         BURGER_REGISTER: "Competitions",
         BURGER_GUIDEBOOK: "Guidebook",
         BURGER_OF_US: "And of Us",
         GUIDE_TITLE_1: "SAVOR 25 Guidebook",
         GUIDE_TITLE_2: "Competition Guides",
         GUIDE_TITLE_REGISTRATION: "Registration Guidelines",
-        GUIDE_DESC_REGISTRATION_1: "Registration opens from May 7th 2025 to June 28th 2025.",
-        GUIDE_DESC_REGISTRATION_2: "Access the official SAVOR 2025 website at https://savor25.vercel.app, or go directly to the registration page at https://savor25.vercel.app/registration",
-        GUIDE_DESC_REGISTRATION_3: "Select the competition category you wish to participate in, then click the 'Register' button for that category.",
-        GUIDE_DESC_REGISTRATION_4: "Transfer the registration fee according to the selected competition category for each team submitted. The fee should be paid to BANK LAMPUNG Account Number 381.03.01.72421.8 under the name OSIS PK SMA NEGERI 1 METRO.",
-        GUIDE_DESC_REGISTRATION_5: "Access the registration link provided for the competition category you wish to enter.",
-        GUIDE_DESC_REGISTRATION_6: "Fill in the required information honestly and accurately*.",
-        GUIDE_DESC_REGISTRATION_7: "Upload the payment proof in the form of an image (.png, .jpg, .jpeg) on the form.",
-        GUIDE_DESC_REGISTRATION_8: "Review the information you have entered, ensuring there are no typos. Then click the 'Submit' button to send your registration form.",
+        GUIDE_DESC_REGISTRATION_1:
+            "Registration opens from May 7th 2025 to June 28th 2025.",
+        GUIDE_DESC_REGISTRATION_2:
+            "Access the official SAVOR 2025 website at https://savor25.vercel.app, or go directly to the registration page at https://savor25.vercel.app/registration",
+        GUIDE_DESC_REGISTRATION_3:
+            "Select the competition category you wish to participate in, then click the 'Register' button for that category.",
+        GUIDE_DESC_REGISTRATION_4:
+            "Transfer the registration fee according to the selected competition category for each team submitted. The fee should be paid to BANK LAMPUNG Account Number 381.03.01.72421.8 under the name OSIS PK SMA NEGERI 1 METRO.",
+        GUIDE_DESC_REGISTRATION_5:
+            "Access the registration link provided for the competition category you wish to enter.",
+        GUIDE_DESC_REGISTRATION_6:
+            "Fill in the required information honestly and accurately*.",
+        GUIDE_DESC_REGISTRATION_7:
+            "Upload the payment proof in the form of an image (.png, .jpg, .jpeg) on the form.",
+        GUIDE_DESC_REGISTRATION_8:
+            "Review the information you have entered, ensuring there are no typos. Then click the 'Submit' button to send your registration form.",
         GUIDE_REGISTRATION: "Registration Tutorial Video",
         GUIDE_GENERAL: "GUIDEBOOK",
-        GUIDE_DESC: "The SAVOR 25 technical guidelines is a complete guide to participating in the SAVOR 25 competition. It contains important information about the terms and conditions, competition categories, and registration guidelines. Please be sure to read this manual carefully before registering.",
+        GUIDE_DESC:
+            "The SAVOR 25 technical guidelines is a complete guide to participating in the SAVOR 25 competition. It contains important information about the terms and conditions, competition categories, and registration guidelines. Please be sure to read this manual carefully before registering.",
         GUIDE_OF: "Guide of",
         UNDER_DEV: "UNDER DEVELOPMENT",
-        UNDER_DEV_DESC: "This page is currently under development. Please check back later for updates.",
+        UNDER_DEV_DESC:
+            "This page is currently under development. Please check back later for updates.",
         REPORT_BUG_TITLE: "Report a Bug",
-        REPORT_BUG_DESC: "If you encounter any issues or bugs while using the site, please report them to us so we can fix them as soon as possible.",
+        REPORT_BUG_DESC:
+            "If you encounter any issues or bugs while using the site, please report them to us so we can fix them as soon as possible.",
         REPORT_BUG_LINK: "Report Bug",
         CONTRIBUTE_TITLE: "Contribute to SAVOR 25",
-        CONTRIBUTE_DESC: "SAVOR25 webapp is currently maintained by only one person, and we are looking for contributors to help us improve the app. If you are interested in contributing, please reach out to us through the link below.",
+        CONTRIBUTE_DESC:
+            "SAVOR25 webapp is currently maintained by only one person, and we are looking for contributors to help us improve the app. If you are interested in contributing, please reach out to us through the link below.",
         CONTRIBUTE_LINK: "Contribute Here",
     },
     id: {
@@ -128,18 +148,21 @@ const languageLibrary: Record<Language, LanguageData> = {
         NAV_GUIDEBOOK: "JUKNIS",
         NAV_OF_US: "DAN KAMI!",
         LANG_STR: "::Bahasa",
-        HOME_DESCRIPTION: "Ajang kompetisi antarsekolah terbesar persembahan SMAN 1 Metro telah tiba! Dari perlombaan akademik hingga pertunjukan kreativitas, SAVOR adalah panggung untuk bersinar, berkolaborasi, dan berkompetisi. Bergabunglah bersama ratusan siswa dalam merayakan bakat, kebersamaan, dan semangat muda dalam satu pengalaman yang tak terlupakan.",
+        HOME_DESCRIPTION:
+            "Ajang kompetisi antarsekolah terbesar persembahan SMAN 1 Metro telah tiba! Dari perlombaan akademik hingga pertunjukan kreativitas, SAVOR adalah panggung untuk bersinar, berkolaborasi, dan berkompetisi. Bergabunglah bersama ratusan siswa dalam merayakan bakat, kebersamaan, dan semangat muda dalam satu pengalaman yang tak terlupakan.",
         HOME_CHECK_IT_OUT_1_BUTTON: "PERIKSA TRAILER-NYA!!",
         HOME_CHECK_IT_OUT_2_BUTTON: "CEK DAFTAR PERLOMBAAN!",
         HOME_WATCH_TRAILER: "Tonton Trailer!",
-        HOME_RUNNING_DESC: "SAVORRUN adalah acara lari santai yang menggabungkan kebugaran dan semangat komunitas. Peserta akan berlari melalui rute yang indah, menikmati alam sambil bersaing untuk waktu terbaik. SAVORRUN akan diadakan pada puncak acara SAVOR 25, dan terbuka untuk semua siswa dan masyarakat umum.",
+        HOME_RUNNING_DESC:
+            "SAVORRUN adalah acara lari santai yang menggabungkan kebugaran dan semangat komunitas. Peserta akan berlari melalui rute yang indah, menikmati alam sambil bersaing untuk waktu terbaik. SAVORRUN akan diadakan pada puncak acara SAVOR 25, dan terbuka untuk semua siswa dan masyarakat umum.",
         HOME_RUNNING_BUTTON: "Ikut Berlari!!",
         HOME_LIST_OF_COMPETITIONS: "Daftar Kompetisi",
         HOME_KEY_DATES: "Tanggal Penting",
         HOME_FAQ: "Pertanyaan yang Sering Diajukan",
         // HOME_SPONSORS: "Didukung dan Disponsori Oleh",
         HOME_SPONSORS: "Terbuka Bagi Para Sponsor dan Mitra",
-        HOME_SPONSORS_DESC: "Kami terbuka untuk peluang sponsor dan kemitraan. Jika Anda tertarik untuk berkolaborasi dengan kami, silakan hubungi kami melalui kontak dibawah.",
+        HOME_SPONSORS_DESC:
+            "Kami terbuka untuk peluang sponsor dan kemitraan. Jika Anda tertarik untuk berkolaborasi dengan kami, silakan hubungi kami melalui kontak dibawah.",
         HOME_SPONSORS_CALL: "Hubungi kami!",
         HOME_MORE_INFO: "Informasi Lebih Lanjut",
         HOME_BUSINESS_INQUIRY: "PERTANYAAN BISNIS / HUMAS",
@@ -186,13 +209,18 @@ const languageLibrary: Record<Language, LanguageData> = {
             },
         ],
         REGIS_TITLE: "Daftar Kompetisi",
-        REGIS_DESC: "Selamat datang di halaman pendaftaran lomba SAVOR 25! Di sini kamu bisa menemukan semua lomba yang tersedia untuk pendaftaran. Pastikan untuk membaca panduan lomba dengan seksama sebelum mendaftar.",
+        REGIS_DESC:
+            "Selamat datang di halaman pendaftaran lomba SAVOR 25! Di sini kamu bisa menemukan semua lomba yang tersedia untuk pendaftaran. Pastikan untuk membaca panduan lomba dengan seksama sebelum mendaftar.",
         REGIS_JUKNIS: "Juknis & Tata Cara Pendaftaran",
         REGIS_SORT: "URUTKAN",
         REGIS_SORT_LEVEL: "Jenjang",
         REGIS_SORT_PRICE: "Biaya",
         REGIS_SORT_EXTRA: "Ekstrakurikuler",
-        INFO_NOTE: " !=> Selalu rujuk pada panduan lomba untuk informasi yang paling akurat dan terkini.",
+        REGIS_CLOSED_TEXT: "TUTUP",
+        REGIS_CLOSED_WARNING:
+            '⚠️ Registrasi Online untuk perlombaan SAVOR sudah ditutup. Jika peserta sudah melakukan transfer biaya pendaftaran, namun belum registrasi Online, mohon untuk dapat menghubungi Contact Person perlombaan melalui tombol "CP" pada masing-masing halaman perlombaan dibawah.',
+        INFO_NOTE:
+            " !=> Selalu rujuk pada panduan lomba untuk informasi yang paling akurat dan terkini.",
         BURGER_REGISTER: "Pendaftaran",
         BURGER_GUIDEBOOK: "Juknis",
         BURGER_OF_US: "Tentang Kami",
@@ -200,24 +228,35 @@ const languageLibrary: Record<Language, LanguageData> = {
         GUIDE_TITLE_2: "Juknis Perlombaan",
         GUIDE_TITLE_REGISTRATION: "Panduan Pendaftaran",
         GUIDE_DESC_REGISTRATION_1: "Pendaftaran dibuka dari Mei 2025 s.d. Juni 2025.",
-        GUIDE_DESC_REGISTRATION_2: "Akses official website SAVOR 2025, https://savor25.vercel.app, atau langsung akses laman pendaftaran di https://savor25.vercel.app/pendaftaran",
-        GUIDE_DESC_REGISTRATION_3: "Pilih kategori lomba yang ingin diikuti, lalu klik tombol 'Register' pada kategori tersebut.",
-        GUIDE_DESC_REGISTRATION_4: "Transfer biaya pendaftaran sesuai biaya cabang lomba terpilih untuk setiap regu yang dikirim. Biaya dibayar melalui Nomor Rekening BANK LAMPUNG 381.03.01.72421.8 a.n. OSIS PK SMA NEGERI 1 METRO.",
-        GUIDE_DESC_REGISTRATION_5: "Akses link pendaftaran yang tersedia sesuai cabang lomba yang ingin diikuti.",
-        GUIDE_DESC_REGISTRATION_6: "Isi informasi yang diperlukan secara jujur dan sebenar-benarnya*.",
-        GUIDE_DESC_REGISTRATION_7: "Unggah bukti pembayaran pada formulir dalam bentuk gambar (.png, .jpg, .jpeg).",
-        GUIDE_DESC_REGISTRATION_8: "Periksa kembali informasi yang telah diisi, pastikan tidak ada kesalahan penulisan. Lalu klik tombol 'Kirim' atau 'Submit' untuk mengirimkan formulir pendaftaran.",
+        GUIDE_DESC_REGISTRATION_2:
+            "Akses official website SAVOR 2025, https://savor25.vercel.app, atau langsung akses laman pendaftaran di https://savor25.vercel.app/pendaftaran",
+        GUIDE_DESC_REGISTRATION_3:
+            "Pilih kategori lomba yang ingin diikuti, lalu klik tombol 'Register' pada kategori tersebut.",
+        GUIDE_DESC_REGISTRATION_4:
+            "Transfer biaya pendaftaran sesuai biaya cabang lomba terpilih untuk setiap regu yang dikirim. Biaya dibayar melalui Nomor Rekening BANK LAMPUNG 381.03.01.72421.8 a.n. OSIS PK SMA NEGERI 1 METRO.",
+        GUIDE_DESC_REGISTRATION_5:
+            "Akses link pendaftaran yang tersedia sesuai cabang lomba yang ingin diikuti.",
+        GUIDE_DESC_REGISTRATION_6:
+            "Isi informasi yang diperlukan secara jujur dan sebenar-benarnya*.",
+        GUIDE_DESC_REGISTRATION_7:
+            "Unggah bukti pembayaran pada formulir dalam bentuk gambar (.png, .jpg, .jpeg).",
+        GUIDE_DESC_REGISTRATION_8:
+            "Periksa kembali informasi yang telah diisi, pastikan tidak ada kesalahan penulisan. Lalu klik tombol 'Kirim' atau 'Submit' untuk mengirimkan formulir pendaftaran.",
         GUIDE_REGISTRATION: "Video Tutorial Pendaftaran",
         GUIDE_GENERAL: "JUKNIS UMUM",
-        GUIDE_DESC: "Juknis SAVOR 25 adalah panduan lengkap untuk mengikuti kompetisi SAVOR 25. Di dalamnya terdapat informasi penting mengenai syarat dan ketentuan, kategori lomba, serta panduan pendaftaran. Pastikan untuk membaca juknis ini dengan seksama sebelum mendaftar.",
+        GUIDE_DESC:
+            "Juknis SAVOR 25 adalah panduan lengkap untuk mengikuti kompetisi SAVOR 25. Di dalamnya terdapat informasi penting mengenai syarat dan ketentuan, kategori lomba, serta panduan pendaftaran. Pastikan untuk membaca juknis ini dengan seksama sebelum mendaftar.",
         GUIDE_OF: "Juknis Perlombaan",
         UNDER_DEV: "SEDANG DALAM PENGEMBANGAN",
-        UNDER_DEV_DESC: "Halaman ini sedang dalam pengembangan. Silakan periksa kembali nanti untuk pembaruan.",
+        UNDER_DEV_DESC:
+            "Halaman ini sedang dalam pengembangan. Silakan periksa kembali nanti untuk pembaruan.",
         REPORT_BUG_TITLE: "Laporkan Bug",
-        REPORT_BUG_DESC: "Jika Anda menemukan masalah atau bug saat menggunakan situs, harap laporkan kepada kami agar kami dapat segera memperbaikinya.",
+        REPORT_BUG_DESC:
+            "Jika Anda menemukan masalah atau bug saat menggunakan situs, harap laporkan kepada kami agar kami dapat segera memperbaikinya.",
         REPORT_BUG_LINK: "Laporkan Bug",
         CONTRIBUTE_TITLE: "Kontribusi untuk SAVOR 25",
-        CONTRIBUTE_DESC: "Aplikasi web SAVOR25 saat ini dikelola oleh satu orang, dan kami mencari kontributor untuk membantu kami meningkatkan aplikasi ini. Jika Anda tertarik untuk berkontribusi, silakan hubungi kami melalui tautan di bawah.",
+        CONTRIBUTE_DESC:
+            "Aplikasi web SAVOR25 saat ini dikelola oleh satu orang, dan kami mencari kontributor untuk membantu kami meningkatkan aplikasi ini. Jika Anda tertarik untuk berkontribusi, silakan hubungi kami melalui tautan di bawah.",
         CONTRIBUTE_LINK: "Kontribusi di Sini",
     },
 };

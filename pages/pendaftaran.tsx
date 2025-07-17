@@ -65,6 +65,8 @@ const BranchesPage = () => {
                             <h1>{getStringTranslation("REGIS_TITLE")}</h1>
                             <Hr />
                             <p>{getStringTranslation("REGIS_DESC")}</p>
+                            <Hr />
+                            <p>{getStringTranslation("REGIS_CLOSED_WARNING")}</p>
                             <Button hyperlink href="/juknis">
                                 {getStringTranslation("REGIS_JUKNIS")}
                                 {" >>"}

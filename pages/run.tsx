@@ -16,27 +16,42 @@ const UsPage = () => {
                 <GenPage>
                     <main className={`${styles.main}`}>
                         <section>
-                            <img src="/imgs/run/Logo.png" alt="Savor Run" className={styles.banner} />
+                            <img
+                                src="/imgs/run/Logo.png"
+                                alt="Savor Run"
+                                className={styles.banner}
+                            />
                         </section>
                         <section className={styles.title}>
                             <h1>SAVOR RUN</h1>
-                            <h2>
-                                “Pace the race, Brace the wave!”
-                            </h2>
+                            <h2>“Pace the race, Brace the wave!”</h2>
                             <S />
                             <p>
-                                Hi runners! What&apos;s SAVOR RUN ? let&apos;s see...
-                                • 𝑺𝑨𝑽𝑶𝑹 𝑹𝑼𝑵 merupakan bagian rangkaian dari event SAVOR yang diselenggarakan dalam rangka merayakan hari jadi SMA Negeri 1 Kota Metro ke-66!
+                                Hi runners! What&apos;s SAVOR RUN ? let&apos;s see... •
+                                𝑺𝑨𝑽𝑶𝑹 𝑹𝑼𝑵 merupakan bagian rangkaian dari event SAVOR yang
+                                diselenggarakan dalam rangka merayakan hari jadi SMA
+                                Negeri 1 Kota Metro ke-66!
                                 <br />
                                 <br />
-                                Kategori Run 5K untuk umum dan pelajar, podium 1,2,3, doorprize dan rangkaian kegiatan menarik lainnya sudah siap untuk kalian meriahkan !🏃‍♂️
-                                So, jangan sampai terlewat! Segera daftar & persiapkan diri kalian yaa Runners!
+                                Kategori Run 5K untuk umum dan pelajar, podium 1,2,3,
+                                doorprize dan rangkaian kegiatan menarik lainnya sudah
+                                siap untuk kalian meriahkan !🏃‍♂️ So, jangan sampai
+                                terlewat! Segera daftar & persiapkan diri kalian yaa
+                                Runners!
                             </p>
                             <div>
-                                <Button hyperlink newTab href={"https://wa.me/+6285183335612"}>
+                                <Button
+                                    hyperlink
+                                    newTab
+                                    href={"https://wa.me/+6285183335612"}
+                                >
                                     CP SAVORRUN
                                 </Button>
-                                <Button hyperlink newTab href={"https://wa.me/+6285123132955"}>
+                                <Button
+                                    hyperlink
+                                    newTab
+                                    href={"https://wa.me/+6285123132955"}
+                                >
                                     CP PENDAFTARAN
                                 </Button>
                             </div>
@@ -48,20 +63,19 @@ const UsPage = () => {
                             <h3>🕘 Pendaftaran dibuka 4 Juni 2025</h3>
                             <S />
                             <p>Tautan Pendaftaran SAVORRUN Bagi Kalangan Umum</p>
-                            <p>{"{"} Rp. 150.000 {"}"}</p>
-                            <Button hyperlink newTab href="https://forms.gle/Aw3vfq84pQsa56hd7">{">"} Pendaftaran Umum {"<"}</Button>
-                            <p>Nikmati Potongan Harga Sebagai Pelajar [ S&K berlaku ]</p>
-                            <p>{"{"} Rp. 130.000 {"}"}</p>
-                            <Button hyperlink newTab href="https://forms.gle/6Dx5F8mGucYxtic8A">! Saya Seorang Pelajar !</Button>
-                            <p>Tautan Pendaftaran Khusus Murid SMA Negeri 1 Metro</p>
-                            <p>{"{"} Rp. 120.000 {"}"}</p>
-                            <Button hyperlink newTab href="https://forms.gle/Dcbe4hWPU1rwfU5V8">~ Daftar Sebagai Murid SMAN 1 Metro ~</Button>
+                            <p>Pendaftaran Umum : Rp. 150.000</p>
+                            <p>Saya Seorang Pelajar : Rp. 130.000</p>
+                            <p>Daftar Sebagai Murid SMAN 1 Metro : Rp. 120.000</p>
+                            <Button>
+                                Pendaftaran SAVORRUN Sudah Ditutup.
+                            </Button>
                         </section>
                         <section>
                             <h2>Upcoming Update...</h2>
                             <S />
                             <p>
-                                Tunggu informasi lebih lanjut mengenai Rute Map, Racepack, dan Podium Prize!
+                                Tunggu informasi lebih lanjut mengenai Rute Map, Racepack,
+                                dan Podium Prize!
                             </p>
                         </section>
                         <section className={styles.sponsor}>
@@ -71,24 +85,40 @@ const UsPage = () => {
                                 <p>
                                     Hi Potential Sponsors & Media Partners!
                                     <br />
-                                    It is time to mark your calendars for 𝐒𝐀𝐕𝐎𝐑 𝐑𝐔𝐍 𝟐𝟎𝟐𝟓 🗓️
+                                    It is time to mark your calendars for 𝐒𝐀𝐕𝐎𝐑 𝐑𝐔𝐍 𝟐𝟎𝟐𝟓
+                                    🗓️
                                 </p>
                                 <p>
-                                    𝑺𝒎𝒂𝒏𝒔𝒂 𝑭𝒆𝒔𝒕𝒊𝒗𝒆 𝑹𝒆𝒈𝒊𝒐𝒏𝒂𝒍 𝑪𝒐𝒎𝒑𝒆𝒕𝒊𝒕𝒊𝒐𝒏 𝑹𝑼𝑵 mengundang sponsorship & media partner untuk berkontribusi serta berkolaborasi bersama dalam perjalanan kreatif kami 🏃🏻
-                                    jangan lewatkan kesempatan untuk memperkenalkan brand kalian ke audiens yang lebih luas!
+                                    𝑺𝒎𝒂𝒏𝒔𝒂 𝑭𝒆𝒔𝒕𝒊𝒗𝒆 𝑹𝒆𝒈𝒊𝒐𝒏𝒂𝒍 𝑪𝒐𝒎𝒑𝒆𝒕𝒊𝒕𝒊𝒐𝒏 𝑹𝑼𝑵 mengundang
+                                    sponsorship & media partner untuk berkontribusi serta
+                                    berkolaborasi bersama dalam perjalanan kreatif kami 🏃🏻
+                                    jangan lewatkan kesempatan untuk memperkenalkan brand
+                                    kalian ke audiens yang lebih luas!
                                 </p>
                                 <p>
-                                    Untuk informasi lebih lanjut, silakan hubungi kami melalui kontak di bawah ini:
-                                    ☎️:
+                                    Untuk informasi lebih lanjut, silakan hubungi kami
+                                    melalui kontak di bawah ini: ☎️:
                                 </p>
                                 <div className={styles.sponsorButtons}>
-                                    <Button hyperlink newTab href={"https://wa.me/+6285896211584"}>
+                                    <Button
+                                        hyperlink
+                                        newTab
+                                        href={"https://wa.me/+6285896211584"}
+                                    >
                                         SPONSORSHIP
                                     </Button>
-                                    <Button hyperlink newTab href={"https://wa.me/+6281273202019"}>
+                                    <Button
+                                        hyperlink
+                                        newTab
+                                        href={"https://wa.me/+6281273202019"}
+                                    >
                                         MEDIA PARTNER
                                     </Button>
-                                    <Button hyperlink newTab href={"https://wa.me/+6282171933493"}>
+                                    <Button
+                                        hyperlink
+                                        newTab
+                                        href={"https://wa.me/+6282171933493"}
+                                    >
                                         CP UMKM
                                     </Button>
                                 </div>
